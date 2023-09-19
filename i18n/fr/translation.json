@@ -1,0 +1,346 @@
+{
+   "buttons" : {
+      "more": "Voir Plus",
+      "less": "Voir Moins",
+      "video": "vidéo",
+      "read": "En savoir Plus",
+      "join": "Rejoindre Maintenant",
+      "add": "Ajouter"
+   },
+   "navbar": {
+      "accueil": "Accueil",
+      "karriere": "l'karrière",
+      "bootCamp": "Bootcamps",
+      "events": "Événements",
+      "contact": "Contact",
+      "play":"Début"
+   },
+   "footer": {
+      "logo": "L'karrière. 2023",
+      "address": "IMMB 117 LOTISSEMENT ALAMANE 2, ELJIHADIA INZGANE",
+      "nav": {
+         "Coaches": "Entraîneurs",
+         "Events": "Événements",
+         "About": "À propos",
+         "Contact": "Contact",
+         "Privacy": "Politique de confidentialité",
+         "Terms": "Conditions de services"
+      }
+   },
+   "form" : {
+      "next": "suivant",
+      "previous": "précédent",
+      "title1": "Salut ! Veuillez Choisir ",
+      "title2": "Votre ",
+      "span": "Carrière",
+      "f_name": "Prénom",
+      "l_name": "Nom",
+      "age": "Âge",
+      "email": "Email",
+      "phone": "N° de téléphone",
+      "city": "Ville",
+      "function": "Fonction",
+      "submit": "envoyer",
+      "done": "fermer",
+      "done_title": "vous avez",
+      "done_span": " terminé",
+      "done_content": ["Votre candidature ", "A envoyé avec succès !", "Nous vous recontacterons très bientôt", "veuillez vérifier constamment votre Email"]
+   },
+   "home": {
+      "hero_section": {
+         "title1": "Rejoignez le Bootcamp",
+         "title2": "Et lancez-vous dans le domaine digital,",
+         "title3": "Meilleures opportunités vous attendent !"
+      },
+      "features": [
+         {
+            "id": 1,
+            "icon": "gem-solid.svg",
+            "title": "Qualité",
+            "description": [
+               "Enseignement par des experts du secteur",
+               "Contenu pertinent et actuel",
+               "Encadrement personnalisé",
+               "Approche pratique et axée sur les compétences"
+            ], 
+            "shape": 1,
+            "tip": true
+         },
+         {
+            "id": 2,
+            "icon": "graduation-cap-solid.svg",
+            "title": "Méthodologie",
+            "description": [
+               "Bootcamp intensif",
+               "Projets pratiques",
+               "Apprentissage collaboratif",
+               "Accès aux ressources"
+            ],
+            "shape": 2,
+            "tip": false
+         },
+         {
+            "id": 3,
+            "icon": "chart-simple-solid.svg",
+            "title": "Résultats",
+            "description": [
+               "Compétences pratiques",
+               "Portfolio impressionnant",
+               "Confiance professionnelle",
+               "Opportunités d'emploi"
+            ],
+            "shape": 3,
+            "tip": true
+         }
+      ],
+      "why": {
+         "title": "Pourquoi ?",
+         "data": [
+            {
+               "title": "Excellence pédagogique :",
+               "description": "Notre équipe d'experts du secteur assure une formation flexible, pratique et actuelle sur des projets réels, qui vous permettront d'acquérir des compétences concrètes et recherchées par les employeurs."
+            },
+            {
+               "title": "Opportunités professionnelles illimitées :",
+               "description": "Vous offrez la possibilité d'accéder à un large éventail d'opportunités professionnelles dans le domaine qui vous passionne."
+            },
+            {
+               "title": "Communauté et réseau ",
+               "description": "Vous rejoignez une communauté dynamique composée d'apprenants et d'experts du domaine. Vous aurez l'opportunité de travailler en collaboration avec les autres participants, de partager vos idées et de forger des liens professionnels solides, un facteur clé pour votre succès à venir."
+            },
+            {
+               "title": "Accompagnement individuel :",
+               "description": "Profitez d'un accompagnement sur mesure visant à vous aider à relever les défis, à atteindre vos objectifs et à maximiser votre potentiel tout au long de votre parcours."
+            }
+         ]
+      },
+      "forWho": {
+         "title": "Pour qui ?",
+         "data": [
+            {
+               "title": "Étudiants ambitieux : ",
+               "description": "Les étudiants qui souhaitent se préparer activement pour une réussite dans le domaine digital trouveront une opportunité de développer des compétences pratiques et d'acquérir une expérience concrète."
+            },
+            {
+               "title": "Équipes d'entreprises :",
+               "description": "Les entreprises peuvent inscrire leurs équipes dans le programme pour développer des compétences internes, améliorer la performance et rester compétitives dans un environnement commercial en constante évolution."
+            },
+            {
+               "title": "Entrepreneurs aspirants :",
+               "description": "Les individus ayant des idées entrepreneuriales désirant lancer des entreprises peuvent exploiter leurs connaissances digitales pour créer et gérer avec succès leurs projets."
+            },
+            {
+               "title": "Professionnels en transition :",
+               "description": "Les personnes qui cherchent à se réorienter vers le domaine digital ou à faire évoluer leur parcours professionnel peuvent bénéficier de notre programme afin acquérir rapidement les compétences nécessaires et réussir leur transition professionnelle."
+            }
+         ]
+      },
+      "bootcamps": {
+         "title": "Bootcamp",
+         "learn": "En savoir Plus",
+         "join": "Rejoindre",
+         "levelTitle": "niveau",
+         "durationTitle": "durée",
+         "month": "Mois"
+      },
+      "howItWorks": {
+         "title": "comment ça marche",
+         "data": [
+            {
+               "id": 1
+            },
+            {
+               "id": 2,
+               "title": "Choisir le",
+               "titleBold": "Bootcamp visé"
+            },
+            {
+               "id": 3,
+               "title": "Passer l’entretien",
+               "titleBold": ""
+            },
+            {
+               "id": 4,
+               "title": "Joindre le",
+               "titleBold": "Bootcamp"
+            },
+            {
+               "title": "Intégration ",
+               "titleBold": ""
+            },
+            {
+               "id": 5
+            }
+         ]
+      },
+      "ourPartners": {
+         "title": "Nos partenaires"
+      },
+      "coaches": {
+         "title": "Nos formateurs",
+         "data": [
+            {"id": 0, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "SAID ZAIM", "title": "E-commerce & Markéting Digital"},
+            {"id": 1, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "ELMEHDI ELASRI", "title": "E-commerce & Markéting Digital"},
+            {"id": 2, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "OMAR OULMOUDEN", "title": "Design & animation graphique"},
+            {"id": 3, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "MOUAD KAAIB", "title": "Développeur Mobile"},
+            {"id": 4, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "WALID OUTACH", "title": "montage vidéo"},
+            {"id": 5, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "HAMID MOUME", "title": "design graphique"},
+            {"id": 6, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "M.AMINE TZEMMOUT", "title": "Gestion de projet informatique"}
+         ],
+         "coacheButton": "en savoir plus sur les formateurs"
+      },
+      "reviews" : {
+         "title" : "Commentaires",
+         "You": "Vous !",
+         "Share1": "Partagez votre avis ",
+         "Share2": "À propos de l’karriére"
+      },
+      "contact": {
+         "infosTitle": "Avez-vous des questions?",
+         "formTitle": "Comment pouvons-nous vous aider?",
+         "infosDescription": "Notre équipe est disponible pour répondre à vos questions",
+         "formDescription": "Si vous souhaitez nous parler, veuillez remplir le formulaire ci-dessous et nous vous contacterons.",
+         "callUs": "Tél",
+         "emailUs": "Email",
+         "name": "Nom",
+         "namePlaceholder": "Entrez votre nom",
+         "firstName": "Prénom",
+         "firstNamePlaceholder": "Entrez votre prénom",
+         "phone": "Tél",
+         "phonePlaceholder": "Entrez votre numéro de téléphone",
+         "email": "Email",
+         "emailPlaceholder": "Entrez votre e-mail",
+         "message": "Message",
+         "messagePlaceholder": "Entrez votre message",
+         "condition": "Oui, j’aimerais recevoir occasionnellement des nouvelles et des mises à jour de la part de l’organisme.",
+         "button": "Envoyer"
+      }
+   },
+   "k-camps": {
+      "Hero_section": {
+         "title1": "Vous aussi, vous pouvez obtenir ",
+         "title1A": "le travail de vos rêves",
+         "title2": "Changez votre vie dès maintenant avec le premier bootcamp au Maroc qui ",
+         "title2A": "vous guide étape par étape pour construire un projet en ligne complet.",
+         "warning": "SANS RISQUE - Si vous n'aimez pas le contenu pour quelque raison que ce soit, vous serez remboursé immédiatement",
+         "button": "Afficher le contenu"
+      },
+      "Counter_section": {
+         "title1": "Tout ce dont vous avez besoin est un contenu de haute qualité ",
+         "title2": "avec les conseils et le suivi de formateurs experts",
+         "hour": "heurs",
+         "session": "séances",
+         "weeks": "semaines"
+      },
+      "Projects": {
+         "title1": "Projets réalisés pour des entreprises par des membres de l'académie",
+         "title2": "Si vous êtes à la recherche d'un endroit où les résultats se concrétisent, l'karrière est l'endroit que vous recherchez",
+         "team": "équipe"
+      },
+      "Certificate": {
+         "title": "Vous recevrez un certificat accrédité de l'karrière Academy"
+      },
+      "WhyChooseUs": {
+         "title1": "Pourquoi l'karrière n'est-il pas comme n'importe quel autre endroit ?",
+         "title2": "Nous avons effectué cette comparaison pour vous afin de ne pas perdre votre temps à découvrir les différences dans ce que vous obtenez du bootcamp et d'autres cours en ligne disponibles",
+         "column1": "Autre",
+         "column2": "Youtube",
+         "column3": "l'karrière",
+         "tableData": [
+            {
+               "title": "Leçons interactives et tâches appliquées",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Contenu arabe de haute qualité",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Formation continue du suivi des formateurs",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Mentors et formateurs dévoués",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Réunions en direct",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Communauté pour développeurs d’élite",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Emplois réels",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Travailler en équipe",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Consultations d’experts",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Examens quotidiens des codes",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Certificat de réussite",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Explication des dernières technologies",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            }
+         ]
+      },
+      "Extras": {
+         "title1": "Ce n'est pas tout !",
+         "title2": "En rejoignant l'karrière, vous obtiendrez également :"
+      },
+      "Guarantee": {
+         "description": "Et parce que nous avons confiance en ce que nous offrons, nous vous garantissons un remboursement complet de votre argent dans un délai de 30 jours si vous en faites la demande, sans poser de questions."
+      },
+      "Subscription_section": {
+         "title1": "Réduction exclusive et places limitées",
+         "title2": "Saisissez l'opportunité en vous inscrivant dès maintenant, car la période d'inscription pour la prochaine session se clôture bientôt",
+         "hour": "heurs",
+         "minute": "minutes",
+         "second": "secondes"
+      },
+      "PaymentOption": {
+         "description": "Vous pouvez payer par cartes de crédit, PayPal ou via les méthodes de paiement locales que nous proposons dans votre pays. Pour en savoir plus sur les méthodes de paiement, vous pouvez ",
+         "link": "cliquer ici pour contacter directement notre support technique."
+      },
+      "QAndA": {
+         "title": "questions fréquemment posées"
+      }
+   }
+}

@@ -1,0 +1,352 @@
+#headBarMobile,
+#headBarDesktop {
+   transition: all .5s;
+}
+
+.navbar-hidden {
+   top: -300px;
+   opacity: 0;
+}
+
+.navbar {
+   width: 100%;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 9999;
+}
+
+.bg_bl {
+   /* background-color: #8956a3; */
+   background: rgba(141, 88, 164, 1);
+   background: -webkit-linear-gradient(to right, #845ca8, #6c3875);
+   background: var(--purple-linear-gradient-light);
+   color: white;
+}
+
+.bg-or {
+   background-color: #ffbc62;
+}
+
+
+.navbar_ul {
+   padding: 0 20px 0 0px;
+}
+
+.navbar_ul_icon {
+   width: 20px;
+   height: 20px;
+   object-fit: contain;
+}
+
+.navbar_ul {
+   border-radius: 26px;
+}
+
+.circle {
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+   transition: all .3s;
+
+}
+
+.navbar_list .circle {
+   /* background-color: #8956a3; */
+   background-color: rgba(141, 88, 164, 1);
+   color: black;
+   left: -16px;
+   top: 50%;
+   transform: translateY(-50%);
+
+   position: absolute;
+}
+
+.navbar_list,
+.navbar_play {
+   position: relative;
+}
+
+.navbar_play {
+   border-radius: 26px;
+   padding: 15px 20px;
+   color: white;
+   background: var(--yellow-linear-gradient-dark);
+}
+.ar .navbar_play{
+   background: var(--yellow-linear-gradient-light);
+}
+
+.navbar_play {
+   z-index: 88;
+   position: absolute;
+   /* border: 10px solid white; */
+   /* right: -59px; */
+   right: -84px;
+   /* transition: right .4s ease-in-out, display .2s ease-in-out 1s; */
+   transition: right .4s ease-out, left 6s;
+   cursor: pointer;
+   width: 100px;
+}
+
+.ar .navbar_play:after{
+   left:initial;
+   right: -15px;
+}
+.ar .navbar_ul:before{
+   right: initial;
+   left: 1px;
+}
+.ar .navbar_ul:after{
+   left: -39px;
+   right: initial;
+}
+ .ar .navbar_ul a:last-child{
+   padding-left: 50px;
+   padding-right: 23px;
+}
+/*.ar .navbar_ul a:first-child{
+   padding-left: 50px;
+} */
+.navbar_ul a {
+   border-right: 1px solid #b0a9b4;
+   transition: background-color .3s;
+   padding: 15px 23px;
+}
+
+.navbar_ul a:hover {
+   background-color: #ffffff38;
+}
+
+.navbar_ul .navbar_contact {
+   position: relative;
+   transition: all 0s !important;
+}
+
+.navbar_ul .navbar_contact::after {
+   content: '';
+   position: absolute;
+   right: -15px;
+   /* background-color: initial; */
+   width: 15px;
+   height: 100%;
+   border-radius: 0 48px 48px 0;
+}
+
+.navbar_ul a:last-child {
+   padding-right: 50px;
+   border-left: none;
+   border-right: none;
+}
+
+
+/* .navbar_ul a:hover +.circle {
+   background-color: red;
+} */
+
+/* .navbar_play:hover {} */
+
+/* .navbar_play:hover::after {
+   z-index: 99;
+} */
+
+.navbar_ul::before {
+   content: "";
+   position: absolute;
+   background-color: var(--circleBg-color);
+   width: 35px;
+   height: 35px;
+   border-radius: 50%;
+   right: 1px;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 1;
+}
+
+.navbar_ul.onScroll::before,
+.navbar_ul.onScroll::after {
+   background-color: #fff;
+}
+
+.navbar_ul::after {
+   content: "";
+   position: absolute;
+   background-color: var(--circleBg-color);
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   right: -39px;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 1;
+}
+/* .ar .navbar_ul::after, .ar .navbar_ul::before{
+   background-color: #f9fdfe;
+} */
+.ar .navbar_ul .navbar_contact::after{
+   right: initial;
+   left: -15px
+}
+.ar .navbar_ul a:first-child {
+   border-right: none;
+   position: relative;
+}
+.ar .navbar_ul a:first-child:after {
+   content: '';
+    position: absolute;
+    left: 123.6px;
+    /* background-color: initial; */
+    width: 19px;
+    height: 100%;
+    border-radius: 0 48px 48px 0;
+
+}
+.ar .navbar_ul a:first-child:hover:after{
+   background-color: #ffffff38;
+}
+.navbar_play::after {
+   content: "";
+   position: absolute;
+   background-color: #faa531;
+   width: 25px;
+   height: 25px;
+   /* left: 3px; */
+   left: -15px;
+
+   top: 50%;
+   transform: translateY(-50%);
+   border-radius: 50%;
+   z-index: -99;
+   /* opacity: 0; */
+}
+
+.navbar_lang {
+   font-weight: 300;
+   background: rgba(141, 88, 164, 1);
+   background: var(--purple-linear-gradient-dark);
+   padding: 5px;
+   border-radius: 25px;
+   font-size: 14px;
+   color: white;
+}
+
+.navbar_logo {
+   font-size: 39px;
+   align-items: center;
+}
+
+
+.navbar_logo_container {
+   width: 220px;
+   height: 90px;
+   /* height: 90px; */
+}
+
+.navbar_logo_container img {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+
+/* .navbar_container {} */
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 1300px) {
+
+   /* Navbar container */
+   #headBarDesktopNav {
+      width: 100%;
+      padding: 25px 2%;
+   }
+
+   /* Logo */
+   .navbar_logo_container {
+      width: 180px;
+      height: 90px;
+   }
+
+   /* Menu */
+   /* last child */
+   .navbar_ul a:last-child {
+      padding-right: 40px;
+   }
+   .ar .navbar_ul a:last-child{
+      padding-left: 50px;
+      padding-right: 23px;
+   }
+}
+
+@media screen and (max-width: 1130px) {
+
+   /* Logo */
+   .navbar_logo_container {
+      width: 150px;
+      height: 90px;
+   }
+
+   /* Menu */
+   .navbar_ul a {
+      font-size: 15px;
+      padding: 15px 15px;
+   }
+
+   .navbar_play {
+      font-size: 15px;
+      padding: 15px 15px;
+      right: -83px;
+   }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+   /* Logo */
+   .navbar_logo_container {
+      width: 40px;
+      height: 30px;
+   }
+
+}
+
+@media screen and (max-width: 975px) {
+
+   /* Menu */
+   .navbar_ul a {
+      font-size: 14px;
+      padding: 15px 12px;
+   }
+
+   .navbar_ul_icon {
+      width: 15px;
+      height: 15px;
+   }
+
+   /* last child */
+   .navbar_ul a:last-child {
+      padding-right: 25px;
+   }
+
+   .navbar_play {
+      font-size: 14px;
+      padding: 15px 12px;
+   }
+
+}
+
+/* ------------------------------------------------------- */
+/* --------------------- NavBar Mobile --------------------- */
+/* ------------------------------------------------------- */
+
+.nav_menu {
+   top: 0;
+   right: -800px;
+   opacity: 0;
+   transition: all .5s;
+}
+
+
+
+.nav_menu_shadow {
+   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

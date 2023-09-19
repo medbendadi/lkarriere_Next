@@ -1,0 +1,346 @@
+{
+   "buttons" : {
+      "more": "مشاهدة المزيد",
+      "less": "إظهار اقل",
+      "video": "فيديو",
+      "read": "إقرأ المزيد",
+      "join": "انضم الآن",
+      "add": "إضافة"
+   },
+   "navbar": {
+      "accueil": "الرئيسية",
+      "karriere": "الكاريير",
+      "bootCamp": "مخيمات",
+      "events": "فعاليات",
+      "contact": "إتصل",
+      "play":"إبدأ"
+   },
+   "footer": {
+      "logo": "الكاريير. 2023",
+      "address": "تقسيم الأمان 2 الجهادية إنزكان IMMO 117",
+      "nav": {
+         "Coaches": "المدربين",
+         "Events": "فعاليات",
+         "About": "معلومات عنا",
+         "Contact": "إتصل",
+         "Privacy": "سياسة الخصوصية",
+         "Terms": "شروط الخدمة"
+      }
+   },
+   "form" : {
+      "next": "التالي",
+      "previous": "سابق",
+      "title1": "أهلاً ! الرجاء اختيار  ",
+      "title2": "المسار ",
+      "span": "الخاص بك",
+      "f_name": "الاسم",
+      "l_name": "النسب",
+      "age": "العمر",
+      "email": "إيميل",
+      "phone": "الهاتف",
+      "city": "المدينة",
+      "function": "الوظيفة",
+      "submit": "ارسال",
+      "done": "اغلاق",
+      "done_title": "لقد ",
+   "done_span": "انتهيت",
+      "done_content": ["تم الإرسال ", "!طلبك بنجاح", "سوف نتواصل معك قريبا جدا", "يرجى التحقق من بريدك الإلكتروني باستمرار"]
+   },
+   "home": {
+      "hero_section": {
+         "title1": "انضم إلى البرنامج التدريبي",
+         "title2": "وبدء العمل في المجال الرقمي",
+         "title3": "!فرص أفضل تنتظرك"
+      },
+      "features": [
+         {
+            "id": 1,
+            "icon": "gem-solid.svg",
+            "title": "الجودة",
+            "description": [
+               "التدريس من قبل خبراء الصناعة",
+               "المحتوى ذي الصلة والحالي",
+               "تأطير مخصص",
+               "النهج العملي القائم على الكفاءة"
+            ], 
+            "shape": 1,
+            "tip": true
+         },
+         {
+            "id": 2,
+            "icon": "graduation-cap-solid.svg",
+            "title": "المنهجية",
+            "description": [
+               "معسكر تدريب مكثف",
+               "مشاريع عملية",
+               "التعلم التعاوني",
+               "الوصول إلى الموارد"
+            ],
+            "shape": 2,
+            "tip": false
+         },
+         {
+            "id": 3,
+            "icon": "chart-simple-solid.svg",
+            "title": "النتائج",
+            "description": [
+               "مهارات عملية",
+               "محفظة رائعة",
+               "الثقة المهنية",
+               "فرص عمل"
+            ],
+            "shape": 3,
+            "tip": true
+         }
+      ],
+      "why": {
+         "title": "لماذا ؟",
+         "data": [
+            {
+               "title": "Excellence pédagogique :",
+               "description": "يوفر فريقنا من خبراء الصناعة تدريبًا مرنًا وعمليًا ومحدثًا على مشاريع العالم الحقيقي، مما سيسمح لك باكتساب مهارات ملموسة يسعى إليها أصحاب العمل"
+            },
+            {
+               "title": "Opportunités professionnelles illimitées :",
+               "description": "أنت تقدم الفرصة للوصول إلى مجموعة واسعة من الفرص المهنية في المجال الذي أنت متحمس له"
+            },
+            {
+               "title": "Communauté et réseau ",
+               "description": "تنضم إلى مجتمع ديناميكي من المتعلمين والخبراء في هذا المجال. ستتاح لك الفرصة للعمل بشكل تعاوني مع المشاركين الآخرين ومشاركة أفكارك وإقامة روابط مهنية قوية، وهو عامل رئيسي لنجاحك في المستقبل"
+            },
+            {
+               "title": "Accompagnement individuel :",
+               "description": "استفد من الدعم المخصص لمساعدتك على مواجهة التحديات وتحقيق أهدافك وتعظيم إمكاناتك طوال رحلتك"
+            }
+         ]
+      },
+      "forWho": {
+         "title": "لمن؟",
+         "data": [
+            {
+               "title": "Étudiants ambitieux : ",
+               "description": "سيجد الطلاب الذين يرغبون في الاستعداد بنشاط للنجاح في المجال الرقمي فرصة لتطوير المهارات العملية واكتساب الخبرة العملية"
+            },
+            {
+               "title": "Équipes d'entreprises :",
+               "description": "يمكن للشركات تسجيل فرقها في البرنامج لتطوير المهارات الداخلية وتحسين الأداء والبقاء قادرة على المنافسة في بيئة أعمال دائمة التغير"
+            },
+            {
+               "title": "Entrepreneurs aspirants :",
+               "description": "يمكن للأفراد الذين لديهم أفكار ريادية لبدء الأعمال التجارية استخدام معرفتهم الرقمية لإنشاء مشاريعهم وإدارتها بنجاح"
+            },
+            {
+               "title": "Professionnels en transition :",
+               "description": "يمكن للأشخاص الذين يتطلعون إلى إعادة توجيه أنفسهم نحو المجال الرقمي أو تطوير مسارهم الوظيفي الاستفادة من برنامجنا لاكتساب المهارات اللازمة بسرعة والنجاح في انتقالهم المهني"
+            }
+         ]
+      },
+      "bootcamps": {
+         "title": "مخيمات",
+         "learn": "معرفة المزيد",
+         "join": "انضم",
+         "levelTitle": "مستوى",
+         "durationTitle": "فترة",
+         "month": "أشهر"
+      },
+      "howItWorks": {
+         "title": "كيف يعمل",
+         "data": [
+            {
+               "id": 1
+            },
+            {
+               "id": 2,
+               "title": "اختيار",
+               "titleBold": "معسكر تدريب"
+            },
+            {
+               "id": 3,
+               "title": "مقابلة",
+               "titleBold": ""
+            },
+            {
+               "id": 4,
+               "title": "انضم إلى",
+               "titleBold": "معسكر تدريب"
+            },
+            {
+               "title": "اندماج",
+               "titleBold": ""
+            },
+            {
+               "id": 5
+            }
+         ]
+      },
+      "ourPartners": {
+         "title": "شركائنا"
+      },
+      "coaches": {
+         "title": "مدربينا",
+         "data": [
+            {"id": 0, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "سعيد زعيم", "title": "التجارة الإلكترونية والتسويق الرقمي"},
+            {"id": 1, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "المهدي العسري", "title": "التجارة الإلكترونية والتسويق الرقمي"},
+            {"id": 2, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "عمر المودن", "title": "التصميم والرسوم المتحركة"},
+            {"id": 3, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "معاد كعيب", "title": "مطور تطبيقات الهواتف"},
+            {"id": 4, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "وليد اوتاش", "title": "تحرير الفيديو"},
+            {"id": 5, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "حميد موم", "title": "تصميم جرافيكي"},
+            {"id": 6, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "محمد امين تزموت", "title": "إدارة مشروعات تقنية المعلومات"}
+         ],
+         "coacheButton": "تعرف على المزيد عن المدربين"
+      },
+      "reviews" : {
+         "title" : "قصص النجاح",
+         "You": "! أنت",
+         "Share1": "شاركنا رايك ",
+         "Share2": "حول مؤسستنا"
+      },
+      "contact": {
+         "infosTitle": "لديك أسئلة؟",
+         "formTitle": "كيف يمكننا مساعدتك ؟",
+         "infosDescription": "لأي طلب، اتصل بفريق الدعم لدينا",
+         "formDescription": "إذا كنت ترغب في التحدث إلينا، فيرجى إكمال النموذج أدناه وسنتصل بك",
+         "callUs": "اتصل بنا",
+         "emailUs": "راسلنا عبر البريد الإلكتروني",
+         "name": "الاسم العائلي",
+         "namePlaceholder": "أدخل اسمك العائلي",
+         "firstName": "الاسم الأول",
+         "firstNamePlaceholder": "أدخل اسمك الأول",
+         "phone": "هاتف",
+         "phonePlaceholder": "أدخل رقم هاتفك",
+         "email": "البريد الإلكتروني",
+         "emailPlaceholder": "أدخل بريدك الإلكتروني",
+         "message": "رسالة",
+         "messagePlaceholder": "أدخل رسالتك",
+         "condition": ".نعم، أود أن أتلقى أخبارًا وتحديثات عرضية من الكاريير",
+         "button": "إرسال"
+      }
+   },
+   "k-camps": {
+      "Hero_section": {
+         "title1": "أنت أيضًا يمكنك الحصول",
+         "title1A": ".على وظيفة أحلامك",
+         "title2": "غير حياتك الآن مع أول معسكر تدريبي في المغرب يرشدك",
+         "title2A": ".خطوة بخطوة لبناء مشروع كامل عبر الإنترنت",
+         "warning": "بدون أي مخاطر - إذا لم يعجبك المحتوى لأي سبب من الأسباب ستستعيد أموالك مباشرة",
+         "button": "اطلع على المحتوى"
+      },
+      "Counter_section": {
+         "title1": "كل ما تحتاجه أنت هو محتوى بجودة عالية",
+         "title2": "بتوجيه ومتابعة من مدربين خبراء",
+         "hour": "ساعة",
+         "session": "حصة",
+         "weeks": "أسابيع"
+      },
+      "Projects": {
+         "title1": "المشاريع التي يتم تنفيذها للشركات من قبل أعضاء الأكاديمية",
+         "title2": "إذا كنت تبحث عن مكان تتحقق فيه النتائج، فإن الكاريير هو المكان الذي تبحث عنه",
+         "team": "فريق العمل"
+      },
+      "Certificate": {
+         "title": "ستحصل على شهادة معتمدة من أكاديمية الكاريير "
+      },
+      "WhyChooseUs": {
+         "title1": "لماذا لا يشبه الكاريير أي مكان آخر؟",
+         "title2": "لقد أجرينا هذه المقارنة من أجلك حتى لا تضيع وقتك في اكتشاف الاختلافات في ما تحصل عليه من المعسكر التدريبي وغيرها من الدورات المتاحة عبر الإنترنت",
+         "column1": "أخرى",
+         "column2": "اليوتيوب",
+         "column3": "الكاريير",
+         "tableData": [
+            {
+               "title": "دروس تفاعلية ومهام تطبيقية",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "محتوى عربي عالي الجودة",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "تدريب مستمر بمتابعة المدربين",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "موجهين ومدربين خبراء مكرسين لك",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "جلسات مباشرة",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "مجتمع لنخبة المطورين",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "فرص عمل حقيقية",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "العمل مع فريق",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "إستشارات من خبراء",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "مراجعات يومية للأكواد",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "شهادة إنجاز",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "شرح أحدث التقنيات",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            }
+         ]
+      },
+      "Extras": {
+         "title1": "!هذا ليس كل شيء",
+         "title2": ":من خلال الانضمام إلى الكاريير، ستحصل أيضًا على"
+      },
+      "Guarantee": {
+         "description": ".ولأننا نؤمن بما نقدمه، فإننا نضمن استرداد أموالك بالكامل خلال 30 يومًا إذا سألت ذلك، دون طرح أي أسئلة"
+      },
+      "Subscription_section": {
+         "title1": "خصم حصري والأماكن محدودة",
+         "title2": "اغتنم الفرصة بالتسجيل الآن، حيث ستنتهي فترة التسجيل للدورة القادمة قريباً",
+         "hour": "ساعة",
+         "minute": "دقيقة",
+         "second": "ثانية"
+      },
+      "PaymentOption": {
+         "description": "يمكنك الدفع عن طريق بطاقة الائتمان أو البايبال أو من خلال طرق الدفع المحلية التي نقدمها في بلدك. لمعرفة المزيد حول طرق الدفع، يمكنك  ",
+         "link": "النقر هنا للاتصال بدعمنا الفني مباشرة"
+      },
+      "QAndA": {
+         "title": "الأسئلة الشائعة"
+      }
+   }
+}

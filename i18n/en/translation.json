@@ -1,0 +1,346 @@
+{
+   "buttons" : {
+      "more": "Show More",
+      "less": "Show Less",
+      "video": "video",
+      "read": "Read More",
+      "join": "Join Now",
+      "add": "Add"
+   },
+   "navbar": {
+      "accueil": "Home",
+      "karriere": "l'karrière",
+      "bootCamp": "Bootcamps",
+      "events": "Events",
+      "contact": "Contact",
+      "play":"Play"
+   },
+   "footer": {
+      "logo": "L'karrière. 2023",
+      "address": "IMMB 117 LOTISSEMENT ALAMANE 2, ELJIHADIA INZGANE",
+      "nav": {
+         "Coaches": "Coaches",
+         "Events": "Events",
+         "About": "About",
+         "Contact": "Contact",
+         "Privacy": "Privacy Policy",
+         "Terms": "Terms of Services"
+      }
+   },
+   "form" : {
+      "next": "next",
+      "previous": "previous",
+      "title1": "Hi ! Please Choose ",
+      "title2": "Your ",
+      "span": "Career",
+      "f_name": "First Name",
+      "l_name": "Last Name",
+      "age": "Age",
+      "email": "Email",
+      "phone": "Phone N°",
+      "city": "City",
+      "function": "Function",
+      "submit": "submit",
+      "done": "done",
+      "done_title": "You are",
+      "done_span": " done",
+      "done_content": ["Your Application ", "Has Sent Successfully!", "We will contact you very soon", "please check your email constantly"]
+   },
+   "home": {
+      "hero_section": {
+         "title1": "Join the bootcamp",
+         "title2": "And get started in the digital field",
+         "title3": "Better opportunities await you!"
+      },
+      "features": [
+         {
+            "id": 1,
+            "icon": "gem-solid.svg",
+            "title": "Quality",
+            "description": [
+               "Teaching by industry experts",
+               "Relevant and current content",
+               "Custom framing",
+               "Practical and competency-based approach"
+            ], 
+            "shape": 1,
+            "tip": true
+         },
+         {
+            "id": 2,
+            "icon": "graduation-cap-solid.svg",
+            "title": "Methodology",
+            "description": [
+               "Bootcamp intensive",
+               "Practical projects",
+               "Collaborative learning",
+               "Access to resources"
+            ],
+            "shape": 2,
+            "tip": false
+         },
+         {
+            "id": 3,
+            "icon": "chart-simple-solid.svg",
+            "title": "Results",
+            "description": [
+               "Practical skills",
+               "Impressive portfolio",
+               "Professional confidence",
+               "Employment opportunities"
+            ],
+            "shape": 3,
+            "tip": true
+         }
+      ],
+      "why": {
+         "title": "why ?",
+         "data": [
+            {
+               "title": "Pedagogical Excellence:",
+               "description": "Our team of industry experts provides flexible, practical and up-to-date training on real-world projects, which will allow you to acquire concrete skills that are sought after by employers."
+            },
+            {
+               "title": "Unlimited career opportunities:",
+               "description": "You offer the opportunity to access a wide range of professional opportunities in the field you are passionate about."
+            },
+            {
+               "title": "Community and network:",
+               "description": "You join a dynamic community of learners and experts in the field. You will have the opportunity to work collaboratively with other participants, share your ideas and forge strong professional ties, a key factor for your future success."
+            },
+            {
+               "title": "Individual coaching:",
+               "description": "Benefit from tailored support to help you meet challenges, achieve your goals and maximize your potential throughout your journey."
+            }
+         ]
+      },
+      "forWho": {
+         "title": "for who ?",
+         "data": [
+            {
+               "title": "Ambitious students: ",
+               "description": "Students who wish to actively prepare for success in the digital field will find an opportunity to develop practical skills and gain practical experience."
+            },
+            {
+               "title": "Enterprise Teams:",
+               "description": "Companies can enroll their teams in the program to develop internal skills, improve performance and stay competitive in an ever-changing business environment."
+            },
+            {
+               "title": "Aspiring Contractors:",
+               "description": "Individuals with entrepreneurial ideas to start businesses can use their digital knowledge to create and successfully manage their projects."
+            },
+            {
+               "title": "Transitioning Professionals:",
+               "description": "People who are looking to reorient themselves towards the digital field or to evolve their career path can benefit from our program to quickly acquire the necessary skills and succeed in their professional transition."
+            }
+         ]
+      },
+      "bootcamps": {
+         "title": "Bootcamp",
+         "learn": "Learn more",
+         "join": "Join",
+         "levelTitle": "level",
+         "durationTitle": "duration",
+         "month": "Months"
+      },
+      "howItWorks": {
+         "title": "how it works",
+         "data": [
+            {
+               "id": 1
+            },
+            {
+               "id": 2,
+               "title": "Select",
+               "titleBold": "Bootcamp"
+            },
+            {
+               "id": 3,
+               "title": "Interview",
+               "titleBold": ""
+            },
+            {
+               "id": 4,
+               "title": "Join",
+               "titleBold": "Bootcamp"
+            },
+            {
+               "title": "Integration",
+               "titleBold": ""
+            },
+            {
+               "id": 5
+            }
+         ]
+      },
+      "ourPartners": {
+         "title": "our partners"
+      },
+      "coaches": {
+         "title": "coaches",
+         "data": [
+            {"id": 0, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "SAID ZAIM", "title": "E-commerce & Digital Marketing"},
+            {"id": 1, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "ELMEHDI ELASRI", "title": "E-commerce & Digital Marketing"},
+            {"id": 2, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "OMAR OULMOUDEN", "title": "Design & graphic animation"},
+            {"id": 3, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "MOUAD KAAIB", "title": "mobile developer"},
+            {"id": 4, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "WALID OUTACH", "title": "video editer"},
+            {"id": 5, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "HAMID MOUME", "title": "graphic design"},
+            {"id": 6, "picture": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU", "name": "M.AMINE TZEMMOUT", "title": "IT project manager"}
+         ],
+         "coacheButton": "more information about coaches"
+      },
+      "reviews" : {
+         "title" : "Reviews",
+         "You": "YOU !",
+         "Share1": "Share your opinion",
+         "Share2": " About l'Karriére"
+      },
+      "contact": {
+         "infosTitle": "Have questions?",
+         "formTitle": "How can we help you?",
+         "infosDescription": "For any request, contact our support team.",
+         "formDescription": "If you would like to talk to us, please complete the form below and we will contact you.",
+         "callUs": "Call us",
+         "emailUs": "Email us",
+         "name": "Name",
+         "namePlaceholder": "Enter your last name",
+         "firstName": "First name",
+         "firstNamePlaceholder": "Enter your first name",
+         "phone": "Phone",
+         "phonePlaceholder": "Enter your phone number",
+         "email": "Email",
+         "emailPlaceholder": "Enter your e-mail",
+         "message": "Message",
+         "messagePlaceholder": "Enter your message",
+         "condition": "Yes, I would like to receive occasional news and updates from l'karrière.",
+         "button": "Submit"
+      }
+   },
+   "k-camps": {
+      "Hero_section": {
+         "title1": "You too can get the job ",
+         "title1A": "of your dreams",
+         "title2": "Change your life now with the first bootcamp in Morocco that guides you step ",
+         "title2A": "by step to build a complete online project.",
+         "warning": "RISK FREE - If you don't like the content for any reason you will get your money back",
+         "button": "View Content"
+      },
+      "Counter_section": {
+         "title1": "All you need is high quality content with",
+         "title2": "the guidance and follow-up of expert trainers",
+         "hour": "hours",
+         "session": "sessions",
+         "weeks": "weeks"
+      },
+      "Projects": {
+         "title1": "Projects carried out for companies by members of the academy",
+         "title2": "If you are looking for a place where results come true, l'karrière is the place you are looking for",
+         "team": "team"
+      },
+      "Certificate": {
+         "title": "You will receive an accredited certificate from l'karrière Academy"
+      },
+      "WhyChooseUs": {
+         "title1": "Why is l'karrière not like any other place?",
+         "title2": "We made this comparison for you so you don’t waste your time discovering the differences in what you get from the bootcamp and other online courses available",
+         "column1": "Other",
+         "column2": "Youtube",
+         "column3": "l'karrière",
+         "tableData": [
+            {
+               "title": "Interactive lessons and applied tasks",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "High Quality Arabic Content",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Ongoing training of trainers' follow-up",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Dedicated mentors and trainers",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Live Meetings",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Community for elite developers",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Real Jobs",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Working with a team",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Consultations from experts",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Daily reviews of codes",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Certificate of achievement",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            },
+            {
+               "title": "Explanation of the latest technologies",
+               "column1": false,
+               "column2": false,
+               "column3": true
+            }
+         ]
+      },
+      "Extras": {
+         "title1": "That is not all!",
+         "title2": "By joining l'karrière, you will also get:"
+      },
+      "Guarantee": {
+         "description": "And because we trust what we offer, we guarantee a full refund of your money within 30 days if you request it, without questions."
+      },
+      "Subscription_section": {
+         "title1": "Exclusive discount and limited seats",
+         "title2": "Seize the opportunity by registering now, as the registration period for the next session is closing soon",
+         "hour": "hours",
+         "minute": "minutes",
+         "second": "seconds"
+      },
+      "PaymentOption": {
+         "description": "You can pay by credit card, PayPal or through the local payment methods we offer in your country. To learn more about payment methods, you can ",
+         "link": "click here to contact our technical support directly."
+      },
+      "QAndA": {
+         "title": "frequently asked questions"
+      }
+   }
+}

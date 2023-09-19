@@ -1,0 +1,22 @@
+@media screen and (max-width: 430px) {
+    .BootcampsCard {
+        padding: 5% 0;
+        gap: 5px;
+    }
+
+    .BootcampsCard .BootcampsCardDescription {
+        width: 90%;
+    }
+
+    .BootcampsCard .BootcampsCardTitles .BootcampsCardSemiTitles{
+        width: 90%;
+    }
+
+    .BootcampsCard .BootcampsCardTitles .BootcampsCardTitle{
+        width: 85%;
+    }
+
+    .BootcampsCard .BootcampsCardLinks{
+        width: 95%;
+    }
+}

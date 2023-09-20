@@ -1,15 +1,8 @@
 
 
 export default async function getTranslations(locale) {
-   const res = await fetch('/api/translation',
-      {
-         method: 'POST',
-         body: locale
-      });
+   const base_url = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000/'
+   const res = await fetch(`http://localhost:3000/api/en-EN`)
    const data = await res.json()
-   if (data) {
-      return data
-   } else {
-      return []
-   }
+   return data;
 }

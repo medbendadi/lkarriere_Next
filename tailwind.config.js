@@ -13,10 +13,6 @@ module.exports = {
       colors: {
         'nav-hover': '#ffffff38',
       },
-      fontFamily: {
-        'en': 'Source Sans 3',
-        'ar': 'Almarai, Poppins',
-      }
     }
   },
   plugins: [],

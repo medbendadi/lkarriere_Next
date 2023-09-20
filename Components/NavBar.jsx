@@ -3,7 +3,12 @@ import NavBarDesktop from './NavBarDesktop';
 import NavBarMobile from './NavBarMobile';
 
 
-import { useTranslation } from 'react-i18next';
+import flag_ma from '../public/images/Assets/IMG SVG/Flags/ma.svg'
+import flag_fr from '../public/images/Assets/IMG SVG/Flags/fr.svg'
+import flag_ar from '../public/images/Assets/IMG SVG/Flags/ar.svg'
+import flag_us from '../public/images/Assets/IMG SVG/Flags/us.svg'
+import flag_z from '../public/images/Assets/IMG SVG/Flags/br.svg'
+
 
 
 const NavBar = ({ circleBg, openModal, translation }) => {
@@ -99,17 +104,17 @@ const NavBar = ({ circleBg, openModal, translation }) => {
 
    // List of languages
    const langs = [
-      {'flag': '/images/Assets/IMG SVG/Flags/br.svg', 'title': 'ⵜⴰⵎⴰⵣⵉⵖⵜ', 'code': 'ⵣ'},
-      {'flag': '/images/Assets/IMG SVG/Flags/ar.svg', 'title': 'العربية', 'code': 'ar-AR'},
-      {'flag': '/images/Assets/IMG SVG/Flags/ma.svg', 'title': 'الدارجة', 'code': 'ar-MA'},
-      {'flag': '/images/Assets/IMG SVG/Flags/fr.svg', 'title': 'Fraçais', 'code': 'fr-FR'},
-      {'flag': '/images/Assets/IMG SVG/Flags/us.svg', 'title': 'English', 'code': 'en-EN'},
+      {'flag': flag_z, 'title': 'ⵜⴰⵎⴰⵣⵉⵖⵜ', 'code': 'ⵣ'},
+      {'flag': flag_ar, 'title': 'العربية', 'code': 'ar-AR'},
+      {'flag': flag_ma, 'title': 'الدارجة', 'code': 'ar-MA'},
+      {'flag': flag_fr, 'title': 'Fraçais', 'code': 'fr-FR'},
+      {'flag': flag_us, 'title': 'English', 'code': 'en-EN'},
    ]   
 
    return isMobileState ? (
          <NavBarMobile openModal={openModal} langs={langs} translation={translation} chevronUp={chevronUp} setChevronUp={setChevronUp} />
    ) : (
-         <NavBarDesktop circleBg={circleBg} openModal={openModal} langs={langs} translation={translation} chevronUp={chevronUp} setChevronUp={setChevronUp} />
+            <NavBarDesktop circleBg={circleBg} openModal={openModal} langs={langs} translation={translation} chevronUp={chevronUp} setChevronUp={setChevronUp} />
    )
 
 }

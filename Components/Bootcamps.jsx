@@ -7,7 +7,7 @@ import styles from '../styles/Bootcamps.module.css'
 
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import {motion} from 'framer-motion'
+import {m} from 'framer-motion'
 import { ChevronDown, ChevronUp } from 'react-feather';
 
 // const BootcampsCard = (await import('../../../../Components/BootcampsCard/BootcampsCard')).default;
@@ -36,7 +36,7 @@ function Bootcamps({ data, translation }) {
     return (
         <div id='Home-Bootcamps' className={`${styles.Bootcamps} ${styles.BootcampsBg} w-full h-auto py-16 flex flex-col items-center gap-10 relative`}>
             {/* Header */}
-            <motion.div
+            <m.div
                 whileInView="visible"
                 initial="hidden"
                 variants={itemAnimation}
@@ -46,7 +46,7 @@ function Bootcamps({ data, translation }) {
                     <img className='lg:w-[45px] md:w-[35px] w-[45px]' src={HeaderIcon} alt="" />
                     <span className='capitalize lg:text-4xl md:text-3xl text-4xl text-white'>{(t('home', { returnObjects: true })?.bootcamps?.title ? t('home', { returnObjects: true })?.bootcamps?.title : 'bootcamp')}</span>
                 </div>
-            </motion.div>
+            </m.div>
 
             {/* Content */}
             <div className='w-full max-w-[1600px] grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center md:px-10 px-5 gap-5 gap-y-16'>

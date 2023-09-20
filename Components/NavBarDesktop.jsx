@@ -1,10 +1,8 @@
 import React, { Fragment, useRef, useState } from 'react'
-import { useTranslation } from 'react-i18next';
 
 import { Link as ScrollLink } from 'react-scroll';
-import { motion } from 'framer-motion'
+import {m} from 'framer-motion'
 import Link from 'next/link';
-import styles from '../styles/NavBar.module.css'
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 
@@ -25,18 +23,16 @@ import contactIcon from '../public/images/Assets/Icones/Icones Bar/icon bar 5.sv
 
 
 function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, translation }) {
-    const { locale, locales } = useRouter();
-    console.log(translation);
+    const router = useRouter()
+    const  lang  = router.query.lang || 'en-EN';
+    const { pathname } = router
+   const location = pathname.replace('/[lang]', '');
     const langRef = useRef();
+    const isRTL = lang?.split('-')[0] === 'ar' || false;
 
-    const { t, i18n } = useTranslation();
-    const isRTL = locale === 'ar' || locale === 'dr';
     const [onFirstHover, setOnFirstHover] = useState(false);
     const [onLastHover, setOnLastHover] = useState(false);
     // Checking the location for navbar
-    const router = useRouter();
-    const location = router?.pathname
-    console.log({location});
     const isHomePage = location === '/';
 
 
@@ -69,19 +65,19 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
     ];
 
   return (
-    <motion.div
+    <m.div
 
         className="md:flex hidden z-[999]">
-        <nav id='headBarDesktop' className={`${styles.navbar} flex justify-center items-center w-5/6 m-auto fixed top-0 ${isRTL ? "ar" : ''}`}>
-              <div id='headBarDesktopNav' className={`max-w-[1400px] w-[90%] h-full flex justify-between items-center py-[25px] ${styles.row}`}>
-                <Link href='/' className={`${styles.navbar_logo} flex`}>
-                    <div className={`${styles.navbar_logo_container} relative`}>
+        <nav id='headBarDesktop' className={`navbar flex justify-center items-center w-5/6 m-auto fixed top-0 ${isRTL ? "ar" : ''}`}>
+              <div id='headBarDesktopNav' className={`max-w-[1400px] w-[90%] h-full flex justify-between items-center py-[25px] row`}>
+                <Link href='/' className={`navbar_logo flex`}>
+                    <div className={`navbar_logo_container relative`}>
                         <Image fill className='lg:block hidden' src={isRTL ? Logo_ar : Logo} alt="Logo" />
                         <Image fill className='lg:hidden block' src={SmallLogo} alt="" />
                     </div>
                 </Link>
-                  <div className={`${styles.navbar_list} flex items-center ${styles.row}`}>
-                      <ul id='navbar_ul' className={`${styles.navbar_ul} ${styles.row} flex items-center ${styles.bg_bl} font-extralight`} style={(isRTL) && (isHomePage) ? {'--circleBg-color': "#f9fdfe"} : {'--circleBg-color': circleBg}} >
+                  <div className={`navbar_list flex items-center row`}>
+                      <ul id='navbar_ul' className={`navbar_ul row flex items-center bg_bl font-extralight`} style={(isRTL) && (isHomePage) ? {'--circleBg-color': "#f9fdfe"} : {'--circleBg-color': circleBg}} >
                     {
                         isHomePage ? (
                             menuDesktop.map((item, key) => (
@@ -92,11 +88,11 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
                                     smooth={true}
                                     offset={-0}
                                     duration={500}
-                                    className={`${styles.navbar_contact} cursor-pointer flex items-center ${styles.row} min-[1108px]:gap-2 gap-1 h-full w-full ${(key === menuDesktop.length - 1) && onLastHover ? ' after:bg-nav-hover ar' : ''}`} 
+                                    className={`navbar_contact cursor-pointer flex items-center row min-[1108px]:gap-2 gap-1 h-full w-full ${(key === menuDesktop.length - 1) && onLastHover ? ' after:bg-nav-hover ar' : ''}`} 
                                     onMouseEnter={key === 0 ? () => handleMouseEnter('first') : (key === menuDesktop.length - 1 ? () => handleMouseEnter('last') : undefined)} 
                                     onMouseLeave={key === 0 ? () => handleMouseLeave('first') : (key === menuDesktop.length - 1 ? () => handleMouseLeave('last') : undefined)}
                                 >
-                                    <div className={`${styles.navbar_ul_icon} relative`}>
+                                    <div className={`navbar_ul_icon relative`}>
                                         <Image fill  src={item.icon} alt="" />
                                     </div>
                                     {item.title}
@@ -107,11 +103,11 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
                             menuDesktop.map((item, key) => (
                                 <Link href='/' 
                                     key={key}
-                                    className={`${styles.navbar_contact} cursor-pointer flex items-center ${styles.row} min-[1108px]:gap-2 gap-1 h-full w-full ${(key === menuDesktop.length - 1) && onLastHover ? ' after:bg-nav-hover' : ''}`} 
+                                    className={`navbar_contact cursor-pointer flex items-center row min-[1108px]:gap-2 gap-1 h-full w-full ${(key === menuDesktop.length - 1) && onLastHover ? ' after:bg-nav-hover' : ''}`} 
                                     onMouseEnter={key === 0 ? () => handleMouseEnter('first') : (key === menuDesktop.length - 1 ? () => handleMouseEnter('last') : undefined)} 
                                     onMouseLeave={key === 0 ? () => handleMouseLeave('first') : (key === menuDesktop.length - 1 ? () => handleMouseLeave('last') : undefined)}
                                 >
-                                    <div className={`${styles.navbar_ul_icon} relative`}>
+                                    <div className={`navbar_ul_icon relative`}>
                                         <Image fill src={item.icon} alt="" />
                                     </div>
                                     {item.title}
@@ -122,7 +118,7 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
                     </ul>
                     <div
                         onClick={openModal}
-                        className={`${styles.navbar_play} bg-or flex ${styles.row} items-center text-center`}
+                        className={`navbar_play bg-or flex row items-center text-center`}
                         style={isRTL ? {left: '-84px', right: 'initial'} : null}
                         >
                             <span>
@@ -134,11 +130,11 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
                         </div>
                 </div>
                 <div className="py-3 self-start relative">
-                    <button onClick={toggleLanguages} className={`${styles.navbar_lang} flex items-center gap-1 min-[975px]:space-x-1 space-x-0 py-3 px-4`}>
+                    <button onClick={toggleLanguages} className={`navbar_lang flex items-center gap-1 min-[975px]:space-x-1 space-x-0 py-3 px-4`}>
                         <span>
                             <Globe size="18" />
                         </span>
-                        <p>{locale.toUpperCase()}</p>
+                        <p>{lang?.toUpperCase()}</p>
 
                         <span>
                             {
@@ -155,7 +151,7 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
                             {
                                 langs.map((item, key) => (
                                     <Fragment key={key}>
-                                        <Link href={`${location}`} locale={`${item.code}`} className='w-[70%] flex justify-between items-center gap-2 hover:text-[#5358A6] py-2  '>
+                                        <Link href={`/${item.code}${location}`} className='w-[70%] flex justify-between items-center gap-2 hover:text-[#5358A6] py-2  '>
                                             <div className='w-[20px] h-[20px] relative'>
                                             <Image fill src={item.flag} alt="" />
                                             </div>
@@ -174,7 +170,7 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
                 </div>
             </div>
         </nav>
-    </motion.div > 
+    </m.div > 
   )
 }
 const MemoizedMyComponent = React.memo(NavBarDesktop);

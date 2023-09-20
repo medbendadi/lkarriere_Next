@@ -95,10 +95,13 @@
 .ar .navbar_ul:before{
    right: initial;
    left: 1px;
+   background-color: #f9feff;
 }
 .ar .navbar_ul:after{
    left: -39px;
    right: initial;
+   background-color: #f9feff;
+
 }
  .ar .navbar_ul a:last-child{
    padding-left: 50px;

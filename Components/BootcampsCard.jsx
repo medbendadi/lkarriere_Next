@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { ChevronRight } from 'react-feather'
 
 // Framer Motion
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 
 // Icons
 import BootcampsCardIcon from '/images/Assets/Icones/Icones Setion Bootcamps/icon 2.svg';
@@ -37,7 +37,7 @@ function BootcampsCard({ item, translation }) {
         }
     };
     return (
-        <motion.div
+        <m.div
             whileInView="visible"
             initial="hidden"
             variants={itemAnimation}
@@ -116,7 +116,7 @@ function BootcampsCard({ item, translation }) {
                 </div> 
             </div>
             
-        </motion.div>
+        </m.div>
     )
 }
 const MemorizedBootcampsCard = memo(BootcampsCard);

@@ -1,9 +1,13 @@
 import '../styles/tailwind.css'
 import '../styles/globals.css'
+import '../styles/NavBar.css'
 
+import { Poppins_Font, Source_Sans_3_Font, Almarai_Font } from '@/utils/fonts'
 import { useEffect, useState } from "react";
 // import "../styles/globals.css";
 import { useRouter } from "next/router";
+import { LazyMotion, domAnimation } from 'framer-motion';
+
 
 // import { disableReactDevTools } from '@fvilers/disable-react-devtools'
 
@@ -16,9 +20,11 @@ import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
   const { locale } = useRouter();
-      useEffect(() => {
 
 
+
+  
+  useEffect(() => {
          const elementsWithMargin = document.querySelectorAll(".mr");
      
          if (elementsWithMargin && (locale === 'ar-MA' || locale === 'ar-AR')) {
@@ -33,7 +39,14 @@ function MyApp({ Component, pageProps }) {
        }, [locale])
   return (
     <div className={`selection:bg-[var(--second-purple)] selection:text-white ${locale === 'ar-AR' || locale === 'ar-MA' ? 'font-ar' : 'font-en '}`}>
+      <style jsx global>{`
+        html{
+          font-family: ${Almarai_Font.style.fontFamily}, ${Source_Sans_3_Font.style.fontFamily};
+        }
+      `}</style>
+      <LazyMotion features={domAnimation}>
         <Component {...pageProps} />
+      </LazyMotion>
     </div>
   );
 }

@@ -2,7 +2,6 @@ import React, { Fragment, useRef } from 'react'
 
 import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';
-import styles from '../styles/NavBar.module.css'
 import Image from 'next/image';
 
 
@@ -28,15 +27,16 @@ import { useRouter } from 'next/router';
 
 
 function NavBarMobile({ openModal, langs, chevronUp, setChevronUp, translation  }) {
-    const { locale, locales } = useRouter();
     const menuRef = useRef();
+    const router = useRouter()
+    const  lang  = router.query.lang || 'en-EN';
+    const { pathname } = router
+   const location = pathname.replace('/[lang]', '');
     
 
-    const isRTL = locale === 'ar-AR' || locale === 'ar-MA';
+  const isRTL = lang?.split('-')[0] === 'ar' || false;
 
     // Checking the location for navbar
-    const router = useRouter();
-    const location = router.pathname
     const isHomePage = location === '/';
 
 
@@ -59,10 +59,6 @@ function NavBarMobile({ openModal, langs, chevronUp, setChevronUp, translation  
         menuRef.current.classList.remove('active')
     }
 
-    const handleLang = async(lang) => {
-        localStorage.setItem('lang', lang)
-        i18n.changeLanguage(lang)
-    }
 
     const toggleLanguages = () => {
         setChevronUp(prev => !prev);
@@ -76,12 +72,12 @@ function NavBarMobile({ openModal, langs, chevronUp, setChevronUp, translation  
                 {/* Logo */}
                 <Link href='/'>
                       <div>
-                          <div className='relative w-[120px] h-[100px]'>
+                          <div className='relative w-[120px] h-[40px]'>
                             <Image fill className="min-[315px]:block hidden" src={isRTL ? Logo_ar : Logo } alt="Logo" />
                           </div>
-                          <div className='relative w-[30px] h-[25px]'>
-                        <Image fill className='min-[315px]:hidden block' src={SmallLogo} alt="Logo" />
-                    </div>
+                          {/* <div className='relative w-[30px] h-[25px]'> */}
+                        {/* <Image fill className='min-[315px]:hidden block' src={SmallLogo} alt="Logo" /> */}
+                    {/* </div> */}
                           </div>
                 </Link>
 
@@ -105,7 +101,7 @@ function NavBarMobile({ openModal, langs, chevronUp, setChevronUp, translation  
                                 {
                                     langs.map((item, key) => (
                                     <Fragment key={key}>
-                                            <Link href={`${location}`} locale={`${item.code}`} className='w-[70%] flex justify-between items-center gap-2 hover:text-[#5358A6] py-2'>
+                                            <Link href={`/${item.code}${location}`} className='w-[70%] flex justify-between items-center gap-2 hover:text-[#5358A6] py-2'>
                                             <div className='relative w-[20px] h-[20px]'>
 
                                                     <Image fill src={item.flag} alt="" />

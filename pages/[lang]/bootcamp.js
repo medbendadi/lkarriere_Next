@@ -5,8 +5,6 @@ import dynamic from "next/dynamic";
 const Meta = dynamic(() => import('../../components/Meta'))
 const NavBar = dynamic(() => import('../../components/NavBar'))
 const Hero = dynamic(() => import('../../components/Hero'))
-import { useState, useEffect } from 'react';
-import getTranslations from '@/handlers/getTranslations';
 
 import { Phone } from '@mui/icons-material'
 import { getDictionary } from '@/getTranslation';
@@ -16,7 +14,6 @@ const Bootcamp = ({ translation }) => {
    const router = useRouter()
    const { pathname } = router
    const location = pathname.replace('/[lang]/', '');
-   console.log(location);
   const { lang } = router.query;
 
   return (
@@ -26,7 +23,7 @@ const Bootcamp = ({ translation }) => {
            translation?.home?.contact?.formDescription
         }
         <br/>
-        <Link href={`/ar-AR/${location}`} >AR</Link>
+        <Link href={`/ar_AR/${location}`} >AR</Link>
         <br/>
         {/* {
            location
@@ -39,17 +36,16 @@ const Bootcamp = ({ translation }) => {
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { lang: 'ar-AR' } },
-      { params: { lang: 'ar-MA' } },
-      { params: { lang: 'en-EN' } },
-      { params: { lang: 'fr-FR' } },
+      { params: { lang: 'ar_AR' } },
+      { params: { lang: 'ar_MA' } },
+      { params: { lang: 'en_EN' } },
+      { params: { lang: 'fr_FR' } },
     ],
     fallback: false, // Set to false or true depending on your requirements
   };
 }
 
 export async function getStaticProps({ params }) { 
-  console.log(params.lang);
   const translation = await getDictionary(params.lang)
   return {
     props: {

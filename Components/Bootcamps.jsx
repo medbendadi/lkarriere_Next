@@ -18,7 +18,7 @@ function Bootcamps({ data, translation }) {
     const [countBootcampCards, setCountBootcampCards] = useState(6);
     const [showBootcampCards, setShowBootcampCards] = useState(false);
 
-    const isRTL = locale === 'ar-Ar' || locale === 'ar-MA';
+    const isRTL = locale === 'ar_AR' || locale === 'ar_MA';
 
 
     const itemAnimation = {

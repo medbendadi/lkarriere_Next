@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
          const elementsWithMargin = document.querySelectorAll(".mr");
      
-         if (elementsWithMargin && (locale === 'ar-MA' || locale === 'ar-AR')) {
+         if (elementsWithMargin && (locale === 'ar_MA' || locale === 'ar_AR')) {
            Array.from(elementsWithMargin)?.forEach(element => {
              const marginRightValue = window.getComputedStyle(element).getPropertyValue("margin-right");
              const marginLeftValue = window.getComputedStyle(element).getPropertyValue("margin-left");
@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
          }
        }, [locale])
   return (
-    <div className={`selection:bg-[var(--second-purple)] selection:text-white ${locale === 'ar-AR' || locale === 'ar-MA' ? 'font-ar' : 'font-en '}`}>
+    <div className={`selection:bg-[var(--second-purple)] selection:text-white ${locale === 'ar_AR' || locale === 'ar_MA' ? 'font-ar' : 'font-en '}`}>
       <style jsx global>{`
         html{
           font-family: ${Almarai_Font.style.fontFamily}, ${Source_Sans_3_Font.style.fontFamily};

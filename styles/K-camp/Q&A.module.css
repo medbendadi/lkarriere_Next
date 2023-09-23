@@ -1,0 +1,123 @@
+.introduction {
+   width: 100%;
+   box-shadow: 0 15px 34px 0 rgba(0, 0, 0, .15);
+   -moz-box-shadow: 0 15px 34px 0 rgba(0, 0, 0, .15);
+   -webkit-box-shadow: 0 15px 34px 0 rgba(0, 0, 0, .15);
+   min-height: 80px;
+   background: #fff;
+   overflow: hidden;
+}
+
+.introduction:not(:last-child) {
+   border-bottom: 1px solid #0000001c;
+}
+
+.introduction {
+   align-items: flex-start;
+   width: 100%;
+}
+
+.introduction-shape {
+   object-fit: contain;
+   width: 60px;
+}
+
+.introduction-shape img {
+   width: 100%;
+   height: 100%;
+}
+
+.introduction_content {
+   background-color: #fff;
+   color: black;
+   font-size: 20px;
+   padding: 15px 20px;
+   position: relative;
+   cursor: pointer;
+   min-height: 69px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.introduction_content_text {
+   /* font-family: 'Poppins', sans-serif; */
+   font-weight: 700;
+}
+
+.introduction_content_number.active {
+   background: -webkit-gradient(linear, right top, left top, from(#9042e8), to(#2d43e7));
+   background: linear-gradient(270deg, #9042e8, #2d43e7);
+}
+
+.introduction_content_number {
+   background: #ccc;
+   width: 40px;
+   height: 40px;
+   padding: 13px;
+   border-radius: 5px;
+   text-align: center;
+   color: #fff;
+}
+
+.introduction_content_dropdown {
+   background-color: #fafafa;
+   /* text-align: center; */
+   color: #000;
+   -webkit-transition: max-height .3s;
+   -moz-transition: max-height .3s;
+   -ms-transition: max-height .3s;
+   -o-transition: max-height .3s;
+   transition: max-height .3s;
+   overflow: hidden;
+   max-height: 0;
+   /* opacity: 0; */
+}
+
+.introduction_content_dropdown_inner {
+   padding: 20px;
+}
+
+.introduction_content_dropdown div {
+   padding: 11px;
+   color: #000;
+   font-size: 16px;
+   font-weight: 300;
+   line-height: 2.5;
+}
+
+.introduction_content_dropdown.active_dropdown {
+   -webkit-transition: max-height .3s;
+   -moz-transition: max-height .3s;
+   -ms-transition: max-height .3s;
+   -o-transition: max-height .3s;
+   transition: max-height .3s;
+
+   max-height: 500rem;
+}
+
+.introduction_content_dropdown::after {
+   position: absolute;
+   top: -25px;
+   right: 0;
+   content: '';
+   height: 29px;
+   width: 20px;
+   background-color: #eee;
+   z-index: -1;
+}
+
+.introduction_content_tip {
+   position: absolute;
+   width: 24px;
+   object-fit: contain;
+   left: -21px;
+   top: 46%;
+   z-index: -1;
+   transform: translateY(-50%);
+}
+
+.introduction_content_tip img {
+   width: 100%;
+   height: 100%;
+}

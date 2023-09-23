@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
          }
        }, [locale])
   return (
-    <div className={`selection:bg-[var(--second-purple)] selection:text-white ${locale === 'ar-AR' || locale === 'ar-MA' ? 'font-ar' : 'font-en '}`}>
+    <div className={`selection:bg-[var(--second-purple)] selection:text-white`}>
       <style jsx global>{`
         html{
           font-family: ${Almarai_Font.style.fontFamily}, ${Source_Sans_3_Font.style.fontFamily};

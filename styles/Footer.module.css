@@ -1,0 +1,28 @@
+.footerLeft {
+   background: var(--purple-linear-gradient-dark);
+}
+
+.footerList {
+   border-right: 1px solid white;
+   border-left: 1px solid white;
+}
+
+.footerRight {
+   background-color: var(--second-purple);
+}
+
+.footerDown {
+   background: var(--yellow-linear-gradient-light);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+   .footerList {
+      border-right: none;
+      border-left: none;
+   }
+
+   .footerLeft {
+      background: linear-gradient(to bottom, #8D58A4, #5358A6);;
+   }
+}

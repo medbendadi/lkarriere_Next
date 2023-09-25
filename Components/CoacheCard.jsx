@@ -43,7 +43,7 @@ function CoacheCard({ isActive, picture, name, title }) {
         {/* Photo */}
           <div className={`${styles.picture_container} min-w-[175px] min-h-[175px] max-w-[175px] max-h-[175px] border-[.1px] border-solid border-slate-100 rounded-full relative flex justify-center items-center`}>
               <div className='min-w-[165px] min-h-[165px] max-w-[165px] max-h-[165px] rounded-full overflow-hidden relative'>
-            <Image fill className='object-cover' src={picture} alt="" loading='lazy' />
+                    <Image fill className='object-cover' src={picture} alt="" loading='lazy' />
               </div>
             <div className='absolute inset-0 bg-white/70 rounded-full'></div>
         </div>

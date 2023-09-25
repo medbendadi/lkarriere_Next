@@ -21,6 +21,9 @@ import App from 'next/app';
 
 function MyApp({ Component, pageProps }) {
   const { locale } = useRouter();
+  const router = useRouter();
+  const lang = router.query.lang || 'en';
+  const isRTL = lang === 'ar' || lang === 'ma';
 
   useEffect(() => {
          const elementsWithMargin = document.querySelectorAll(".mr");
@@ -37,12 +40,31 @@ function MyApp({ Component, pageProps }) {
        }, [locale])
   return (
     <div className={`selection:bg-[var(--second-purple)] selection:text-white`}>
-      <style jsx global>{
+      {
+        isRTL ? 
+        <style jsx global>{
+      
+          `
+            html{
+              font-family: ${Almarai_Font.style.fontFamily};
+            }
+          `}</style> : 
+
+          <style jsx global>{
+      
+            `
+              html{
+                font-family: ${Source_Sans_3_Font.style.fontFamily};
+              }
+            `}</style>
+      }
+      {/* <style jsx global>{
+      
       `
         html{
-          font-family: ${Almarai_Font.style.fontFamily}, ${Source_Sans_3_Font.style.fontFamily};
+          font-family: ${Source_Sans_3_Font.style.fontFamily}, ${Almarai_Font.style.fontFamily};
         }
-      `}</style>
+      `}</style> */}
         <LazyMotion features={domAnimation}>
           <Component {...pageProps} />
         </LazyMotion>

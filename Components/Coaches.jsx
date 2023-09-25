@@ -24,7 +24,7 @@ function Coaches({translation}) {
   
   const [swiper, setSwiper] = useState(null);
 
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  const [activeSlideIndex, setActiveSlideIndex] = useState(1);
 
   const handleSlideChange = (swiper) => {
       setActiveSlideIndex(swiper.realIndex);
@@ -57,7 +57,7 @@ function Coaches({translation}) {
             breakpoints={{
               775: {
                 slidesPerView: 3,
-                spaceBetween: -5 
+                spaceBetween: -5
               },
             }}
           >

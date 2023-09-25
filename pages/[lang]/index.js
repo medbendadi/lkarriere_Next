@@ -34,13 +34,19 @@ const Reviews = dynamic(() => import('../../components/Reviews'), {
 const Contact = dynamic(() => import('../../components/Contact'), {
   loading: () => <div></div>,
 })
+const JoinForm = dynamic(() => import('../../components/JoinFom'), {
+  loading: () => <div></div>,
+})
 
 import { fetchData } from '../../FetchData';
 
 import { getDictionary } from '@/getTranslation';
+import { useState } from 'react';
 
 
 const index = ({ translation, camps, reviews }) => {
+  const [handleModal, setHandleModal] = useState(false)
+  
   const router = useRouter()
   const lang  = router.query.lang;
   
@@ -62,7 +68,7 @@ const index = ({ translation, camps, reviews }) => {
             <Contact translation={translation.home?.contact}/>
             {/* <Footer /> */}
             {
-              //  handleModal ? (<JoinForm  onClose={() => setHandleModal(false)}/>) : null
+               handleModal ? (<JoinForm translation={translation.form} onClose={() => setHandleModal(false)}/>) : null
         }
             
                {/* Whatssap Icon */}

@@ -24,7 +24,7 @@ const QAndA = ({ questionAndAnswers, isRTL, translation, lang }) => {
          </div>
          <div id="introduction" className={`${styles.introduction} flex flex-col text-xs items-center rounded-[35px]`}>
             {
-               questionAndAnswers.map((item, index) => (
+               questionAndAnswers?.map((item, index) => (
                   <div
                      key={index} className={`${styles.introduction} w-full`}>
                      <div className={`${styles.introduction_content} w-full`} onClick={() => handleActive(index+1)}>

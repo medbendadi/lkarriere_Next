@@ -10,20 +10,12 @@ import { ChevronRight } from 'react-feather'
 import { m } from 'framer-motion'
 
 // Icons
-import BootcampsCardIcon from '/images/Assets/Icones/Icones Setion Bootcamps/icon 2.svg';
-import LevelIcon from '/images/Assets/Icones/Icones Setion Bootcamps/icon 3.svg';
-import DurationIcon from '/images/Assets/Icones/Icones Setion Bootcamps/icon 4.svg';
-import JoinIcon from '/images/Assets/Icones/Icones Setion Bootcamps/icon 5.svg';
+import BootcampsCardIcon from '../public/images/Assets/Icones/Icones Setion Bootcamps/icon 2.svg';
+import LevelIcon from '../public/images/Assets/Icones/Icones Setion Bootcamps/icon 3.svg';
+import DurationIcon from '../public/images/Assets/Icones/Icones Setion Bootcamps/icon 4.svg';
+import JoinIcon from '../public/images/Assets/Icones/Icones Setion Bootcamps/icon 5.svg';
 
-
-// Translation
-import { useTranslation } from 'react-i18next';
-
-function BootcampsCard({ item, translation }) {
-    const { t, i18n } = useTranslation();
-    const isRTL = i18n.language === 'ar' || i18n.language === 'dr';
-
-    const lang = localStorage.getItem('lang') || i18n.language
+function BootcampsCard({ item, translation, isRTL, lang }) {
     const itemAnimation = {
         hidden: { y: 100, opacity: 0 },
         visible: {
@@ -60,7 +52,7 @@ function BootcampsCard({ item, translation }) {
                             <div className={`flex justify-between items-center ${isRTL ? 'flex-row-reverse' : 'flex-row'}`}>
                                 {/* Title */}
                                 <div>
-                                    <span className='capitalize font-light text-sm'>{t('home', { returnObjects: true })?.bootcamps?.levelTitle}</span>
+                                    <span className='capitalize font-light text-sm'>{translation?.levelTitle}</span>
                                 </div>
                                 {/* icon */}
                                 <div>
@@ -76,7 +68,7 @@ function BootcampsCard({ item, translation }) {
                             <div className={`flex justify-between items-center ${isRTL ? 'flex-row-reverse' : 'flex-row'}`}>
                                 {/* Title */}
                                 <div>
-                                    <span className='capitalize font-light text-sm'>{t('home', { returnObjects: true })?.bootcamps?.durationTitle}</span>
+                                    <span className='capitalize font-light text-sm'>{translation?.durationTitle}</span>
                                 </div>
                                 {/* icon */}
                                 <div>
@@ -84,7 +76,7 @@ function BootcampsCard({ item, translation }) {
                                 </div>
                             </div>
                             <div className={`${isRTL ? 'text-end' : 'text-start'}`}>
-                                <span className='text-lg capitalize'>{item?.duration} {t('home', { returnObjects: true })?.bootcamps?.month}</span>
+                                <span className='text-lg capitalize'>{item?.duration} {translation?.month}</span>
                             </div>
                         </div>
                     </div>
@@ -104,13 +96,13 @@ function BootcampsCard({ item, translation }) {
                         before:content-[""] before:absolute before:w-[28px] before:h-[28px] before:rounded-full before:bg-white before:right-1 before:top-[50%] before:-translate-y-[50%] hover:opacity-[.9] duration-300`}
                     >
                         <img className={`w-[14px] ${isRTL ? 'scale-x-[-1]' : 'scale-x-1'}`} src={JoinIcon} alt="icon" />
-                        <span className={`${isRTL ? 'scale-x-[-1]' : 'scale-x-1'}`}>{t('home', { returnObjects: true })?.bootcamps?.join}</span>
+                        <span className={`${isRTL ? 'scale-x-[-1]' : 'scale-x-1'}`}>{translation?.join}</span>
                     </Link>
 
                     {/* Second Button */}
                     <Link href={`K-camp/`+item.label} target='_blank'
                     className='second-button uppercase flex justify-center items-center w-[45%] py-4 rounded-full relative -ml-1 hover:opacity-[.9] duration-300 bg-[#ececec] text-[#5357A6]'>
-                        <span className={`${isRTL ? 'scale-x-[-1]' : 'scale-x-1'}`}>{t('home', { returnObjects: true })?.bootcamps?.learn}</span>
+                        <span className={`${isRTL ? 'scale-x-[-1]' : 'scale-x-1'}`}>{translation?.learn}</span>
                         <ChevronRight size={16} />
                     </Link>
                 </div> 

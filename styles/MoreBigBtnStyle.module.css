@@ -1,0 +1,8 @@
+.moreBigBtn {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0px 0px 16px rgba(0, 0, 0,  0.19);
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.25);
+  -webkit-backdrop-filter: blur(4px);
+  color: var(--main-purple);
+}

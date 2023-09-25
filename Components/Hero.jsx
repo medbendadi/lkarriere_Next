@@ -61,8 +61,8 @@ const Hero = ({ translation }) => {
    const isMobile = isMobileState;
 
    const router = useRouter()
-  const lang = router.query.lang || 'en-EN';
-   const isRTL = lang?.split('-')[0] === 'ar' || false;
+  const lang = router.query.lang || 'en_EN';
+   const isRTL = lang?.split('_')[0] === 'ar' || false;
 
    return (
       <div id='Home-Hero' className={`${styles.hero} max-w-[2000px] w-full flex justify-center relative shadow-2xl shadow-black/20 ${isRTL ? 'justify-end' : ''} `}>
@@ -73,10 +73,11 @@ const Hero = ({ translation }) => {
                duration: 0.8,
                delay: 0.8
             }}
-            className={`${styles.hero_content} flex flex-col items-center ${isRTL ? 'md:items-end md:text-right text-center w-fit md:mr-[300px]' : 'md:items-start md:text-start text-center w-full'}`}>
+            className={`${styles.hero_content} flex flex-col items-center ${isRTL ? 'md:items-end md:text-right text-center w-fit md:mr-[300px]' : 'md:items-start md:text-start text-center w-full'} font-extralight`}>
             <h1>{translation?.title1} </h1>
             <div className={`${styles.hero_img_container}`}>
-               <Image fill src={textSvg} alt="" loading='lazy' />
+               <Image fill src={textSvg} alt="" oading="eager" priority={true} placeholder="blur"
+                blurDataURL="data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]" quality="100" />
             </div>
             <h1>{translation?.title2} <br /> {translation?.title3}</h1>
          </m.div>
@@ -88,7 +89,8 @@ const Hero = ({ translation }) => {
                delay: 0.8
             }}
             className={`${styles.hero_person} md:block hidden`}>
-            <Image fill src={personSvg} alt="" loading="eager" />
+            <Image fill src={personSvg} alt="" loading="eager" priority={true} placeholder="blur"
+                blurDataURL="data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]" quality="100"/>
          </m.div>
          <m.div
             variants={isMobile? {} : container}

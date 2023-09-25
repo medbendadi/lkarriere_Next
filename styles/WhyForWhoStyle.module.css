@@ -1,0 +1,181 @@
+/* Why & For Who background */
+.WhyForWhoBg {
+    background-image: url('../public/images/Assets/IMG SVG/Section Why_who/BG.svg');
+    background-position: center;
+    background-size: cover;
+}
+
+/* Header */
+.WhyHeader::before {
+    content: "";
+    position: absolute;
+    right: -1px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: #ececec;
+}
+
+.WhyHeader::after {
+    content: "";
+    position: absolute;
+    right: -46px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: #ececec;
+}
+
+.WhoHeader::before {
+    content: "";
+    position: absolute;
+    left: -22px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50px;
+    background-color: #FAA32C;
+}
+
+/* Card Background  */
+
+.puzzleWhyWhoPage {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* Purple */
+
+.puzzleWhyWhoPage_purple_tl {
+    background-image: url('../public/images/Assets/IMG SVG/Section Why_who/Puzzle\ Right\ 1\ .svg');
+}
+
+
+.puzzleWhyWhoPage_purple_tr {
+    background-image: url('../public/images/Assets/IMG SVG/Section Why_who/Puzzle\ Right\ 2\ .svg');
+}
+
+.puzzleWhyWhoPage_purple_bl {
+    background-image: url('../public/images/Assets/IMG SVG/Section Why_who/Puzzle\ Right\ 3\ .svg');
+}
+
+.puzzleWhyWhoPage_purple_br {
+    background-image: url('../public/images/Assets/IMG SVG/Section Why_who/Puzzle\ Right\ 4\ .svg');
+}
+
+/* Yellow */
+
+.puzzleWhyWhoPage_yellow_tl {
+    background-image: url('../public/images/Assets/IMG SVG/Section Why_who/Puzzle\ Left\ 1.svg');
+}
+
+.puzzleWhyWhoPage_yellow_tr {
+    background-image: url('../public/images/Assets/IMG SVG/Section Why_who/Puzzle\ Left\ 2.svg');
+}
+
+.puzzleWhyWhoPage_yellow_bl {
+    background-image: url('../public/images/Assets/IMG SVG/Section Why_who/Puzzle\ Left\ 3.svg');
+}
+
+.puzzleWhyWhoPage_yellow_br {
+    background-image: url('../public/images/Assets/IMG SVG/Section Why_who/Puzzle\ Left\ 4.svg');
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 1160px) {
+    .WhyForWhoContainer {
+        flex-direction: column;
+        gap: 100px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .WhyForWhoContainer {
+        gap: 20px;
+    }
+}
+
+/* Responsive Mobile ( max width : 400px) */
+
+@media screen and (max-width: 400px) {
+
+    /* -------------------------------------------- */
+
+    .ForWhoContent, .WhyContent {
+        height: 350px;
+        padding: 5% 0;
+    }
+
+    /* Icon */
+    .iconWhyWhoPage {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* --------------------------------------- */
+
+    /* Box 1 */
+
+    /* Container */
+    .puzzleWhyWhoPageBox1 {
+        width: 155px;
+        height: 180px;
+        gap: 5px;
+        padding: 10px 0 25px 0;
+    }
+
+    .puzzleWhyWhoPageBox1 .description {
+        width: 70%;
+        overflow-y: auto;
+    }
+
+    /* Box 2 */
+    .puzzleWhyWhoPageBox2 {
+        width: 215px;
+        height: 160px;
+        top: 0;
+        left: -44px;
+        gap: 5px;
+        padding: 10px 10px 25px 20px;
+    }
+
+    .puzzleWhyWhoPageBox2 .description {
+        width: 70%;
+        overflow-y: auto;
+    }
+
+    /* Box 3 */
+    .puzzleWhyWhoPageBox3 {
+        width: 215px;
+        height: 160px;
+        right: -45px;
+        gap: 5px;
+        padding: 25px 10px 10px 0px;
+    }
+
+    .puzzleWhyWhoPageBox3 .description {
+        width: 60%;
+        overflow-y: auto;
+    }
+
+    /* Box 4 */
+    .puzzleWhyWhoPageBox4 {
+        width: 150px;
+        height: 180px;
+        left: -2px;
+        gap: 5px;
+        padding: 45px 10px 10px 10px;
+    }
+
+    .puzzleWhyWhoPageBox4 .description {
+        width: 70%;
+        overflow-y: auto;
+    }
+
+    /* -------------------------------------------- */
+    .secondLineWhyForWhoPage {
+        margin-top: -105px;
+    }
+}

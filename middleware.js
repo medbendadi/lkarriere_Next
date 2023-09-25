@@ -7,20 +7,34 @@ import Negotiator from 'negotiator'
 
 function getLocale(request) {
   // Negotiator expects plain object so we need to transform headers
-  const negotiatorHeaders = {}
-  request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
+// Transform headers to a plain object
+const negotiatorHeaders = {};
+request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
 
-  // @ts-ignore locales are readonly
-  const locales = i18n.locales
+// Get supported locales from i18n configuration
+const locales = i18n.locales;
 
-  // Use negotiator and intl-localematcher to get best locale
-  let languages = new Negotiator({ headers: negotiatorHeaders }).languages(
-    locales
-  )
+// Use negotiator to get client's preferred languages
+const negotiator = new Negotiator({ headers: negotiatorHeaders });
+const clientLanguages = negotiator.languages(locales);
 
-  const locale = matchLocale(languages, locales, i18n.defaultLocale)
+// Check if clientLanguages is an array and not empty
+if (Array.isArray(clientLanguages) && clientLanguages.length > 0) {
+  // Match the client's languages to a supported locale
+  const locale = matchLocale(clientLanguages, locales, i18n.defaultLocale);
 
-  return locale
+  if (locale) {
+    return locale;
+  } else {
+    // Handle the case where no matching locale is found
+    console.warn('No matching locale found. Falling back to default locale.');
+    return i18n.defaultLocale;
+  }
+} else {
+  // Handle the case where clientLanguages is not an array or empty
+  console.warn('Client did not provide valid language preferences. Falling back to default locale.');
+  return i18n.defaultLocale;
+}
 }
 
 export function middleware(request) {

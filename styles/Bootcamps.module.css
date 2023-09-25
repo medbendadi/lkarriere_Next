@@ -8,7 +8,7 @@
 
 .BootcampsBg::before {
     content: "";
-    background-image: url('../../../../public/images/Assets//IMG SVG/Setion Bootcamps/BG Transparent.webp');
+    background-image: url('../public/images/Assets//IMG SVG/Setion Bootcamps/BG Transparent.webp');
     background-position: top;
     background-size: cover;
     position: absolute;
@@ -39,7 +39,7 @@
 }
 
 .Bootacamps_bg_header {
-    background-image: url('../../../../public/images/Assets//IMG SVG/Setion Bootcamps/Header.svg');
+    background-image: url('../public/images/Assets//IMG SVG/Setion Bootcamps/Header.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

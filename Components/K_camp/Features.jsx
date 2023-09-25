@@ -12,6 +12,7 @@ import checkIcon from '../../public/images/Assets/Icones/Icones Section Infos/ch
 
 
 const Features = ({ features, isRTL, lang }) => {
+   console.log(lang);
    const [active, setActive] = useState(1)
 
    const handleActive = (item) => {
@@ -38,7 +39,7 @@ const Features = ({ features, isRTL, lang }) => {
       <div className='w-full h-auto flex justify-center py-10'>
          <div className={`lg:w-[80%] min-[450px]:w-[90%] w-[95%] max-w-[1200px] ${styles.features_cards} space-y-2 overflow-x-hidden`}>
             {
-               features.map((item, index) => (
+               features?.map((item, index) => (
                   <motion.div
                      whileInView="visible"
                      initial="hidden"

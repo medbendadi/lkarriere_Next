@@ -1,40 +1,55 @@
-import React, { memo, useState, useEffect } from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import dynamic from "next/dynamic";
 import {Phone} from '@mui/icons-material';
-import getTranslations from '@/handlers/getTranslations';
+import { getDictionary } from '@/getTranslation';
 
 const Meta = dynamic(() => import('../../../Components/Meta')),
-NavBar = dynamic(() => import('../../../Components/NavBar')),
-Hero = dynamic(() => import('../../../Components/K_camp/Hero')),
-CounterSection = dynamic(() => import('../../../Components/K_camp/CounterSection')),
-Features = dynamic(() => import('../../../Components/K_camp/Features')),
-Infos = dynamic(() => import('../../../Components/K_camp/Infos')),
-Projects = dynamic(() => import('../../../Components/K_camp/Projects')),
-Certificate = dynamic(() => import('../../../Components/K_camp/Certificate')),
-WhyChooseUs = dynamic(() => import('../../../Components/K_camp/WhyChooseUs')),
-Price = dynamic(() => import('../../../Components/K_camp/Price')),
-Extras = dynamic(() => import('../../../Components/K_camp/Extras')),
-QAndA = dynamic(() => import('../../../Components/K_camp/Q&A')),
-Footer = dynamic(() => import('../../../Components/Footer'));
+NavBar = dynamic(() => import('../../../Components/NavBar'), {
+  loading: () => <div></div>,
+}),
+Hero = dynamic(() => import('../../../Components/K_camp/Hero'), {
+  loading: () => <div></div>,
+}),
+CounterSection = dynamic(() => import('../../../Components/K_camp/CounterSection'), {
+  loading: () => <div></div>,
+}),
+Features = dynamic(() => import('../../../Components/K_camp/Features'), {
+  loading: () => <div></div>,
+}),
+Infos = dynamic(() => import('../../../Components/K_camp/Infos'), {
+  loading: () => <div></div>,
+}),
+Projects = dynamic(() => import('../../../Components/K_camp/Projects'), {
+  loading: () => <div></div>,
+}),
+Certificate = dynamic(() => import('../../../Components/K_camp/Certificate'), {
+  loading: () => <div></div>,
+}),
+WhyChooseUs = dynamic(() => import('../../../Components/K_camp/WhyChooseUs'), {
+  loading: () => <div></div>,
+}),
+Price = dynamic(() => import('../../../Components/K_camp/Price'), {
+  loading: () => <div></div>,
+}),
+Extras = dynamic(() => import('../../../Components/K_camp/Extras'), {
+  loading: () => <div></div>,
+}),
+QAndA = dynamic(() => import('../../../Components/K_camp/Q&A'), {
+  loading: () => <div></div>,
+}),
+Footer = dynamic(() => import('../../../Components/Footer'), {
+  loading: () => <div></div>,
+});
 
-function k_camp({ Bootcamp }) {
+function k_camp({ Bootcamp, translation }) {
     const router = useRouter();
     const lang = router.query.lang || 'en-EN';
-    const locale = lang?.split('-')[0];
+    const locale = lang?.split('_')[0];
     const isRTL = locale === 'ar' || locale === 'dr';
 
     const Kcamp = router.query.Kcamp;
-
-    const [translation, setTranslation] = useState([]);
-    useEffect(() => {
-      const getData = async () => {
-        const data = await getTranslations(lang);
-        setTranslation(data);
-      }
-      getData()
-    }, [locale]);
 
     return (
       <>
@@ -52,7 +67,7 @@ function k_camp({ Bootcamp }) {
 
             <Infos silverBoxes={Bootcamp?.silverBoxSection} goldenBox={Bootcamp?.goldenBox} isRTL={isRTL} lang={locale} />
 
-            <Projects projectSection={Bootcamp?.projectSection} translation={translation?.k_camps?.Projects} />
+            <Projects projectSection={Bootcamp?.projectSection} translation={translation?.k_camps?.Projects} tButtons={translation?.buttons} isRTL={isRTL} />
 
             {/* Reviews */}
             {/* <Reviews bootcamp={bootcampTitile} /> */}
@@ -85,8 +100,9 @@ export default MemorizedX;
 
 export const getServerSideProps = async ({ params }) => {
   try{
+    const translation = await getDictionary(params.lang);
     const Kcamp = params.Kcamp;
-    const query = encodeURIComponent(`*[_type == "K-camps" && bootcamp->label == "Web_development"][0]`);
+    const query = encodeURIComponent(`*[_type == "K-camps" && bootcamp->label == "${Kcamp}"][0]`);
     const url = `${process.env.SANITY_URL}query=${query}`;
     const res = await fetch(url, {
       method: 'GET',
@@ -102,12 +118,14 @@ export const getServerSideProps = async ({ params }) => {
       return {
           props: {
             Bootcamp: [],
+            translation: translation || [],
           }
       };
     } else {
       return {
           props: {
-            Bootcamp
+            Bootcamp,
+            translation: translation || [],
           },
       }
     }

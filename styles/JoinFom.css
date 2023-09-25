@@ -1,0 +1,91 @@
+.activeCamp{
+   background: var(--purple-linear-gradient-dark);
+   /* padding: ; */
+}
+
+.activeCamp p{
+   color: white;
+   border-color: white;
+
+}
+/* .activeCamp img{
+   width: 35px;
+   height: 35px;
+} */
+
+.ant-input-number{
+   width: 100%;
+}
+
+.ant-form-item-label label{
+   font-weight: bold;
+   font-size: 18px;
+   font-family: 'Source Sans 3', sans-serif;
+}
+
+.ant-form-item-label > label.ant-form-item-required:before {
+   content: unset !important;
+}
+
+.ant-form-item-label label{
+   color:var(--main-purple) !important;
+   font-size: 17px !important;
+   margin-left: 10px !important;
+}
+
+
+
+.ant-select-selector{
+   padding: 0.5rem 18px !important;
+   height: auto !important;
+   border-radius: 9999px !important;
+   font-size: 1rem !important;
+}
+.ant-select-multiple .ant-select-selection-item{
+   background-color: #e0dff7 !important;
+   color: #6a669f !important;
+   padding-inline: 15px !important;
+   border-radius: 9999px !important;
+   
+}
+.ant-select-dropdown .ant-select-item-option-active:not(.ant-select-item-option-disabled){
+   background-color: #e1dcfc !important;
+
+}
+.ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled){
+   background-color: #e1dcfc;
+}
+
+.ant-select-dropdown .ant-select-item{
+   /* border-radius: 9999px !important; */
+   padding: 10px;
+   margin: 2px 0 ;
+}
+.ant-select-dropdown{
+   background-color: #cdc4f9 !important;
+}
+textarea {
+   resize: none !important;
+ }
+/* 
+.last .ant-select-selector{
+   padding: 0.5rem 11px !important;
+} */
+
+.ar .ant-col.ant-col-24.ant-form-item-label.css-dev-only-do-not-override-byeoj0{
+   text-align: end;
+}
+
+.ar .ant-col.ant-col-24.ant-form-item-label.css-dev-only-do-not-override-byeoj0 label{
+   font-family: 'Droid Arabic Kufi';
+}
+
+
+.checkIconCircle::after{
+   animation: crescendo 1.5s alternate infinite ease-in;
+}
+
+@keyframes crescendo {
+  0%   {transform: scale(.87);}
+  100% {transform: scale(1);}
+}

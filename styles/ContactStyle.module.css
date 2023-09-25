@@ -1,0 +1,35 @@
+/* Backgrounds */
+.InfosBg {
+    background-image: url('../public/images/Assets/IMG SVG/Section Contact/BG 1.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.FormBg {
+    background-image: url('../public/images/Assets/IMG SVG/Section Contact/BG 2.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.checkbox-input {
+    appearance: none;
+    -webkit-appearance: none;
+    min-height: 15px;
+    min-width: 15px;
+    height: 15px;
+    width: 15px;
+    border: 2px solid #FAA32C;
+    position: relative;
+}
+
+.checkbox-input:checked {
+    background-color: #FAA32C;
+}
+
+.checkbox-input:checked:after {
+    content: url("../public/images/Assets/Icones/Icones Section Contact/check.svg");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}

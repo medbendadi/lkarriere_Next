@@ -31,6 +31,9 @@ const Coaches = dynamic(() => import('../../components/Coaches'), {
 const Reviews = dynamic(() => import('../../components/Reviews'), {
   loading: () => <div></div>,
 })
+const Contact = dynamic(() => import('../../components/Contact'), {
+  loading: () => <div></div>,
+})
 
 import { fetchData } from '../../FetchData';
 
@@ -56,7 +59,7 @@ const index = ({ translation, camps, reviews }) => {
             <Partners translation={translation.home?.ourPartners}/>
             <Coaches translation={translation.home?.coaches}/>
         <Reviews icon={true} translation={translation} reviews={reviews} />
-            {/* <Contact /> */}
+            <Contact translation={translation.home?.contact}/>
             {/* <Footer /> */}
             {
               //  handleModal ? (<JoinForm  onClose={() => setHandleModal(false)}/>) : null

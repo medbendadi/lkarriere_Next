@@ -37,11 +37,11 @@ const NavBar = ({ circleBg, openModal, translation }) => {
 
    // List of languages
    const langs = [
-      {'flag': flag_z, 'title': 'ⵜⴰⵎⴰⵣⵉⵖⵜ', 'code': 'AGH_Z'},
-      {'flag': flag_ar, 'title': 'العربية', 'code': 'ar_AR'},
-      {'flag': flag_ma, 'title': 'الدارجة', 'code': 'ar_MA'},
-      {'flag': flag_fr, 'title': 'Fraçais', 'code': 'fr_FR'},
-      {'flag': flag_us, 'title': 'English', 'code': 'en_EN'},
+      {'flag': flag_z, 'title': 'ⵜⴰⵎⴰⵣⵉⵖⵜ', 'code': 'z'},
+      {'flag': flag_ar, 'title': 'العربية', 'code': 'ar'},
+      {'flag': flag_ma, 'title': 'الدارجة', 'code': 'ma'},
+      {'flag': flag_fr, 'title': 'Fraçais', 'code': 'fr'},
+      {'flag': flag_us, 'title': 'English', 'code': 'en'},
    ]   
 
    return isMobileState ? (

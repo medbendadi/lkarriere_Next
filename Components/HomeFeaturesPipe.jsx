@@ -15,8 +15,8 @@ import Image from 'next/image'
 
 const HomeFeaturesPipe = ({ item, index, active, handleActive, variants, custom, isMobile }) => {
    const router = useRouter()
-    const  lang  = router.query.lang || 'en_EN';
-    const isRTL = lang?.split('_')[0] === 'ar' || false;
+    const  lang  = router.query.lang || 'en';
+    const isRTL = lang === 'ar' || lang === 'ma';
 
    return (
       <m.div
@@ -34,9 +34,9 @@ const HomeFeaturesPipe = ({ item, index, active, handleActive, variants, custom,
                onClick={() => handleActive(item.id)}>
                {
                   item.tip && (
-                     <div className={`${styles.features_card_content_tip}`}
+                     <div className={`${styles.features_card_content_tip}  h-[38px] w-[38px]`}
                         style={isRTL ? { right: ' -21px', left: 'initial', top: '50%' } : { left: ' -21px', right: 'initial' }}>
-                        <Image fill src={isRTL ? tip : require('../public/images/Assets/tip.png')} alt="" loading='lazy' />
+                        <Image fill src={isRTL ? tip : require('../public/images/Assets/tip.png')} alt="" loading='eager' />
                      </div>
                   )
                }
@@ -55,7 +55,7 @@ const HomeFeaturesPipe = ({ item, index, active, handleActive, variants, custom,
 
             </div>
             <div className={active === item.id ? `${styles.features_card_content_dropdown} w-full ${styles.active_dropdown} relative p-[20px] ${isRTL ? 'after:left-0 after:right-[initial]' : 'after:right-0 after:left-[initial]'}` : `${styles.features_card_content_dropdown}`}>
-               <p className='text-[#5358A6]'>
+               <div className='text-[#5358A6]'>
                   {
                      item?.description?.map((line, index) => (
                         <span className={`flex items-start gap-2 row mb-3 last:mb-0 min-[795px]:text-base min-[570px]:text-sm text-xs ${isRTL ? 'text-end' : 'text-start'}`} key={index}>
@@ -66,7 +66,7 @@ const HomeFeaturesPipe = ({ item, index, active, handleActive, variants, custom,
                         </span>
                      ))
                   }
-               </p>
+               </div>
             </div>
 
          </div>

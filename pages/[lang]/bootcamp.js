@@ -23,7 +23,7 @@ const Bootcamp = ({ translation }) => {
            translation?.home?.contact?.formDescription
         }
         <br/>
-        <Link href={`/ar_AR/${location}`} >AR</Link>
+        <Link href={`/ar/${location}`} >AR</Link>
         <br/>
         {/* {
            location
@@ -36,10 +36,10 @@ const Bootcamp = ({ translation }) => {
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { lang: 'ar_AR' } },
-      { params: { lang: 'ar_MA' } },
-      { params: { lang: 'en_EN' } },
-      { params: { lang: 'fr_FR' } },
+      { params: { lang: 'ar' } },
+      { params: { lang: 'ma' } },
+      { params: { lang: 'en' } },
+      { params: { lang: 'fr' } },
     ],
     fallback: false, // Set to false or true depending on your requirements
   };

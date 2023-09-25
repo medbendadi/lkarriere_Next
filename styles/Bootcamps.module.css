@@ -8,7 +8,7 @@
 
 .BootcampsBg::before {
     content: "";
-    background-image: url('../../../../public/images/Assets//IMG SVG/Setion Bootcamps/BG Transparent.webp');
+    background-image: url('../public/images/Assets//IMG SVG/Setion Bootcamps/BG Transparent.webp');
     background-position: top;
     background-size: cover;
     position: absolute;
@@ -22,11 +22,11 @@
 
 /* Bootcamps cards */
 
-.Bootcamps .BootcampsCard{
+.BootcampsCard{
     z-index: 0;
 }
 
-.Bootcamps .BootcampsCard::before {
+.BootcampsCard::before {
     content: "";
     position: absolute;
     top: 0;
@@ -39,49 +39,12 @@
 }
 
 .Bootacamps_bg_header {
-    background-image: url('../../../../public/images/Assets//IMG SVG/Setion Bootcamps/Header.svg');
+    background-image: url('../public/images/Assets//IMG SVG/Setion Bootcamps/Header.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-/* Card Button */
-
-.Bootcamps .BootcampsCard .second-button::before {
-    content: "";
-    position: absolute;
-    left: -15px;
-    top: 50%;
-    transform: translate(0, -50%);
-    border-radius: 50px;
-    width: 20px;
-    height: 20px;
-    background-color: #ececec;
-}
-
-.Bootcamps .BootcampsCard .first-button::after {
-    content: "";
-    position: absolute;
-    right: -32px;
-    top: 50%;
-    transform: translate(0, -50%);
-    border-radius: 50px;
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-}
-
-.Bootcamps .BootcampsCard {
-    transition: all .3s;
-
-}
-
-.Bootcamps .BootcampsCard:hover {
-    box-shadow: 0px 0px 45px -12px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0px 0px 45px -12px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 45px -12px rgba(0, 0, 0, 0.75);
-    transform: scale(1.03) !important;
-}
 
 @media screen and (max-width: 768px) {
     .Bootacamps_bg_header {

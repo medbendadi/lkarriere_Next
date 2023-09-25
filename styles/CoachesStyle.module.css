@@ -1,0 +1,169 @@
+/* coaches-button-shadow */
+.coaches_button_prev, .coaches_button_prev{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1280px) {
+    .CoachesContainer {
+        gap: 20px;
+    }
+
+    /* Coache Button */
+    .coache_button_link_container {
+        width: 950px;
+    }
+
+    .coache_button_link {
+        width: 945px;
+    }
+
+    /* Slider container */
+    .coaches_slider_container {
+        width: 885px;
+    }
+
+    /* Swiper Buttons */
+    .coaches_button_prev,  .coaches_button_next {
+        width: 75px;
+        height: 75px;
+    }
+
+    .coaches_button_prev {
+        left: -37.5px;
+    }
+
+    .coaches_button_next {
+        right: -37.5px;
+    }
+}
+
+@media screen and (max-width: 975px) {
+
+    .CoachesContainer {
+        padding: 30px 0;
+    }
+
+    /* Coache Button */
+    .coache_button_link_container {
+        width: 700px;
+    }
+
+    .coache_button_link {
+        width: 695px;
+    }
+
+    /* Slider container */
+    .coaches_slider_container {
+        width: 700px;
+    }
+
+    /* Swiper Buttons */
+    .coaches_button_prev,  .coaches_button_next {
+        width: 60px;
+        height: 60px;
+    }
+
+    .coaches_button_prev {
+        left: -30px;
+        padding-right: 5px;
+    }
+
+    .coaches_button_next {
+        right: -30px;
+        padding-left: 5px;
+    }
+}
+
+@media screen and (max-width: 775px) {
+
+
+    /* Slider container */
+    .coaches_slider_container {
+        width: 370px;
+    }
+
+    /* Coache Button */
+    .coache_button_link_container {
+        width: 350px;
+    }
+
+    .coache_button_link {
+        width: 345px;
+    }
+
+    /* Swiper Buttons */
+    .coaches_button_prev,  .coaches_button_next {
+        width: 90px;
+        height: 90px;
+    }
+
+    .coaches_button_prev {
+        left: -45px;
+        padding-right: 10px;
+    }
+
+    .coaches_button_next {
+        right: -45px;
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+
+    /* Slider container */
+    .coaches_slider_container {
+        width: 290px;
+    }
+
+    /* Coache Button */
+    .coache_button_link_container {
+        width: 270px;
+    }
+
+    .coache_button_link {
+        width: 265px;
+    }
+
+    /* Swiper Buttons */
+    .coaches_button_prev,  .coaches_button_next {
+        width: 70px;
+        height: 70px;
+    }
+
+    .coaches_button_prev {
+        left: -35px;
+        padding-right: 10px;
+    }
+
+    .coaches_button_next {
+        right: -35px;
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+
+
+    /* Slider container */
+    .coaches_slider_container {
+        width: 220px;
+    }
+
+    /* Swiper Buttons */
+    .coaches_button_prev,  .coaches_button_next {
+        width: 55px;
+        height: 55px;
+    }
+
+    .coaches_button_prev {
+        left: -30px;
+        padding-right: 5px;
+    }
+
+    .coaches_button_next {
+        right: -30px;
+        padding-left: 5px;
+    }
+}

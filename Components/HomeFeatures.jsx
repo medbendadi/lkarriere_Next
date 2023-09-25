@@ -26,8 +26,8 @@ const HomeFeatures = ({translation}) => {
    }
 
    const router = useRouter()
-   const  lang  = router.query.lang || 'en_EN';
-   const isRTL = lang?.split('_')[0] === 'ar' || false;
+   const  lang  = router.query.lang || 'en';
+   const isRTL = lang === 'ar' || lang === 'ma';
    
    
    const [isMobileState, setIsMobileState] = useState(null);

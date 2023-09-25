@@ -1,0 +1,500 @@
+/* .c-left-top {
+    content: "";
+    position: absolute;
+    top: -17px;
+    left: calc(50% + 10px);
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-bottom-left-radius: 50px;
+    box-shadow: -6px 6px 0 6px #FAA32C;
+} */
+
+
+/* ----------------------------------------------------- */
+
+/*  
+.c-left-bottom {
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    left: calc(50% + 10px);
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top-left-radius: 50px;
+    box-shadow: -6px -6px 0 6px #FAA32C;
+} */
+
+
+/* ----------------------------------------------------- */
+
+/* ----------------------------------------------------- */
+
+
+/* .c-right-top {
+    content: "";
+    position: absolute;
+    top: -17px;
+    right: calc(50% - 10px);
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-bottom-right-radius: 50px;
+    box-shadow: 6px 6px 0 6px #FAA32C;
+} */
+
+
+/* ----------------------------------------------------- */
+
+
+/* .c-right-bottom {
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    right: calc(50% - 10px);
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top-right-radius: 50px;
+    box-shadow: 6px -6px 0 6px #FAA32C;
+} */
+
+/* ----------------------------------------------------- */
+
+/* ----------------------------------------------------- */
+
+/* ----------------------------------------------------- */
+
+/* ----------------------------------------------------- */
+
+/* .c-left-top-active {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: calc(50% + 3px);
+    transform: translateX(-50%);
+    width: 15px;
+    height: 10px;
+    background-color: transparent;
+    border-bottom-right-radius: 50px;
+    box-shadow: 6px 6px 0 6px #5758a6;
+} */
+
+
+/* ----------------------------------------------------- */
+
+
+/* .c-left-bottom-active {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% + 3px);
+    transform: translateX(-50%);
+    width: 15px;
+    height: 10px;
+    background-color: transparent;
+    border-top-right-radius: 50px;
+    box-shadow: 6px -6px 0 6px #5758a6;
+} */
+
+/* ----------------------------------------------------- */
+
+/* ----------------------------------------------------- */
+
+/* .c-right-top-active {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: calc(50% - 12px);
+    transform: translateX(-50%);
+    width: 15px;
+    height: 10px;
+    background-color: transparent;
+    border-bottom-left-radius: 50px;
+    box-shadow: -6px 6px 0 6px #5758a6;
+} */
+
+
+/* ----------------------------------------------------- */
+
+
+/* .c-right-bottom-active {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: calc(50% - 12px);
+    transform: translateX(-50%);
+    width: 15px;
+    height: 10px;
+    background-color: transparent;
+    border-top-left-radius: 50px;
+    box-shadow: -6px -6px 0 6px #5758a6;
+} */
+
+/* Swiper */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.slide-content {
+    overflow: hidden;
+}
+
+/* Coache Card */
+
+.coache_card.active {
+    filter: drop-shadow(0 0 8px rgb(0, 0, 0, 0.3));
+}
+
+.CoacheCardBgWhite::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../public/images/Assets/IMG\ SVG/Section\ Coaches/Coach\ SVG\ White.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+}
+
+.CoacheCardBgColor::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../public/images/Assets/IMG\ SVG/Section\ Coaches/Coach\ SVG\ Color.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+}
+
+.CoacheCardYellowLeftColor {
+    margin-right: -70px;
+}
+
+.CoacheCardYellowLeftColor::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+    background-image: url('../public/images/Assets/IMG\ SVG/Section\ Coaches/Coach\ SVG\ Yellow\ left.svg');
+}
+
+.CoacheCardYellowRightColor {
+    margin-left: -70px;
+}
+
+.CoacheCardYellowRightColor::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+    background-image: url('../public/images/Assets/IMG\ SVG/Section\ Coaches/Coach\ SVG\ Yellow\ right.svg');
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 1280px) {
+
+    /* Cards */
+    /* White Card */
+    .coache_card {
+        min-width: 280px;
+        min-height: 350px;
+        height: 350px;
+        width: 280px;
+    }
+
+    /* Colored Card */
+    .coache_card.active {
+        min-width: 360px;
+        min-height: 350px;
+        max-height: 350px;
+        height: 350px;
+        width: 360px;
+    }
+
+    /* Card Picture */
+    .coache_card .picture_container {
+        min-width: 140px;
+        min-height: 140px;
+        max-width: 140px;
+        max-height: 140px;
+    }
+
+    .coache_card .picture_container img {
+        min-width: 130px;
+        min-height: 130px;
+        max-width: 130px;
+        max-height: 130px;
+    }
+
+    .coache_card.active .picture_container img {
+        min-width: 140px;
+        min-height: 140px;
+        max-width: 140px;
+        max-height: 140px;
+    }
+
+    /* Card Coache's Name */
+    .coache_card .coacheName {
+        font-size: 1.3rem;
+    }
+
+    .coache_card .coacheTitle {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 975px) {
+
+    /* Cards */
+    /* White Card */
+    .coache_card {
+        min-width: 220px;
+        min-height: 300px;
+        height: 300px;
+        width: 220px;
+        gap: 10px;
+    }
+
+    /* Colored Card */
+    .coache_card.active {
+        min-width: 280px;
+        min-height: 300px;
+        max-height: 300px;
+        height: 300px;
+        width: 280px;
+    }
+
+    /* Card Picture */
+    .coache_card .picture_container {
+        min-width: 105px;
+        min-height: 105px;
+        max-width: 105px;
+        max-height: 105px;
+    }
+
+    .coache_card .picture_container img {
+        min-width: 100px;
+        min-height: 100px;
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .coache_card.active .picture_container img {
+        min-width: 105px;
+        min-height: 105px;
+        max-width: 105px;
+        max-height: 105px;
+        border: 3px solid white;
+    }
+
+    /* Card Coache's Name */
+    .coache_card .coacheName {
+        font-size: 1.1rem;
+    }
+
+    .coache_card .coacheTitle {
+        font-size: .8rem;
+    }
+
+}
+
+@media screen and (max-width: 775px) {
+    .CoacheCardBgColor::before {
+        background-image: url('../public/images/Assets/IMG\ SVG/Section\ Coaches/Coach\ SVG\ White\ Color.svg');
+        z-index: -1;
+    }
+
+    /* Cards */
+    /* White Card */
+    .coache_card {
+        min-width: 350px;
+        min-height: 400px;
+        height: 400px;
+        width: 350px;
+        gap: 20px;
+        z-index: 0;
+    }
+
+    /* Colored Card */
+    .coache_card.active {
+        min-width: 350px;
+        min-height: 400px;
+        max-height: 400px;
+        height: 400px;
+        width: 350px;
+    }
+
+    /* Card Picture */
+    .coache_card .picture_container {
+        min-width: 175px;
+        min-height: 175px;
+        max-width: 175px;
+        max-height: 175px;
+    }
+
+    .coache_card .picture_container img {
+        min-width: 165px;
+        min-height: 165px;
+        max-width: 165px;
+        max-height: 165px;
+    }
+
+    .coache_card.active .picture_container img {
+        min-width: 165px;
+        min-height: 165px;
+        max-width: 165px;
+        max-height: 165px;
+        border: 3px solid white;
+    }
+
+    /* Card Coache's Name */
+    .coache_card .coacheName {
+        font-size: 1.5rem;
+    }
+
+    .coache_card .coacheTitle {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .coache_card {
+        min-width: 280px;
+        min-height: 350px;
+        height: 350px;
+        width: 280px;
+    }
+
+    /* Colored Card */
+    .coache_card.active {
+        min-width: 280px;
+        min-height: 350px;
+        max-height: 350px;
+        height: 350px;
+        width: 280px;
+        gap: 10px;
+    }
+
+    /* Card Picture */
+    .coache_card .picture_container {
+        min-width: 140px;
+        min-height: 140px;
+        max-width: 140px;
+        max-height: 140px;
+    }
+
+    .coache_card .picture_container img {
+        min-width: 135px;
+        min-height: 135px;
+        max-width: 135px;
+        max-height: 135px;
+    }
+
+    .coache_card.active .picture_container img {
+        min-width: 135px;
+        min-height: 135px;
+        max-width: 135px;
+        max-height: 135px;
+        border: 3px solid white;
+    }
+
+    /* Card Coache's Name */
+    .coache_card .coacheName {
+        font-size: 1.4rem;
+    }
+
+    .coache_card .coacheTitle {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 370px) {
+
+    .coache_card {
+        min-width: 220px;
+        min-height: 300px;
+        height: 300px;
+        width: 220px;
+    }
+
+    /* Colored Card */
+    .coache_card.active {
+        min-width: 220px;
+        min-height: 300px;
+        max-height: 300px;
+        height: 300px;
+        width: 220px;
+        gap: 10px;
+    }
+
+    /* Card Picture */
+    .coache_card .picture_container {
+        min-width: 120px;
+        min-height: 120px;
+        max-width: 120px;
+        max-height: 120px;
+    }
+
+    .coache_card .picture_container img {
+        min-width: 115px;
+        min-height: 115px;
+        max-width: 115px;
+        max-height: 115px;
+    }
+
+    .coache_card.active .picture_container img {
+        min-width: 115px;
+        min-height: 115px;
+        max-width: 115px;
+        max-height: 115px;
+        border: 3px solid white;
+    }
+
+    /* Card Coache's Name */
+    .coache_card .coacheName {
+        font-size: 1.2rem;
+    }
+
+    .coache_card .coacheTitle {
+        font-size: .8rem;
+    }
+
+}

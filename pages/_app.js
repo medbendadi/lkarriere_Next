@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 // import "../styles/globals.css";
 import { useRouter } from "next/router";
 import { LazyMotion, domAnimation } from 'framer-motion';
+import App from 'next/app';
 
 
 // import { disableReactDevTools } from '@fvilers/disable-react-devtools'
@@ -27,7 +28,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
          const elementsWithMargin = document.querySelectorAll(".mr");
      
-         if (elementsWithMargin && (locale === 'ar_MA' || locale === 'ar_AR')) {
+         if (elementsWithMargin && (locale === 'ma' || locale === 'ar')) {
            Array.from(elementsWithMargin)?.forEach(element => {
              const marginRightValue = window.getComputedStyle(element).getPropertyValue("margin-right");
              const marginLeftValue = window.getComputedStyle(element).getPropertyValue("margin-left");
@@ -38,7 +39,7 @@ function MyApp({ Component, pageProps }) {
          }
        }, [locale])
   return (
-    <div className={`selection:bg-[var(--second-purple)] selection:text-white ${locale === 'ar_AR' || locale === 'ar_MA' ? 'font-ar' : 'font-en '}`}>
+    <div className={`selection:bg-[var(--second-purple)] selection:text-white ${locale === 'ar' || locale === 'ma' ? 'font-ar' : 'font-en '}`}>
       <style jsx global>{`
         html{
           font-family: ${Almarai_Font.style.fontFamily}, ${Source_Sans_3_Font.style.fontFamily};
@@ -51,4 +52,9 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
+MyApp.getInitialProps = async (appContext) => {
+  // calls page's `getInitialProps` and fills `appProps.pageProps`
+  const appProps = await App.getInitialProps(appContext);
+  return { ...appProps };
+};
 export default MyApp;

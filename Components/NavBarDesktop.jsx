@@ -25,11 +25,11 @@ import { useEffect } from 'react';
 
 function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, translation }) {
     const router = useRouter()
-    const lang = router.query.lang || 'en_EN';
+    const lang = router.query.lang || 'en';
     const { pathname } = router
     const location = pathname.replace('/[lang]', '');
     const langRef = useRef();
-    const isRTL = lang?.split('_')[0] === 'ar' || false;
+    const isRTL = lang === 'ar' || lang === 'ma';
 
     const [onFirstHover, setOnFirstHover] = useState(false);
     const [onLastHover, setOnLastHover] = useState(false);
@@ -143,7 +143,8 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
                                         {
                                             isHomePage ? (
                                         menuDesktop.map((item, key) => (
-                                                    <ScrollLink
+                                            <ScrollLink
+                                                key={key}
                                                         to={`${item.navigate}`}
                                                         spy={true}
                                                         smooth={true}
@@ -165,6 +166,7 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
                                             menuDesktop.map((item, key) => (
                                                     <Link href='/'
                                                     aria-label='home'
+                                                    key={key}
                                                         className={`navbar_contact cursor-pointer flex items-center row min-[1108px]:gap-2 gap-1 h-full w-full ${(key === menuDesktop.length - 1) && onLastHover ? ' after:bg-nav-hover' : ''}`}
                                                         onMouseEnter={key === 0 ? () => handleMouseEnter('first') : (key === menuDesktop.length - 1 ? () => handleMouseEnter('last') : undefined)}
                                                         onMouseLeave={key === 0 ? () => handleMouseLeave('first') : (key === menuDesktop.length - 1 ? () => handleMouseLeave('last') : undefined)}
@@ -196,7 +198,7 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
                                         <span>
                                             <Globe size="18" />
                                         </span>
-                                        <p>{lang.split('_')[1]?.toUpperCase()}</p>
+                                        <p>{lang?.toUpperCase()}</p>
 
                                         <span>
                                             {

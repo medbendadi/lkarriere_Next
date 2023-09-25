@@ -30,12 +30,12 @@ import { useState, useEffect } from 'react';
 function NavBarMobile({ openModal, langs, chevronUp, setChevronUp, translation, setDomLoaded  }) {
     const menuRef = useRef();
     const router = useRouter()
-    const  lang  = router.query.lang || 'en_EN';
+    const  lang  = router.query.lang || 'en';
     const { pathname } = router
    const location = pathname.replace('/[lang]', '');
     
 
-  const isRTL = lang?.split('_')[0] === 'ar' || false;
+  const isRTL = lang === 'ar' || lang === 'ma';
 
     // Checking the location for navbar
     const isHomePage = location === '/';

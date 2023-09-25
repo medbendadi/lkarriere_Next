@@ -1,0 +1,47 @@
+.HowItWorksPuzzle {
+    background-position: center;
+    background-size: cover;
+}
+
+/* .HowItWorksPuzzle-rotate {
+    transform: none !important;
+} */
+
+/* .HowItWorksPuzzle-no-rotate {
+    transform: rotate(0) !important;
+} */
+
+.HowItWorksPuzzle1 {
+    background-image: url('../public/images/Assets/IMG SVG/Section How it Works/Puzzle\ 1.svg');
+}
+
+.HowItWorksPuzzle1_right {
+    background-image: url('../public/images/Assets/IMG SVG/Section How it Works/Puzzle\ 1-right.svg');
+}
+
+.HowItWorksPuzzle1_left {
+    background-image: url('../public/images/Assets/IMG SVG/Section How it Works/Puzzle\ 1-left.svg');
+}
+
+.HowItWorksPuzzle2 {
+    background-image: url('../public/images/Assets/IMG SVG/Section How it Works/Puzzle 2.svg');
+}
+
+.HowItWorksPuzzle3 {
+    background-image: url('../public/images/Assets/IMG SVG/Section How it Works/Puzzle 3.svg');
+}
+
+/* #firstHowItWorksPuzzle {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+
+#lastHowItWorksPuzzle {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+} */
+
+@media screen and (max-width: 640px) {
+    .HowItWorksPuzzle_rotate {
+        transform: rotate(90deg) !important;
+    }
+}

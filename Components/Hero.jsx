@@ -61,8 +61,8 @@ const Hero = ({ translation }) => {
    const isMobile = isMobileState;
 
    const router = useRouter()
-  const lang = router.query.lang || 'en_EN';
-   const isRTL = lang?.split('_')[0] === 'ar' || false;
+  const lang = router.query.lang || 'en';
+   const isRTL = lang === 'ar' || lang === 'ma';
 
    return (
       <div id='Home-Hero' className={`${styles.hero} max-w-[2000px] w-full flex justify-center relative shadow-2xl shadow-black/20 ${isRTL ? 'justify-end' : ''} `}>

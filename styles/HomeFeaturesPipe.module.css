@@ -36,13 +36,13 @@
    transition: all .3s;
 }
 
-.features_card_content_dropdown p {
+.features_card_content_dropdown div {
    display: none;
    transition: all 0. .6s;
 
 }
 
-.features_card_content_dropdown.active_dropdown p {
+.features_card_content_dropdown.active_dropdown div {
    display: initial;
 }
 

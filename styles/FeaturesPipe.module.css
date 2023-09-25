@@ -1,0 +1,144 @@
+.features_card {
+   align-items: flex-start;
+}
+
+.features_card_shape {
+   object-fit: contain;
+   width: 60px;
+}
+
+.features_card_shape img {
+   width: 100%;
+   height: 100%;
+}
+
+.features_card_content {
+   background-color: #8b56a3;
+   background: var(--purple-linear-gradient-light);
+   color: white;
+   font-size: 20px;
+   width: 400px;
+   padding: 15px 20px;
+   border-radius: 0 30px 30px 0;
+   position: relative;
+   cursor: pointer;
+}
+
+.features_card_content_dropdown {
+   width: 400px;
+   background-color: #eee;
+   border-radius: 0 0 45px 45px;
+   text-align: center;
+   color: #8d8383;
+   height: 0;
+   /* padding: 0; */
+   /* overflow: hidden; */
+
+   transition: all .3s;
+}
+
+.features_card_content_dropdown p {
+   display: none;
+   transition: all 0. .6s;
+
+}
+
+.features_card_content_dropdown.active_dropdown p {
+   display: initial;
+}
+
+.features_card_content_dropdown.active_dropdown {
+   height: auto;
+
+}
+
+.features_card_content_dropdown.active_dropdown::after {
+   position: absolute;
+   top: -25px;
+   right: 0;
+   content: '';
+   height: 29px;
+   width: 20px;
+   background-color: #eee;
+   z-index: -1;
+}
+
+.features_card_content_tip {
+   position: absolute;
+   width: 24px;
+   object-fit: contain;
+   left: -21px;
+   top: 46%;
+   z-index: -1;
+   transform: translateY(-50%);
+}
+
+.features_card_content_tip img {
+   width: 100%;
+   height: 100%;
+}
+
+.features_bg {
+   width: 300px;
+   object-fit: contain;
+   z-index: -1;
+}
+
+.features_bg.bg1 {
+   top: -156px;
+   right: 600px;
+   transform: rotate(-10deg);
+}
+
+.features_bg.bg2 {
+   bottom: -37px;
+   left: -128px;
+}
+
+.features_bg img {
+   width: 100%;
+   height: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+   .features_card_content, 
+   .features_card_content_dropdown{
+      width: 350px;
+   }
+}
+
+/* Responsive Design Mobile */
+
+@media screen and (max-width: 450px) {
+   .features_card_content, 
+   .features_card_content_dropdown{
+      width: 250px;
+   }
+}
+
+@media screen and (max-width: 395px) {
+   .features_card {
+      justify-content: center;
+   }
+
+   .features_card_content {
+      font-size: 20px;
+      width: 270px;
+      padding: 15px 20px;
+   }
+
+   .features_card_content_dropdown {
+      width: 270px;
+   }
+}
+
+@media screen and (max-width: 345px) {
+
+   .features_card_content {
+      width: 250px;
+   }
+
+   .features_card_content_dropdown {
+      width: 250px;
+   }
+}

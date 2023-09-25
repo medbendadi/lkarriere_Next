@@ -14,7 +14,7 @@ const MoreBigBtn = dynamic(() => import('./MoreBigBtn'))
 const Reviews = ({ icon, bootcamp, reviews, translation }) => {
    const router = useRouter()
     const lang = router.query.lang;
-    
+    console.log(reviews)
     const isRTL = lang === 'ar' || lang === 'ma';
    const [filteredData, setFilteredData] = useState([])
 
@@ -50,7 +50,7 @@ const Reviews = ({ icon, bootcamp, reviews, translation }) => {
                   </div>
                )
             }
-            <span className='capitalize sm:text-6xl text-4xl' style={{ color: '#5357A6' }}>{translation?.reviews?.title}</span>
+            <span className='capitalize sm:text-6xl text-4xl' style={{ color: '#5357A6' }}>{translation?.home?.reviews?.title}</span>
          </div>
          <div className={`${styles.reviews_cards} w-full grid justify-center gap-5 xl:gap-2 p`}>
             {

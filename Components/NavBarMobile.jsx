@@ -1,3 +1,4 @@
+"use client";
 import React, { Fragment, useRef } from 'react'
 
 import { Link as ScrollLink } from 'react-scroll';

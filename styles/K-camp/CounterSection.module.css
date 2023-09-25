@@ -1,0 +1,34 @@
+.CountCardBgPurple,
+.CountCardBgYellowLeft,
+.CountCardBgYellowRight {
+    position: relative;
+}
+
+.CountCardBgPurple::before,
+.CountCardBgYellowLeft::before,
+.CountCardBgYellowRight::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+}
+
+.CountCardBgPurple::before {
+    background-image: url('../../public/images/Assets/IMG SVG/Section\ Coaches/Coach\ SVG\ Color.svg');
+}
+
+.CountCardBgYellowLeft::before {
+    background-image: url('../../public/images/Assets/IMG SVG/Section\ Coaches/Coach\ SVG\ Yellow\ left.svg');
+}
+
+.CountCardBgYellowRight::before {
+    background-image: url('../../public/images/Assets/IMG SVG/Section\ Coaches/Coach\ SVG\ Yellow\ right.svg');
+}

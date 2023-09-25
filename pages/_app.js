@@ -2,8 +2,8 @@ import '../styles/tailwind.css'
 import '../styles/globals.css'
 import '../styles/NavBar.css'
 
-import { Poppins_Font, Source_Sans_3_Font, Almarai_Font } from '@/utils/fonts'
-import { useEffect, useState } from "react";
+import { Source_Sans_3_Font, Almarai_Font } from '@/utils/fonts'
+import { Suspense, useEffect, useState } from "react";
 // import "../styles/globals.css";
 import { useRouter } from "next/router";
 import { LazyMotion, domAnimation } from 'framer-motion';
@@ -22,9 +22,6 @@ import App from 'next/app';
 function MyApp({ Component, pageProps }) {
   const { locale } = useRouter();
 
-
-
-  
   useEffect(() => {
          const elementsWithMargin = document.querySelectorAll(".mr");
      
@@ -39,15 +36,17 @@ function MyApp({ Component, pageProps }) {
          }
        }, [locale])
   return (
-    <div className={`selection:bg-[var(--second-purple)] selection:text-white ${locale === 'ar' || locale === 'ma' ? 'font-ar' : 'font-en '}`}>
-      <style jsx global>{`
+    <div className={`selection:bg-[var(--second-purple)] selection:text-white`}>
+      <style jsx global>{
+      `
         html{
           font-family: ${Almarai_Font.style.fontFamily}, ${Source_Sans_3_Font.style.fontFamily};
         }
       `}</style>
-      <LazyMotion features={domAnimation}>
-        <Component {...pageProps} />
-      </LazyMotion>
+        <LazyMotion features={domAnimation}>
+          <Component {...pageProps} />
+        </LazyMotion>
+      
     </div>
   );
 }

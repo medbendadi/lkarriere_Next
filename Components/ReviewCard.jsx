@@ -15,6 +15,7 @@ import { useRouter } from 'next/router'
 
 
 const ReviewCard = ({ item, translation }) => {
+   console.log(item)
    const [videoActive, setVideoActive] = useState(false)
    const [playIcon, setPlayIcon] = useState(true)
    const router = useRouter()
@@ -39,21 +40,21 @@ const ReviewCard = ({ item, translation }) => {
          <div className={`${styles.reviews_card_content} flex flex-col items-start sm:py-14 py-5 ${isRTL ? 'text-end' : 'text-start'}`}>
             <div className={`${styles.reviews_card_content_title}`}>
                <h1 className='text-2xl font-medium'>{lang === 'en' ? item.name.en: lang === 'fr' ? item.name.fr : lang === 'ar' && item.name.ar}</h1>
-               <h3>{lang === 'en' ? item.bootcamp.title.en: lang === 'fr' ?item.bootcamp.title.fr : lang === 'ar' && item.bootcamp.title.ar}</h3>
+               <h3>{lang === 'en' ? item.bootcamp?.title?.en: lang === 'fr' ?item.bootcamp?.title?.fr : lang === 'ar' && item.bootcamp?.title?.ar}</h3>
             </div>
             <p>{lang === 'en' ? `${item.comment.en?.split(' ').slice(0, 15).join(' ')} ....` : lang === 'fr' ? `${item.comment.fr?.split(' ').slice(0, 15).join(' ')} ....` : lang === 'ar' && `${item.comment.ar?.split(' ').slice(0, 15).join(' ')} ....`}</p>
          </div>
 
          <div onClick={() => {
             item.video && setVideoActive(true)
-         }} className={`${styles.reviews_card_video} flex items-center absolute space-x-2 ${!item.video && 'disabled'}`} style={isRTL ? {left: '14px', right: 'initial'} : null}>
+         }} className={`${styles.reviews_card_video} flex items-center absolute space-x-2 ${!item.video && `${styles.disabled}`}`} style={isRTL ? {left: '14px', right: 'initial'} : null}>
             {
-               item.video ? (
-                  <div className={`${styles.reviews_card_video_icon} relative`}>
+               item.video != null ? (
+                  <div className={`${styles.reviews_card_video_icon} relative w-[15px] h-[15px]`}>
                      <Image fill src={videoIcon} alt="" />
                   </div>
                ) : (
-                  <div className={`${styles.reviews_card_video_icon} relative`}>
+                  <div className={`${styles.reviews_card_video_icon} relative w-[15px] h-[15px]`}>
                      <Image fill src={noVideoIcon} alt="" />
                   </div>
                )
@@ -102,7 +103,7 @@ const ReviewCard = ({ item, translation }) => {
                      <ReactPlayer url={item?.video} width={499} height={247} controls={true} onReady={() => setPlayIcon(false)} />
                      {
                         playIcon ? (
-                           <div className={`${styles.reviews_card_video_box_video_icon} absolute pointer-events-none`}>
+                           <div className={`${styles.reviews_card_video_box_video_icon} absolute pointer-events-none w-[15px] h-[15px]`}>
                               <Image fill src={videoIcon} alt="" />
                            </div>
                         ) : null

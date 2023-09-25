@@ -59,9 +59,9 @@ const HomeFeaturesPipe = ({ item, index, active, handleActive, variants, custom,
                   {
                      item?.description?.map((line, index) => (
                         <span className={`flex items-start gap-2 row mb-3 last:mb-0 min-[795px]:text-base min-[570px]:text-sm text-xs ${isRTL ? 'text-end' : 'text-start'}`} key={index}>
-                           <div className={`w-[15px] h-[15px] pt-1 relative`}>
+                           <span className={`w-[15px] h-[15px] pt-1 relative`}>
                            <Image fill src={checkIcon} alt="" loading='lazy'/>
-                           </div>
+                           </span>
                            <span className={`${isRTL ? 'text-sm' : 'text-base'}`}>{line}</span>
                         </span>
                      ))

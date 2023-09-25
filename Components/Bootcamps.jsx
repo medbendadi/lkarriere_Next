@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import styles from '../styles/Bootcamps.module.css'
 
 import { useState, memo } from 'react';
@@ -6,6 +5,8 @@ import {m} from 'framer-motion'
 import { ChevronDown, ChevronUp } from 'react-feather';
 import Image from 'next/image';
 import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
+
 
 
 const BootcampsCard = dynamic(() => import('./BootcampsCard'))
@@ -79,8 +80,41 @@ function Bootcamps({ camps, translation }) {
                )  
             }
         </div>
+        
     )
 }
 
 const MemorizedBootcamps = memo(Bootcamps);
 export default MemorizedBootcamps;
+
+export const getStaticProps = async () => {
+    try{
+        const query = encodeURIComponent(`*[_type == "bootcamps"]`);
+        const url = `${process.env.SANITY_URL}query=${query}`;
+        console.log(url);
+        const res = await fetch(url, {
+            method: 'GET',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+        });
+    
+        const data = await res.json();
+        const Bootcamps = data.result;
+        if (!Bootcamps || !Bootcamps.length === 0) {
+        return {
+            props: {
+                Bootcamps: [],
+            }
+        };
+        } else {
+        return {
+            props: {
+                Bootcamps
+            },
+        }
+        }
+    }catch(error) {
+        console.log("Error: ", error)
+    }
+ };

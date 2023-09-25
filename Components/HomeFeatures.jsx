@@ -85,8 +85,8 @@ const HomeFeatures = ({translation}) => {
                   duration: .5,
                }}
                className="features_video xl:w-[600px] lg:w-[550px] min-[475px]:w-[450px] w-full lg:h-[350px] h-[250px]" >
-               <div className={`${styles.features_video_container} xl:w-[600px] lg:w-[550px] min-[475px]:w-[450px] w-full lg:h-[350px] h-[250px] relative`}>
-                  <button aria-label='play' className='absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] w-[80px] h-[80px]'>
+               <div className={`${styles.features_video_container} purple-gradient-to-light xl:w-[600px] lg:w-[550px] min-[475px]:w-[450px] w-full lg:h-[350px] h-[250px] relative`}>
+                  <button aria-label='play' className='absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] w-[110px] h-[110px]'>
                      <Image fill className='w-[80px]' src={iconVideo} alt="" loading='lazy' />
                   </button>
                </div>

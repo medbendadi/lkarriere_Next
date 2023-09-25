@@ -30,10 +30,7 @@ const NavBar = ({ circleBg, openModal, translation }) => {
       window.addEventListener("resize", handleResize);
       return () => window.removeEventListener("resize", handleResize);
    }, []);
-   const isMobile = isMobileState;
-
-
-   
+   // const isMobile = isMobileState;
 
    // List of languages
    const langs = [
@@ -47,7 +44,7 @@ const NavBar = ({ circleBg, openModal, translation }) => {
    return isMobileState ? (
          <NavBarMobile openModal={openModal} langs={langs} translation={translation} chevronUp={chevronUp} setChevronUp={setChevronUp} />
    ) : (
-            <NavBarDesktop circleBg={circleBg} openModal={openModal} langs={langs} translation={translation} chevronUp={chevronUp} setChevronUp={setChevronUp} />
+         <NavBarDesktop circleBg={circleBg} openModal={openModal} langs={langs} translation={translation} chevronUp={chevronUp} setChevronUp={setChevronUp} />
    )
 
 }

@@ -27,7 +27,7 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
     const router = useRouter()
     const lang = router.query.lang || 'en';
     const { pathname } = router
-    const location = pathname.replace('/[lang]', '');
+    const location = pathname.replace(`/[lang]`, '');
     const langRef = useRef();
     const isRTL = lang === 'ar' || lang === 'ma';
 
@@ -131,7 +131,7 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
 
                         className="md:flex hidden z-[999]">
                         <nav id='headBarDesktop' className={`navbar flex justify-center items-center w-5/6 m-auto fixed top-0 ${isRTL ? "ar" : ''}`}>
-                            <div id='headBarDesktopNav' className={`max-w-[1400px] w-[90%] h-full flex justify-between items-center py-[25px] row`}>
+                            <div id='headBarDesktopNav' className={`max-w-[1400px] w-[90%] h-full flex justify-between items-center py-[15px] row`}>
                                 <Link href='/'  aria-label='home' className={`navbar_logo flex`}>
                                     <div className={`navbar_logo_container relative`}>
                                         <Image fill className='lg:block hidden' src={isRTL ? Logo_ar : Logo} alt="Logo" />

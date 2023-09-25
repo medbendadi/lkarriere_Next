@@ -112,7 +112,7 @@ function BootcampsCard({ item, translation }) {
                     </Link>
 
                     {/* Second Button */}
-                    <Link href={`K-camp/`+item.label} target='_blank'
+                    <Link href={`k-camp/`+item.label}
                     className={`${styles.second_button} uppercase flex justify-center items-center w-[45%] py-4 rounded-full relative -ml-1 hover:opacity-[.9] duration-300 bg-[#ececec] text-[#5357A6]`}>
                         <span className={`${isRTL ? 'scale-x-[-1]' : 'scale-x-1'}`}>{translation?.learn}</span>
                         <ChevronRight size={16} />

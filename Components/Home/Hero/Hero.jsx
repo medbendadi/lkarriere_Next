@@ -2,20 +2,20 @@ import React, { memo } from 'react'
 import {m} from 'framer-motion'
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import styles from '../styles/Hero.module.css'
+import styles from '../../../styles/Hero.module.css'
 
 
-import textSvg from '../public/images/Assets/IMG SVG/Section Bar/Text.svg';
-import personSvg from '../public/images/Assets/IMG SVG/Section Bar/Person 1.svg';
-import barSvg from '../public/images/Assets/IMG SVG/Section Bar/Sign 1.svg';
-import sign1Svg from '../public/images/Assets/IMG SVG/Section Bar/Sign P1.svg';
-import sign1SvgAr from '../public/images/Assets/IMG SVG/Section Bar/Sign 1 AR.svg';
-import sign4SvgAr from '../public/images/Assets/IMG SVG/Section Bar/Sign 4 AR.svg';
-import sign2Svg from '../public/images/Assets/IMG SVG/Section Bar/Sign P2.svg';
-import sign3Svg from '../public/images/Assets/IMG SVG/Section Bar/Sign P3.svg';
-import sign4Svg from '../public/images/Assets/IMG SVG/Section Bar/Sign P4.svg';
+import textSvg from '../../../public/images/Assets/IMG SVG/Section Bar/Text.svg';
+import personSvg from '../../../public/images/Assets/IMG SVG/Section Bar/Person 1.svg';
+import barSvg from '../../../public/images/Assets/IMG SVG/Section Bar/Sign 1.svg';
+import sign1Svg from '../../../public/images/Assets/IMG SVG/Section Bar/Sign P1.svg';
+import sign1SvgAr from '../../../public/images/Assets/IMG SVG/Section Bar/Sign 1 AR.svg';
+import sign4SvgAr from '../../../public/images/Assets/IMG SVG/Section Bar/Sign 4 AR.svg';
+import sign2Svg from '../../../public/images/Assets/IMG SVG/Section Bar/Sign P2.svg';
+import sign3Svg from '../../../public/images/Assets/IMG SVG/Section Bar/Sign P3.svg';
+import sign4Svg from '../../../public/images/Assets/IMG SVG/Section Bar/Sign P4.svg';
 import { useEffect } from 'react';
-import useMobileOrResponsive from '../hooks/useMobileOrResponsive';
+import useMobileOrResponsive from '../../../hooks/useMobileOrResponsive';
 import { useState } from 'react';
 
 

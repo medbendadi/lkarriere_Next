@@ -3,35 +3,35 @@ import { useRouter } from 'next/router';
 import React from 'react'
 import dynamic from "next/dynamic";
 const Meta = dynamic(() => import('../../Components/Meta'))
-const NavBar = dynamic(() => import('../../Components/NavBar'), {
+const NavBar = dynamic(() => import('../../Components/NavBar/NavBar'), {
   loading: () => <div></div>,
 })
-const Hero = dynamic(() => import('../../Components/Hero'), {
+const Hero = dynamic(() => import('../../Components/Home/Hero/Hero'), {
   loading: () => <div></div>,
 })
-const Features = dynamic(() => import('../../Components/HomeFeatures'), {
+const Features = dynamic(() => import('../../Components/Home/Features/HomeFeatures'), {
   loading: () => <div></div>,
 })
-const WhyForWho = dynamic(() => import('../../Components/WhyForWho'), {
+const WhyForWho = dynamic(() => import('../../Components/Home/whyForWho/WhyForWho'), {
   loading: () => <div></div>,
 })
-const Bootcamps = dynamic(() => import('../../components/Bootcamps'), {
+const Bootcamps = dynamic(() => import('../../Components/Home/Bootcamps/Bootcamps'), {
   loading: () => <div></div>,
 })
 
-const HowItWorks = dynamic(() => import('../../components/HowItWorks'), {
+const HowItWorks = dynamic(() => import('../../components/Home/HowItWorks/HowItWorks'), {
   loading: () => <div></div>,
 })
-const Partners = dynamic(() => import('../../components/Partners'), {
+const Partners = dynamic(() => import('../../Components/Home/Partners/Partners'), {
   loading: () => <div></div>,
 })
-const Coaches = dynamic(() => import('../../components/Coaches'), {
+const Coaches = dynamic(() => import('../../components/Home/Coaches/Coaches'), {
   loading: () => <div></div>,
 })
-const Reviews = dynamic(() => import('../../components/Reviews'), {
+const Reviews = dynamic(() => import('../../components/Home/Reviews/Reviews'), {
   loading: () => <div></div>,
 })
-const Contact = dynamic(() => import('../../components/Contact'), {
+const Contact = dynamic(() => import('../../Components/Home/Contact/Contact'), {
   loading: () => <div></div>,
 })
 const JoinForm = dynamic(() => import('../../components/JoinFom'), {
@@ -50,6 +50,13 @@ import { useState } from 'react';
 
 const index = ({ translation, camps, reviews }) => {
   const [handleModal, setHandleModal] = useState(false)
+  const {
+    isFallback,
+} = useRouter();
+
+if (isFallback) {
+    return <h1>Fallback</h1>;
+}
   
   const router = useRouter()
   const lang  = router.query.lang;

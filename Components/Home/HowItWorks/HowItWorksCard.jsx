@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/HowItWorksStyle.module.css';
+import styles from '../../../styles/HowItWorksStyle.module.css';
 
 // Framer Motion
 import { m } from 'framer-motion';

@@ -138,18 +138,8 @@ const JoinFom = ({ onClose, type, translation }) => {
 
         }
         </div>
-        <Snackbar open={sent} autoHideDuration={6000} onClose={() => setSent(false)} anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}>
-                <Alert onClose={() => setSent(false)} severity="success" sx={{ width: '100%' }}>
-                    Your Message Sent Successfully!
-                </Alert>
-            </Snackbar>
 
           
-          <Snackbar open={isError} autoHideDuration={6000} onClose={() => setIsError(false)} anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}>
-            <Alert onClose={() => setIsError(false)} severity="error" sx={{ width: '100%' }}>
-                {errorMessage.message}
-            </Alert>
-        </Snackbar>
     </div>
   )
 }

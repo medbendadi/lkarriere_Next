@@ -1,13 +1,13 @@
 import React, { useState, memo } from 'react'
-import styles from '../styles/HomeFeatures.module.css'
+import styles from '../../../styles/HomeFeatures.module.css'
 import { m } from 'framer-motion'
 import dynamic from "next/dynamic";
 
-import bg1 from '../public/images/Assets/IMG SVG/Section Video/BG Effect 1.svg'
-import bg2 from '../public/images/Assets/IMG SVG/Section Video/BG Effect 2.svg'
+import bg1 from '../../../public/images/Assets/IMG SVG/Section Video/BG Effect 1.svg'
+import bg2 from '../../../public/images/Assets/IMG SVG/Section Video/BG Effect 2.svg'
 
 // icons
-import iconVideo from '../public/images/Assets/Icones/Icones Section Video/icon 4.svg'
+import iconVideo from '../../../public/images/Assets/Icones/Icones Section Video/icon 4.svg'
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { useEffect } from 'react';

@@ -1,21 +1,20 @@
 import React, { useState, memo } from 'react'
-import styles from '../styles/ReviewCard.module.css'
+import styles from '../../../styles/ReviewCard.module.css'
 import { AnimatePresence, m } from 'framer-motion'
 
 // icons //
-import defaultImg from '../public/images/Assets/Icones/Icobes Section Reviews/icon 3.svg'
-import starImg from '../public/images/Assets/Icones/Icobes Section Reviews/icon 4.svg'
-import videoIcon from '../public/images/Assets/Icones/Icobes Section Reviews/icon 2.svg'
-import noVideoIcon from '../public/images/Assets/Icones/Icobes Section Reviews/6.svg'
-import closeIcon from '../public/images/Assets/Icones/Icobes Section Reviews/icon 5.svg'
-import urlFor from '../handlers/ImageHandler'
+import defaultImg from '../../../public/images/Assets/Icones/Icobes Section Reviews/icon 3.svg'
+import starImg from '../../../public/images/Assets/Icones/Icobes Section Reviews/icon 4.svg'
+import videoIcon from '../../../public/images/Assets/Icones/Icobes Section Reviews/icon 2.svg'
+import noVideoIcon from '../../../public/images/Assets/Icones/Icobes Section Reviews/6.svg'
+import closeIcon from '../../../public/images/Assets/Icones/Icobes Section Reviews/icon 5.svg'
+import urlFor from '../../../handlers/ImageHandler'
 import ReactPlayer from 'react-player'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 
 const ReviewCard = ({ item, translation }) => {
-   console.log(item)
    const [videoActive, setVideoActive] = useState(false)
    const [playIcon, setPlayIcon] = useState(true)
    const router = useRouter()

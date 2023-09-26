@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
-import styles from '../../styles/ContactStyle.module.css';
+import styles from '../../../styles/ContactStyle.module.css';
 
 // Icons
-import phoneIcon from '../../public/images/Assets/Icones/Icones Section Contact/icon 1.svg';
-import emailIcon from '../../public/images/Assets/Icones/Icones Section Contact/icon 2.svg';
+import phoneIcon from '../../../public/images/Assets/Icones/Icones Section Contact/icon 1.svg';
+import emailIcon from '../../../public/images/Assets/Icones/Icones Section Contact/icon 2.svg';
 import Image from 'next/image';
 
 

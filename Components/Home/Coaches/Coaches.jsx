@@ -1,5 +1,5 @@
 import React, { useState, memo } from 'react';
-import styles from '../styles/CoachesStyle.module.css';
+import styles from '../../../styles/CoachesStyle.module.css';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 // Icons
-import headerIcon from '../public/images/Assets/Icones/Icones Section Coaches/icon 2.svg';
+import headerIcon from '../../../public/images/Assets/Icones/Icones Section Coaches/icon 2.svg';
 import { ChevronLeft, ChevronRight } from 'react-feather';
 import Image from 'next/image';
 import { useRouter } from 'next/router';

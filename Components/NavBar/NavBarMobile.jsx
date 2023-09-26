@@ -6,22 +6,22 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 
-import Logo from '../public/images/Assets/IMG SVG/Section Bar/Logo.svg';
-import Logo_ar from '../public/images/Assets/IMG SVG/Section Bar/Logo Arabe.svg';
-import SmallLogo from '../public/images/Assets/IMG SVG/Section Bar/LogoDark.svg';
+import Logo from '../../public/images/Assets/IMG SVG/Section Bar/Logo.svg';
+import Logo_ar from '../../public/images/Assets/IMG SVG/Section Bar/Logo Arabe.svg';
+import SmallLogo from '../../public/images/Assets/IMG SVG/Section Bar/LogoDark.svg';
 
 // Social Media icons
-import facebookLogo from '../public/images/Assets/Icones/Icones Section Footer/icon 6.svg';
-import instaLogo from '../public/images/Assets/Icones/Icones Section Footer/icon 7.svg';
-import whatsLogo from '../public/images/Assets/Icones/Icones Section Footer/icon 5.svg';
-import linkdenLogo from '../public/images/Assets/Icones/Icones Section Footer/icon 4.svg';
+import facebookLogo from '../../public/images/Assets/Icones/Icones Section Footer/icon 6.svg';
+import instaLogo from '../../public/images/Assets/Icones/Icones Section Footer/icon 7.svg';
+import whatsLogo from '../../public/images/Assets/Icones/Icones Section Footer/icon 5.svg';
+import linkdenLogo from '../../public/images/Assets/Icones/Icones Section Footer/icon 4.svg';
 
 // Icons
-import homeIcon from '../public/images/Assets/Icones/Icones Bar/icon bar 1.svg';
-import karIcon from '../public/images/Assets/Icones/Icones Bar/icon bar 2.svg';
-import bootcIcon from '../public/images/Assets/Icones/Icones Bar/icon bar 3.svg';
-import eventIcon from '../public/images/Assets/Icones/Icones Bar/icon bar 4.svg';
-import contactIcon from '../public/images/Assets/Icones/Icones Bar/icon bar 5.svg';
+import homeIcon from '../../public/images/Assets/Icones/Icones Bar/icon bar 1.svg';
+import karIcon from '../../public/images/Assets/Icones/Icones Bar/icon bar 2.svg';
+import bootcIcon from '../../public/images/Assets/Icones/Icones Bar/icon bar 3.svg';
+import eventIcon from '../../public/images/Assets/Icones/Icones Bar/icon bar 4.svg';
+import contactIcon from '../../public/images/Assets/Icones/Icones Bar/icon bar 5.svg';
 
 import { ChevronDown, ChevronUp, Globe, Menu, X } from 'react-feather';
 import { useRouter } from 'next/router';

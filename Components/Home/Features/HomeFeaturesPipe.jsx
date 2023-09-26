@@ -1,15 +1,15 @@
 import React from 'react'
 import { ChevronDown, ChevronUp } from 'react-feather'
-import styles from '../styles/HomeFeaturesPipe.module.css'
+import styles from '../../../styles/HomeFeaturesPipe.module.css'
 import { m } from 'framer-motion'
 
 // Icons
-import checkIcon from '../public/images/Assets/Icones/Icones Section Infos/check.svg'
+import checkIcon from '../../../public/images/Assets/Icones/Icones Section Infos/check.svg'
 
-import puzzle1 from '../public/images/Assets/IMG SVG/Section Video/Puzzle 1.svg'
-import puzzle2 from '../public/images/Assets/IMG SVG/Section Video/Puzzle 2.svg'
-import puzzle3 from '../public/images/Assets/IMG SVG/Section Video/Puzzle 3.svg'
-import tip from '../public/images/Assets/IMG SVG/tip.svg'
+import puzzle1 from '../../../public/images/Assets/IMG SVG/Section Video/Puzzle 1.svg'
+import puzzle2 from '../../../public/images/Assets/IMG SVG/Section Video/Puzzle 2.svg'
+import puzzle3 from '../../../public/images/Assets/IMG SVG/Section Video/Puzzle 3.svg'
+import tip from '../../../public/images/Assets/IMG SVG/tip.svg'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 
@@ -36,7 +36,7 @@ const HomeFeaturesPipe = ({ item, index, active, handleActive, variants, custom,
                   item.tip && (
                      <div className={`${styles.features_card_content_tip}  h-[38px] w-[38px]`}
                         style={isRTL ? { right: ' -21px', left: 'initial', top: '50%' } : { left: ' -21px', right: 'initial' }}>
-                        <Image fill src={isRTL ? tip : require('../public/images/Assets/tip.png')} alt="" loading='eager' />
+                        <Image fill src={isRTL ? tip : require('../../../public/images/Assets/tip.png')} alt="" loading='eager' />
                      </div>
                   )
                }
@@ -44,7 +44,7 @@ const HomeFeaturesPipe = ({ item, index, active, handleActive, variants, custom,
                <div className="row flex items-center justify-between">
                   <div className={`flex items-center row`}>
                      <div className='w-[40px] h-[35px] relative'>
-                     <Image fill src={require(`../public/images/Assets/Icones/Icobes Section Features/${item.icon}`)} alt="" />
+                     <Image fill src={require(`../../../public/images/Assets/Icones/Icobes Section Features/${item.icon}`)} alt="" />
                      </div>
                      <h2 className={`${isRTL ? 'mr-[8px]' : 'ml-[8px]'}`}>{item.title}</h2>
                   </div>

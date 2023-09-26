@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import styles from '../styles/WhyForWhoStyle.module.css';
+import styles from '../../../styles/WhyForWhoStyle.module.css';
 import { m } from 'framer-motion'
 import dynamic from "next/dynamic";
 import { useRouter } from 'next/router';

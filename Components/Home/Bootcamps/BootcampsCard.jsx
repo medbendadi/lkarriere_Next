@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import styles from '../styles/BootcampsCard.module.css'
+import styles from '../../../styles/BootcampsCard.module.css'
 import Link from 'next/link';
 
 
@@ -10,10 +10,10 @@ import { ChevronRight } from 'react-feather'
 import { m } from 'framer-motion'
 
 // Icons
-import BootcampsCardIcon from '../public/images/Assets/Icones/Icones Setion Bootcamps/icon 2.svg';
-import LevelIcon from '../public/images/Assets/Icones/Icones Setion Bootcamps/icon 3.svg';
-import DurationIcon from '../public/images/Assets/Icones/Icones Setion Bootcamps/icon 4.svg';
-import JoinIcon from '../public/images/Assets/Icones/Icones Setion Bootcamps/icon 5.svg';
+import BootcampsCardIcon from '../../../public/images/Assets/Icones/Icones Setion Bootcamps/icon 2.svg';
+import LevelIcon from '../../../public/images/Assets/Icones/Icones Setion Bootcamps/icon 3.svg';
+import DurationIcon from '../../../public/images/Assets/Icones/Icones Setion Bootcamps/icon 4.svg';
+import JoinIcon from '../../../public/images/Assets/Icones/Icones Setion Bootcamps/icon 5.svg';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 

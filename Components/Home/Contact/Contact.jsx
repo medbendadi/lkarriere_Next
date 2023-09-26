@@ -2,8 +2,8 @@ import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import React, { memo } from 'react';
 
-const ContactForm = dynamic(() => import('./Contact/ContactForm'))
-const ContactInfos = dynamic(() => import('./Contact/ContactInfos'))
+const ContactForm = dynamic(() => import('./ContactForm'))
+const ContactInfos = dynamic(() => import('./ContactInfos'))
 
 function Contact({ translation }) {
   const router = useRouter()

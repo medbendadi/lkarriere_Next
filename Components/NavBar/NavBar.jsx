@@ -5,11 +5,11 @@ const NavBarDesktop = dynamic(() => import('./NavBarDesktop'))
 
 
 
-import flag_ma from '../public/images/Assets/IMG SVG/Flags/ma.svg'
-import flag_fr from '../public/images/Assets/IMG SVG/Flags/fr.svg'
-import flag_ar from '../public/images/Assets/IMG SVG/Flags/ar.svg'
-import flag_us from '../public/images/Assets/IMG SVG/Flags/us.svg'
-import flag_z from '../public/images/Assets/IMG SVG/Flags/br.svg'
+import flag_ma from '../../public/images/Assets/IMG SVG/Flags/ma.svg'
+import flag_fr from '../../public/images/Assets/IMG SVG/Flags/fr.svg'
+import flag_ar from '../../public/images/Assets/IMG SVG/Flags/ar.svg'
+import flag_us from '../../public/images/Assets/IMG SVG/Flags/us.svg'
+import flag_z from '../../public/images/Assets/IMG SVG/Flags/br.svg'
 
 
 

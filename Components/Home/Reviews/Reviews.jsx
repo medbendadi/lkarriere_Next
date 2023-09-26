@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useState } from 'react'
-import styles from  '../styles/Reviews.module.css'
-import headerIcon from '../public/images/Assets/Icones/Icobes Section Reviews/icon 1.svg'
+import styles from  '../../../styles/Reviews.module.css'
+import headerIcon from '../../../public/images/Assets/Icones/Icobes Section Reviews/icon 1.svg'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
@@ -8,13 +8,12 @@ import dynamic from 'next/dynamic'
 
 const ReviewCard = dynamic(() => import('./ReviewCard'))
 const CreateReviewCard = dynamic(() => import('./CreateReviewCard'))
-const MoreBigBtn = dynamic(() => import('./MoreBigBtn'))
+const MoreBigBtn = dynamic(() => import('../../MoreBigBtn'))
 
 
 const Reviews = ({ icon, bootcamp, reviews, translation }) => {
    const router = useRouter()
     const lang = router.query.lang;
-    console.log(reviews)
     const isRTL = lang === 'ar' || lang === 'ma';
    const [filteredData, setFilteredData] = useState([])
 

@@ -1,10 +1,10 @@
 import React, { memo } from 'react'
 import { m } from 'framer-motion'
-import styles from '../styles/ReviewCard.module.css'
+import styles from '../../../styles/ReviewCard.module.css'
 
 
-import plusIcon from '../public/images/Assets/Icones/Icobes Section Reviews/icon 6.svg'
-import starIcon from '../public/images/Assets/Icones/Icobes Section Reviews/icon 4.svg'
+import plusIcon from '../../../public/images/Assets/Icones/Icobes Section Reviews/icon 6.svg'
+import starIcon from '../../../public/images/Assets/Icones/Icobes Section Reviews/icon 4.svg'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 const CreateReviewCard = ({translation}) => {

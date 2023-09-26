@@ -7,7 +7,7 @@ import { getDictionary } from '@/getTranslation';
 import { fetchData } from '../../../FetchData';
 
 const Meta = dynamic(() => import('../../../Components/Meta')),
-NavBar = dynamic(() => import('../../../Components/NavBar'), {
+NavBar = dynamic(() => import('../../../Components/NavBar/NavBar'), {
   loading: () => <div></div>,
 }),
 Hero = dynamic(() => import('../../../Components/K_camp/Hero'), {
@@ -43,11 +43,18 @@ QAndA = dynamic(() => import('../../../Components/K_camp/Q&A'), {
 Footer = dynamic(() => import('../../../Components/Footer'), {
   loading: () => <div></div>,
 });
-const Reviews = dynamic(() => import('../../../Components/Reviews'), {
+const Reviews = dynamic(() => import('../../../Components/Home/Reviews/Reviews'), {
   loading: () => <div></div>,
 })
 
 function k_camp({ Bootcamp, translation, reviews }) {
+  const {
+    isFallback,
+} = useRouter();
+
+if (isFallback) {
+    return <h1>Fallback</h1>;
+}
     const router = useRouter();
     const lang = router.query.lang || 'en-EN';
     const locale = lang?.split('_')[0];
@@ -99,6 +106,7 @@ function k_camp({ Bootcamp, translation, reviews }) {
 }
 const MemorizedX = memo(k_camp);
 export default MemorizedX;
+
 
 export const getServerSideProps = async ({ params }) => {
   try{

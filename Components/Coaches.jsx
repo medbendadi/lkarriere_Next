@@ -73,8 +73,8 @@ function Coaches({translation}) {
           {
             swiper && (
               <div>
-                <button onClick={() => swiper.slidePrev()} className={`${styles.coaches_button_prev} absolute -left-[45px] top-[50%] -translate-y-[50%] w-[90px] h-[90px] yellow-gradient-to-light rounded-full border-4 border-solid border-white flex justify-center items-center pe-[10px] z-10`}><ChevronLeft size={80} /></button>
-              <button onClick={() => swiper.slideNext()} className={`${styles.coaches_button_next} absolute -right-[45px] top-[50%] -translate-y-[50%] w-[90px] h-[90px] yellow-gradient-to-light rounded-full border-4 border-solid border-white flex justify-center items-center ps-[10px] z-10`}><ChevronRight size={80} /></button>
+                <button aria-label='slide prev' onClick={() => swiper.slidePrev()} className={`${styles.coaches_button_prev} absolute -left-[45px] top-[50%] -translate-y-[50%] w-[90px] h-[90px] yellow-gradient-to-light rounded-full border-4 border-solid border-white flex justify-center items-center pe-[10px] z-10`}><ChevronLeft size={80} /></button>
+                <button aria-label='slide next' onClick={() => swiper.slideNext()} className={`${styles.coaches_button_next} absolute -right-[45px] top-[50%] -translate-y-[50%] w-[90px] h-[90px] yellow-gradient-to-light rounded-full border-4 border-solid border-white flex justify-center items-center ps-[10px] z-10`}><ChevronRight size={80} /></button>
               </div>
               )
           }

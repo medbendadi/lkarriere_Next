@@ -16,11 +16,9 @@ function CoacheCard({ isActive, picture, name, title }) {
                 
                 {/* Photo */}
                 <div className={`${styles.picture_container}`}>
-                    <div className='min-w-[165px] min-h-[165px] max-w-[165px] max-h-[165px] rounded-full border-4 border-solid border-white relative overflow-hidden'>
-                    <Image fill className='object-cover' src={picture} alt="user pic" loading='lazy' />
-
-                    </div>
+                    <Image width={165} height={165} className='min-w-[165px] min-h-[165px] max-w-[165px] max-h-[165px] object-cover rounded-full border-4 border-solid border-white overflow-hidden' src={picture} alt="user pic" loading='lazy' />
                 </div>
+                    
 
                 <div className='w-full px-8 text-center'>
                     {/* Name */}
@@ -41,10 +39,8 @@ function CoacheCard({ isActive, picture, name, title }) {
     <div className={`${styles.coache_card} min-h-[400px] h-[400px] min-w-[350px] w-[350px] ${styles.CoacheCardBgWhite} flex flex-col justify-center items-center gap-8 py-5 rounded-[50px] relative z-0 my-5`}>
         
         {/* Photo */}
-          <div className={`${styles.picture_container} min-w-[175px] min-h-[175px] max-w-[175px] max-h-[175px] border-[.1px] border-solid border-slate-100 rounded-full relative flex justify-center items-center`}>
-              <div className='min-w-[165px] min-h-[165px] max-w-[165px] max-h-[165px] rounded-full overflow-hidden relative'>
-                    <Image fill className='object-cover' src={picture} alt="" loading='lazy' />
-              </div>
+        <div className={`${styles.picture_container} min-w-[175px] min-h-[175px] max-w-[175px] max-h-[175px] border-[.1px] border-solid border-slate-100 rounded-full relative flex justify-center items-center`}>
+            <Image width={165} height={165} className='min-w-[165px] min-h-[165px] max-w-[165px] max-h-[165px] rounded-full object-cover' src={picture} alt="" loading='lazy' decoding='async' />
             <div className='absolute inset-0 bg-white/70 rounded-full'></div>
         </div>
 

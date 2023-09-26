@@ -11,7 +11,7 @@
     background-repeat: no-repeat;
 }
 
-.checkbox-input {
+.checkbox_input {
     appearance: none;
     -webkit-appearance: none;
     min-height: 15px;
@@ -22,11 +22,11 @@
     position: relative;
 }
 
-.checkbox-input:checked {
+.checkbox_input:checked {
     background-color: #FAA32C;
 }
 
-.checkbox-input:checked:after {
+.checkbox_input:checked:after {
     content: url("../public/images/Assets/Icones/Icones Section Contact/check.svg");
     position: absolute;
     top: 50%;

@@ -99,7 +99,7 @@ function ContactForm({ isRTL, translation }) {
 
             {/* Condition */}
             <div className={`xl:w-[80%] md:w-[95%] w-full flex ${isRTL ? 'flex-row-reverse text-end' : 'flex-row text-start'} items-start gap-5 py-2 sm:px-5 px-2`}>
-                <input checked={isChecked} onChange={() => setIsChecked(prev => !prev)} className='checkbox-input cursor-pointer' type="checkbox" name="" id={`${id}--condition`} />
+                <input checked={isChecked} onChange={() => setIsChecked(prev => !prev)} className={`${styles.checkbox_input} cursor-pointer`} type="checkbox" name="" id={`${id}--condition`} />
                 <label className={`xl:text-lg text-base cursor-pointer -mt-[7px]`} htmlFor={`${id}--condition`}>{translation?.condition}</label>
             </div>
 

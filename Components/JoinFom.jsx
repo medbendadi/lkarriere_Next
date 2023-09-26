@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 // Assets
 import bg_en from '../public/images/Assets/IMG SVG/Section Form/Men SVG 1 Eng.svg'
@@ -14,11 +14,10 @@ import marketing from '../public/images/Assets/IMG SVG/Section Form/Marketing ic
 import marketing_light from '../public/images/Assets/IMG SVG/Section Form/resize/Marketing icon Light.svg'
 import check from '../public/images/Assets/Icones/Icones Section Infos/check_Light.svg'
 
-import { useState } from 'react'
 import { Close, ArrowBackIos, ArrowForwardIos } from '@mui/icons-material'
 import { Button, Col, Form, Input, Row, Select } from 'antd'
-import { Option } from 'antd/es/mentions';
-import TextArea from 'antd/es/input/TextArea'
+import { Option } from 'antd/lib/mentions';
+import TextArea from 'antd/lib/input/TextArea'
 import { Alert, Snackbar } from '@mui/material'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
@@ -62,17 +61,17 @@ const camps = [
 
 const JoinFom = ({ onClose, type, translation }) => {
    const router = useRouter()
-  const  lang  = router.query.lang || 'en';
+   const  lang  = router.query.lang || 'en';
    const isRTL = lang === 'ar' || lang === 'ma';
    
-  const [step, setStep] = useState(1)
-  const [camp, setCamp] = useState('')
-const [PersonnelData, setPersonnelData] = useState({})
+   const [step, setStep] = useState(1)
+   const [camp, setCamp] = useState('')
+   const [PersonnelData, setPersonnelData] = useState({})
    const [ProfessionalData, setProfessionalData] = useState({})
    
    const [sent, setSent] = useState(false)
-    const [isError, setIsError] = useState(false)
-    const [errorMessage, setErrorMessage] = useState('')
+   const [isError, setIsError] = useState(false)
+   const [errorMessage, setErrorMessage] = useState('')
 
    useEffect(() => {
       if (type) {

@@ -38,6 +38,10 @@ const JoinForm = dynamic(() => import('../../components/JoinFom'), {
   loading: () => <div></div>,
 })
 
+const Footer = dynamic(() => import('../../Components/Footer'), {
+  loading: () => <div></div>,
+})
+
 import { fetchData } from '../../FetchData';
 
 import { getDictionary } from '@/getTranslation';
@@ -49,6 +53,7 @@ const index = ({ translation, camps, reviews }) => {
   
   const router = useRouter()
   const lang  = router.query.lang;
+  const isRTL = lang === 'ar' || lang === 'ma';
   
   return (
     <>
@@ -66,7 +71,7 @@ const index = ({ translation, camps, reviews }) => {
             <Coaches translation={translation.home?.coaches}/>
         <Reviews icon={true} translation={translation} reviews={reviews} />
             <Contact translation={translation.home?.contact}/>
-            {/* <Footer /> */}
+            <Footer translation={translation?.footer} isRTL={isRTL} />
             {
                handleModal ? (<JoinForm translation={translation.form} onClose={() => setHandleModal(false)}/>) : null
         }

@@ -1,7 +1,7 @@
 import { Poppins, Source_Sans_3, Almarai } from 'next/font/google'
 
 export const Source_Sans_3_Font = Source_Sans_3({
-   weight: ["300", "400", "500", "700"],
+   weight: ["300", "400"],
    style: ["normal", "italic"],
    display: 'swap',
    subsets: ['latin']

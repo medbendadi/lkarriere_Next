@@ -106,6 +106,7 @@
  .ar .navbar_ul a:last-child{
    padding-left: 50px;
    padding-right: 23px;
+   border-right: 1px solid #b0a9b4;
 }
 /*.ar .navbar_ul a:first-child{
    padding-left: 50px;
@@ -140,17 +141,6 @@
    border-left: none;
    border-right: none;
 }
-
-
-/* .navbar_ul a:hover +.circle {
-   background-color: red;
-} */
-
-/* .navbar_play:hover {} */
-
-/* .navbar_play:hover::after {
-   z-index: 99;
-} */
 
 .navbar_ul::before {
    content: "";

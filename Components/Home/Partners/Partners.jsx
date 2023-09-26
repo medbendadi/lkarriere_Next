@@ -1,13 +1,13 @@
 import React, { memo } from 'react'
-import headerIcon from '../public/images/Assets/Icones/Icones Section Our Partners/icon 1.svg'
-import styles from '../styles/Partners.module.css'
+import headerIcon from '../../../public/images/Assets/Icones/Icones Section Our Partners/icon 1.svg'
+import styles from '../../../styles/Partners.module.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 
-import Logo1 from '../public/images/Assets/IMG SVG/Section Our Partners/Logo-YouCan.svg'
-import Logo2 from '../public/images/Assets/IMG SVG/Section Our Partners/Logo-Ameex.svg'
-import Logo3 from '../public/images/Assets/IMG SVG/Section Our Partners/Logo-MediaMan.svg'
+import Logo1 from '../../../public/images/Assets/IMG SVG/Section Our Partners/Logo-YouCan.svg'
+import Logo2 from '../../../public/images/Assets/IMG SVG/Section Our Partners/Logo-Ameex.svg'
+import Logo3 from '../../../public/images/Assets/IMG SVG/Section Our Partners/Logo-MediaMan.svg'
 import { ChevronDown } from 'react-feather'
 import { useRouter } from 'next/router'
 import Image from 'next/image'

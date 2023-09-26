@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect } from 'react'
 
 // Assets
@@ -17,9 +16,8 @@ import check from '../public/images/Assets/Icones/Icones Section Infos/check_Lig
 import { useState } from 'react'
 import { Close, ArrowBackIos, ArrowForwardIos } from '@mui/icons-material'
 import { Button, Col, Form, Input, Row, Select } from 'antd'
-import { Option } from 'antd/es/mentions';
-import TextArea from 'antd/es/input/TextArea'
-import { Alert, Snackbar } from '@mui/material'
+import { Option } from 'antd/lib/mentions';
+import TextArea from 'antd/lib/input/TextArea'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 
@@ -139,18 +137,8 @@ const [PersonnelData, setPersonnelData] = useState({})
 
         }
         </div>
-        <Snackbar open={sent} autoHideDuration={6000} onClose={() => setSent(false)} anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}>
-                <Alert onClose={() => setSent(false)} severity="success" sx={{ width: '100%' }}>
-                    Your Message Sent Successfully!
-                </Alert>
-            </Snackbar>
 
           
-          <Snackbar open={isError} autoHideDuration={6000} onClose={() => setIsError(false)} anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}>
-            <Alert onClose={() => setIsError(false)} severity="error" sx={{ width: '100%' }}>
-                {errorMessage.message}
-            </Alert>
-        </Snackbar>
     </div>
   )
 }

@@ -1,11 +1,11 @@
 import React, { useId, memo } from 'react';
 import Image from 'next/image';
-import contactHandler from '../../handlers/contact'
-import styles from '../../styles/ContactStyle.module.css';
+import contactHandler from '../../../handlers/contact'
+import styles from '../../../styles/ContactStyle.module.css';
 
 
 // Icons
-import submitIcon from '../../public/images/Assets/Icones/Icones Section Contact/icon 3.svg';
+import submitIcon from '../../../public/images/Assets/Icones/Icones Section Contact/icon 3.svg';
 
 // Translation
 import { useState } from 'react';

@@ -1,4 +1,4 @@
-import styles from '../styles/Bootcamps.module.css'
+import styles from '../../../styles/Bootcamps.module.css'
 
 import { useState, memo } from 'react';
 import {m} from 'framer-motion'
@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 
 
 const BootcampsCard = dynamic(() => import('./BootcampsCard'))
-import HeaderIcon from '../public/images/Assets/Icones/Icones Setion Bootcamps/icon 1.svg';
+import HeaderIcon from '../../../public/images/Assets/Icones/Icones Setion Bootcamps/icon 1.svg';
 
 
 // const BootcampsCard = (await import('../../../../Components/BootcampsCard/BootcampsCard')).default;
@@ -91,7 +91,6 @@ export const getStaticProps = async () => {
     try{
         const query = encodeURIComponent(`*[_type == "bootcamps"]`);
         const url = `${process.env.SANITY_URL}query=${query}`;
-        console.log(url);
         const res = await fetch(url, {
             method: 'GET',
             headers: {

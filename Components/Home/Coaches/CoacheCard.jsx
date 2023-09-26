@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import styles from  '../styles/CoacheCardStyle.module.css';
+import styles from  '../../../styles/CoacheCardStyle.module.css';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 

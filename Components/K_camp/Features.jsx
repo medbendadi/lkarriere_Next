@@ -12,7 +12,6 @@ import checkIcon from '../../public/images/Assets/Icones/Icones Section Infos/ch
 
 
 const Features = ({ features, isRTL, lang }) => {
-   console.log(lang);
    const [active, setActive] = useState(1)
 
    const handleActive = (item) => {

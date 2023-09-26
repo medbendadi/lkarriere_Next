@@ -8,18 +8,18 @@ import Image from 'next/image';
 
 
 
-import Logo from '../public/images/Assets/IMG SVG/Section Bar/Logo.svg'
-import Logo_ar from '../public/images/Assets/IMG SVG/Section Bar/Logo Arabe.svg'
-import SmallLogo from '../public/images/Assets/IMG SVG/Section Bar/LogoDark.svg'
+import Logo from '../../public/images/Assets/IMG SVG/Section Bar/Logo.svg'
+import Logo_ar from '../../public/images/Assets/IMG SVG/Section Bar/Logo Arabe.svg'
+import SmallLogo from '../../public/images/Assets/IMG SVG/Section Bar/LogoDark.svg'
 
 import { ChevronDown, ChevronUp, Globe } from 'react-feather'
 
 // Icons
-import homeIcon from '../public/images/Assets/Icones/Icones Bar/icon bar 1.svg'
-import karIcon from '../public/images/Assets/Icones/Icones Bar/icon bar 2.svg'
-import bootcIcon from '../public/images/Assets/Icones/Icones Bar/icon bar 3.svg'
-import eventIcon from '../public/images/Assets/Icones/Icones Bar/icon bar 4.svg'
-import contactIcon from '../public/images/Assets/Icones/Icones Bar/icon bar 5.svg'
+import homeIcon from '../../public/images/Assets/Icones/Icones Bar/icon bar 1.svg'
+import karIcon from '../../public/images/Assets/Icones/Icones Bar/icon bar 2.svg'
+import bootcIcon from '../../public/images/Assets/Icones/Icones Bar/icon bar 3.svg'
+import eventIcon from '../../public/images/Assets/Icones/Icones Bar/icon bar 4.svg'
+import contactIcon from '../../public/images/Assets/Icones/Icones Bar/icon bar 5.svg'
 import { useEffect } from 'react';
 
 

@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import styles from '../styles/HowItWorksStyle.module.css';
+import styles from '../../../styles/HowItWorksStyle.module.css';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
@@ -9,7 +9,7 @@ import { m } from 'framer-motion'
 
 
 // Icons
-import headerIcon from "../public/images/Assets/Icones/Icones Sction How it Works/icon 1.svg";
+import headerIcon from "../../../public/images/Assets/Icones/Icones Sction How it Works/icon 1.svg";
 
 const HowItWorksCard = dynamic(() => import('./HowItWorksCard'))
 

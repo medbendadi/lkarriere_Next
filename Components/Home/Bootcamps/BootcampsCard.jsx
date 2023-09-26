@@ -94,7 +94,7 @@ function BootcampsCard({ item, translation }) {
 
                 {/* Description */}
                 <div className={`${styles.BootcampsCardDescription} w-[90%] text-center`}>
-                    <p className='text-sm text-[#5357A6]'>{lang === 'en' ? item?.description.en: lang === 'fr' ?item?.description.fr : lang === 'ar' && item?.description.ar}</p>
+                    <p style={isRTL? { direction: 'rtl'} : {direction: 'ltr'}} className='text-sm text-[#5357A6]'>{lang === 'en' ? item?.description.en: lang === 'fr' ?item?.description.fr : lang === 'ar' && item?.description.ar}</p>
                 </div>
 
                 {/* Links */}

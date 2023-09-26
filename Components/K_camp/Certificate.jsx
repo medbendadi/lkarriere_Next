@@ -1,4 +1,5 @@
-import React, { memo } from 'react'
+import React, { memo } from 'react';
+import Image from 'next/image';
 
 const Certificate = ({ translation }) => {
    return (
@@ -9,8 +10,8 @@ const Certificate = ({ translation }) => {
          </div>
 
          {/* certificate */}
-         <div className='min-[1260px]:w-[60%] min-[570px]:w-[80%] w-[90%] max-w-[1200px] h-[500px] rounded-[45px] bg-white'>
-
+         <div className='min-[1260px]:w-[60%] min-[570px]:w-[80%] w-[90%] max-w-[1200px] h-[500px] rounded-[45px] bg-white flex justify-center items-center relative'>
+            <Image className='h-[110%]' src={badge} alt="" loading='lazy' />
          </div>
       </div>
    )

@@ -41,7 +41,7 @@ const QAndA = ({ questionAndAnswers, isRTL, translation, lang }) => {
                      <div className={activeItems.find((i) => i === index+1) ? `${styles.introduction_content_dropdown} ${styles.active_dropdown} relative` : `${styles.introduction_content_dropdown}`}>
                         <div className={`${styles.introduction_content_dropdown_inner}`}>
                            <div className={`flex ${isRTL ? ( 'justify-end' ) : ( 'justify-start' )} items-center row`} style={isRTL ? { textAlign: 'right' } : { textAlign: 'left' }}>
-                              <p className={`min-[795px]:text-base min-[450px]:text-sm text-xs font-extralight`}>
+                              <p style={isRTL? { direction: 'rtl'} : {direction: 'ltr'}} className={`min-[795px]:text-base min-[450px]:text-sm text-xs font-extralight`}>
                                  {lang === 'en' ? item?.answer?.en: lang === 'fr' ?item?.answer?.fr : lang === 'ar' && item?.answer?.ar}
                               </p>
                            </div>

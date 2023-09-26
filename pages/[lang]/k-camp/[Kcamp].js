@@ -6,46 +6,46 @@ import {Phone} from '@mui/icons-material';
 import { getDictionary } from '@/getTranslation';
 import { fetchData } from '../../../FetchData';
 
-const Meta = dynamic(() => import('../../../Components/Meta')),
-NavBar = dynamic(() => import('../../../Components/NavBar/NavBar'), {
+const Meta = dynamic(() => import('../../../components/Meta')),
+NavBar = dynamic(() => import('../../../components/NavBar/navbar'), {
   loading: () => <div></div>,
 }),
-Hero = dynamic(() => import('../../../Components/K_camp/Hero'), {
+Hero = dynamic(() => import('../../../components/K_camp/hero'), {
   loading: () => <div></div>,
 }),
-CounterSection = dynamic(() => import('../../../Components/K_camp/CounterSection'), {
+CounterSection = dynamic(() => import('../../../components/K_camp/countersection'), {
   loading: () => <div></div>,
 }),
-Features = dynamic(() => import('../../../Components/K_camp/Features'), {
+Features = dynamic(() => import('../../../components/K_camp/features'), {
   loading: () => <div></div>,
 }),
-Infos = dynamic(() => import('../../../Components/K_camp/Infos'), {
+Infos = dynamic(() => import('../../../components/K_camp/infos'), {
   loading: () => <div></div>,
 }),
-Projects = dynamic(() => import('../../../Components/K_camp/Projects'), {
+Projects = dynamic(() => import('../../../components/K_camp/projects'), {
   loading: () => <div></div>,
 }),
-Certificate = dynamic(() => import('../../../Components/K_camp/Certificate'), {
+Certificate = dynamic(() => import('../../../components/K_camp/certificate'), {
   loading: () => <div></div>,
 }),
-WhyChooseUs = dynamic(() => import('../../../Components/K_camp/WhyChooseUs'), {
+WhyChooseUs = dynamic(() => import('../../../components/K_camp/whychooseus'), {
   loading: () => <div></div>,
 }),
-Price = dynamic(() => import('../../../Components/K_camp/Price'), {
+Price = dynamic(() => import('../../../components/K_camp/price'), {
   loading: () => <div></div>,
 }),
-Extras = dynamic(() => import('../../../Components/K_camp/Extras'), {
+Extras = dynamic(() => import('../../../components/K_camp/extras'), {
   loading: () => <div></div>,
 }),
-QAndA = dynamic(() => import('../../../Components/K_camp/Q&A'), {
+QAndA = dynamic(() => import('../../../components/K_camp/q&a'), {
   loading: () => <div></div>,
 }),
-Footer = dynamic(() => import('../../../Components/Footer'), {
+Footer = dynamic(() => import('../../../Components/footer'), {
+  loading: () => <div></div>,
+}),
+Reviews = dynamic(() => import('../../../Components/Home/Reviews/reviews'), {
   loading: () => <div></div>,
 });
-const Reviews = dynamic(() => import('../../../Components/Home/Reviews/Reviews'), {
-  loading: () => <div></div>,
-})
 
 function k_camp({ Bootcamp, translation, reviews }) {
   const {
@@ -77,10 +77,10 @@ if (isFallback) {
 
             <Infos silverBoxes={Bootcamp?.silverBoxSection} goldenBox={Bootcamp?.goldenBox} isRTL={isRTL} lang={locale} />
 
-            <Projects projectSection={Bootcamp?.projectSection} translation={translation?.k_camps?.Projects} tButtons={translation?.buttons} isRTL={isRTL} />
+            <Projects projectSection={Bootcamp?.projectSection} translation={translation?.k_camps?.Projects} tButtons={translation?.buttons} />
 
             {/* Reviews */}
-          <Reviews bootcamp={Bootcamp?.title} reviews={reviews} translation={translation} />
+            <Reviews bootcamp={Bootcamp?.title} reviews={reviews} translation={translation} />
 
             <Certificate translation={translation?.k_camps?.Certificate} />
 
@@ -96,11 +96,11 @@ if (isFallback) {
 
             {/* Whatssap Icon */}
             <Link aria-label='Whatsapp' href="https://wa.me/212677438317" target='_blanc'>
-                  <div className={`fixed flex items-center justify-center w-[40px] z-[99] h-[40px] bottom-[30px] bg-[#40c351] rounded-full p-6 hover:bg-[#36a444] transition duration-300 cursor-pointer ${lang === 'ar' || lang === 'ma' ? 'left-[40px]' : 'right-[40px]'}`}>
-                  <svg className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-uqopch" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PhoneIcon"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
-                  </div>
-                  <div className={`fixed bottom-[23.8px] w-[60px] h-[60px] bg-white z-[55] rounded-full shadow-[0_0_10px_rgba(0,0,0,0.4)] ${lang === 'ar' || lang === 'ma' ? 'left-[33.9px]' : 'right-[33.9px]'}`}></div>
-               </Link>
+              <div className={`fixed flex items-center justify-center w-[40px] z-[99] h-[40px] bottom-[30px] bg-[#40c351] rounded-full p-6 hover:bg-[#36a444] transition duration-300 cursor-pointer ${lang === 'ar' || lang === 'ma' ? 'left-[40px]' : 'right-[40px]'}`}>
+                <svg className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-uqopch" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PhoneIcon"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+              </div>
+              <div className={`fixed bottom-[23.8px] w-[60px] h-[60px] bg-white z-[55] rounded-full shadow-[0_0_10px_rgba(0,0,0,0.4)] ${lang === 'ar' || lang === 'ma' ? 'left-[33.9px]' : 'right-[33.9px]'}`}></div>
+            </Link>
       </>
     )
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, memo } from 'react'
 import dynamic from "next/dynamic";
-const NavBarMobile = dynamic(() => import('./NavBarMobile'))
-const NavBarDesktop = dynamic(() => import('./NavBarDesktop'))
+const NavBarMobile = dynamic(() => import('./navbarmobile'))
+const NavBarDesktop = dynamic(() => import('./navbardesktop'))
 
 
 

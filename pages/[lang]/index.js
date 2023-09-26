@@ -38,7 +38,7 @@ const JoinForm = dynamic(() => import('../../components/JoinFom'), {
   loading: () => <div></div>,
 })
 
-const Footer = dynamic(() => import('../../Components/Footer'), {
+const Footer = dynamic(() => import('../../components/Footer'), {
   loading: () => <div></div>,
 })
 

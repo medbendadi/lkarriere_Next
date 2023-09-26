@@ -1,6 +1,6 @@
 import React, { useState, memo } from 'react';
 import Image from 'next/image';
-import { dynamic } from 'next/dynamic';
+import dynamic from 'next/dynamic';
 
 // icons
 import user from '../../public/images/Assets/Icones/Icobes Section Reviews/icon 3 white.svg';
@@ -13,9 +13,9 @@ import projectPicture1 from '../../public/images/Assets/IMG SVG/Section Projects
 import projectPicture2 from '../../public/images/Assets/IMG SVG/Section Projects/project2.png';
 import projectPicture3 from '../../public/images/Assets/IMG SVG/Section Projects/project3.png';
 
-import MoreBigBtn from '../../Components/MoreBigBtn';
+const MoreBigBtn = dynamic(() => import('../MoreBigBtn'))
 
-const Projects = ({ translation, tButtons, isRTL }) => {
+const Projects = ({ translation, tButtons }) => {
    const [countProducts, setCountProducts] = useState(2);
 
    const projects = [
@@ -144,9 +144,9 @@ const Projects = ({ translation, tButtons, isRTL }) => {
          </div>
 
          {/* Button */}
-         {/* <div className='w-full max-w-[1200px]'>
-            <MoreBigBtn isExpanded={countProducts === 2 ? false : true} content={{more: tButtons.more, less: tButtons.less}} onClick={handleExpandData} isRTL={isRTL} />
-         </div> */}
+         <div className='w-full max-w-[1200px]'>
+            <MoreBigBtn isExpanded={countProducts === 2 ? false : true} content={{more: tButtons.more, less: tButtons.less}} onClick={handleExpandData} />
+         </div>
       </div>
    )
 }

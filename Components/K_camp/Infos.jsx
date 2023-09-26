@@ -61,7 +61,7 @@ const Infos = ({ silverBoxes, goldenBox, isRTL, lang }) => {
                               min-w-[250px] w-[250px] min-h-[200px] h-[200px] 
                               bg-white rounded-[25px] relative'>
                                  <button className='absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%]'>
-                                    <Image className='w-[60px]' src={iconVideo} alt="" loading='lazy' />
+                                    <Image className='w-[60px]' src={iconVideo} alt="" loading='lazy' aria-label='run' />
                                  </button>
                               </div>
 
@@ -113,7 +113,7 @@ const Infos = ({ silverBoxes, goldenBox, isRTL, lang }) => {
                                                 <ChevronRight size={20} />
                                              )
                                           }
-                                          <span className='min-[570px]:text-lg min-[450px]:text-base text-sm'>مخيم أساسيات البايثون</span>
+                                          <span className='min-[570px]:text-lg min-[450px]:text-base text-sm'>مخيم أساسيات الكاريير</span>
                                        </Link>
                                     </div>
                                  </div>
@@ -143,7 +143,7 @@ const Infos = ({ silverBoxes, goldenBox, isRTL, lang }) => {
                               min-w-[250px] w-[250px] min-h-[200px] h-[200px] 
                               bg-white rounded-[25px] relative'>
                                  <button className='absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%]'>
-                                    <Image className='w-[60px]' src={iconVideo} alt="" loading='lazy' />
+                                    <Image className='w-[60px]' src={iconVideo} alt="" loading='lazy' aria-label='run' />
                                  </button>
                               </div>
 

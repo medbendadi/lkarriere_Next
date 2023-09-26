@@ -1,4 +1,3 @@
-"use client";
 import React, { Fragment, useRef } from 'react'
 
 import { Link as ScrollLink } from 'react-scroll';
@@ -8,7 +7,6 @@ import Image from 'next/image';
 
 import Logo from '../../public/images/Assets/IMG SVG/Section Bar/Logo.svg';
 import Logo_ar from '../../public/images/Assets/IMG SVG/Section Bar/Logo Arabe.svg';
-import SmallLogo from '../../public/images/Assets/IMG SVG/Section Bar/LogoDark.svg';
 
 // Social Media icons
 import facebookLogo from '../../public/images/Assets/Icones/Icones Section Footer/icon 6.svg';
@@ -52,12 +50,10 @@ function NavBarMobile({ openModal, langs, chevronUp, setChevronUp, translation, 
 
     // Showing Menu
     const openMenu = () => {
-        const menu = document.getElementById('menu-mobile');
         menuRef.current.classList.add('active')
     }
 
     const closeMenu = () => {
-        const menu = document.getElementById('menu-mobile');
         menuRef.current.classList.remove('active')
     }
 

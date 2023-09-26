@@ -39,7 +39,7 @@ const ReviewCard = ({ item, translation }) => {
          <div className={`${styles.reviews_card_content} flex flex-col items-start sm:py-14 py-5 ${isRTL ? 'text-end' : 'text-start'}`}>
             <div className={`${styles.reviews_card_content_title}`}>
                <h1 className='text-2xl font-medium'>{lang === 'en' ? item.name.en: lang === 'fr' ? item.name.fr : lang === 'ar' && item.name.ar}</h1>
-               <h2 className='font-extralight'>{lang === 'en' ? item.bootcamp?.title?.en: lang === 'fr' ?item.bootcamp?.title?.fr : lang === 'ar' && item.bootcamp?.title?.ar}</h2>
+               <h2>{lang === 'en' ? item.bootcamp?.title?.en: lang === 'fr' ?item.bootcamp?.title?.fr : lang === 'ar' && item.bootcamp?.title?.ar}</h2>
             </div>
             <p>{lang === 'en' ? `${item.comment.en?.split(' ').slice(0, 15).join(' ')} ....` : lang === 'fr' ? `${item.comment.fr?.split(' ').slice(0, 15).join(' ')} ....` : lang === 'ar' && `${item.comment.ar?.split(' ').slice(0, 15).join(' ')} ....`}</p>
          </div>

@@ -165,7 +165,7 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
                                             ) : (
                                             menuDesktop.map((item, key) => (
                                                     <Link href='/'
-                                                    aria-label='home'
+                                                    aria-label={`${item.title}`}
                                                     key={key}
                                                         className={`navbar_contact cursor-pointer flex items-center row min-[1108px]:gap-2 gap-1 h-full w-full ${(key === menuDesktop.length - 1) && onLastHover ? ' after:bg-nav-hover' : ''}`}
                                                         onMouseEnter={key === 0 ? () => handleMouseEnter('first') : (key === menuDesktop.length - 1 ? () => handleMouseEnter('last') : undefined)}

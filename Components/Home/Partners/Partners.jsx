@@ -105,10 +105,10 @@ const Partners = ({translation}) => {
             <li className='w-[70%] relative'>
                <Image fill src={Logo1} alt="" loading="lazy" />
             </li>
-            <li className='w-[70%] mt-10' relative>
+            <li className='w-[70%] mt-10 relative' >
                <Image fill src={Logo2} alt="" loading="lazy" />
             </li>
-            <li className='w-[70%] mt-10' relative>
+            <li className='w-[70%] mt-10 relative'>
                <Image fill src={Logo3} alt="" loading="lazy" />
             </li>
          </ul>

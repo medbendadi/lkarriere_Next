@@ -135,7 +135,7 @@
 @media screen and (max-width: 767px) {
    /* Hero */
    .hero {
-      background-image: url('../public/images/Assets/IMG SVG/Section Bar/BG-Mobile.jpg');
+      background-image: url('../public/images/Assets/IMG SVG/Section Bar/BG-Mobile.webp');
       background-size: cover;
       background-position: bottom;
       padding: 100px 0 0 0;

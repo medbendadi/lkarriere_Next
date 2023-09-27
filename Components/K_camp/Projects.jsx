@@ -52,14 +52,14 @@ const Projects = ({ translation, tButtons, isRTL }) => {
       <div className='w-full h-auto flex flex-col items-center gap-10 py-16'>
          <div className='max-w-[1200px] flex flex-col gap-5 text-[#5358A6] text-center px-5'>
             {/* Title */}
-            <>
+            <div>
                <span className='lg:text-4xl min-[570px]:text-3xl min-[450px]:text-2xl text-xl font-bold'>{translation?.title1}</span>
-            </>
+            </div>
 
             {/* Description */}
-            <>
+            <div>
                <p className='lg:text-xl min-[570px]:text-lg min-[450px]:text-base text-sm'>{translation?.title2}</p>
-            </>
+            </div>
          </div>
 
          {/* Projects */}

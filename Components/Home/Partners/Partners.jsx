@@ -27,7 +27,7 @@ const Partners = ({translation, translationButtons}) => {
             <span className='capitalize sm:text-6xl text-4xl' style={{ color: '#5357A6' }}>{translation?.title}</span>
          </div>
 
-         <div className='max-w-[1200px] w-full sm:block hidden'>
+         <div className='max-w-[1200px] w-full lg:block hidden'>
             <Carousel
                breakpoints={[
                   {
@@ -101,14 +101,14 @@ const Partners = ({translation, translationButtons}) => {
                </div>
             </Carousel>
          </div>
-         <ul className='sm:hidden flex justify-center items-center flex-col' >
-            <li className='w-[70%] relative'>
+         <ul className='lg:hidden flex justify-center items-center flex-col' >
+            <li className='w-[324px] h-[100px] relative'>
                <Image fill src={Logo1} alt="" loading="lazy" />
             </li>
-            <li className='w-[70%] mt-10 relative' >
+            <li className='w-[324px] h-[100px] mt-10 relative' >
                <Image fill src={Logo2} alt="" loading="lazy" />
             </li>
-            <li className='w-[70%] mt-10 relative'>
+            <li className='w-[324px] h-[100px] mt-10 relative'>
                <Image fill src={Logo3} alt="" loading="lazy" />
             </li>
          </ul>

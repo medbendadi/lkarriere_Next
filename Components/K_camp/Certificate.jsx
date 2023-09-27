@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import Image from 'next/image';
+import badge from '../../public/images/Assets/IMG SVG/Section Certificate/badge.svg';
 
 const Certificate = ({ translation }) => {
    return (

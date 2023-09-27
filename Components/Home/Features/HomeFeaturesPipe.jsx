@@ -46,7 +46,7 @@ const HomeFeaturesPipe = ({ item, index, active, handleActive, variants, custom,
                      <div className='w-[40px] h-[35px] relative'>
                      <Image fill src={require(`../../../public/images/Assets/Icones/Icobes Section Features/${item.icon}`)} alt="" />
                      </div>
-                     <h2 className={`${isRTL ? 'mr-[8px]' : 'ml-[8px]'}`}>{item.title}</h2>
+                     <h2 className={`font-light ${isRTL ? 'mr-[8px]' : 'ml-[8px]'}`}>{item.title}</h2>
                   </div>
                   {
                      active === item.id ? (<ChevronUp size={24} />) : (<ChevronDown size={24} />)

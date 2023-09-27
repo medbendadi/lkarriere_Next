@@ -7,40 +7,40 @@ import { getDictionary } from '@/getTranslation';
 import { fetchData } from '../../../FetchData';
 
 const Meta = dynamic(() => import('../../../components/Meta')),
-NavBar = dynamic(() => import('../../../components/NavBar/navbar'), {
+NavBar = dynamic(() => import('../../../components/NavBar/NavBar'), {
   loading: () => <div></div>,
 }),
-Hero = dynamic(() => import('../../../components/K_camp/hero'), {
+Hero = dynamic(() => import('../../../components/K_camp/Hero'), {
   loading: () => <div></div>,
 }),
-CounterSection = dynamic(() => import('../../../components/K_camp/countersection'), {
+CounterSection = dynamic(() => import('../../../components/K_camp/CounterSection'), {
   loading: () => <div></div>,
 }),
-Features = dynamic(() => import('../../../components/K_camp/features'), {
+Features = dynamic(() => import('../../../components/K_camp/Features'), {
   loading: () => <div></div>,
 }),
-Infos = dynamic(() => import('../../../components/K_camp/infos'), {
+Infos = dynamic(() => import('../../../components/K_camp/Infos'), {
   loading: () => <div></div>,
 }),
-Projects = dynamic(() => import('../../../components/K_camp/projects'), {
+Projects = dynamic(() => import('../../../components/K_camp/Projects'), {
   loading: () => <div></div>,
 }),
-Certificate = dynamic(() => import('../../../components/K_camp/certificate'), {
+Certificate = dynamic(() => import('../../../components/K_camp/Certificate'), {
   loading: () => <div></div>,
 }),
-WhyChooseUs = dynamic(() => import('../../../components/K_camp/whychooseus'), {
+WhyChooseUs = dynamic(() => import('../../../components/K_camp/WhyChooseUs'), {
   loading: () => <div></div>,
 }),
-Price = dynamic(() => import('../../../components/K_camp/price'), {
+Price = dynamic(() => import('../../../components/K_camp/Price'), {
   loading: () => <div></div>,
 }),
-Extras = dynamic(() => import('../../../components/K_camp/extras'), {
+Extras = dynamic(() => import('../../../components/K_camp/Extras'), {
   loading: () => <div></div>,
 }),
-QAndA = dynamic(() => import('../../../components/K_camp/q&a'), {
+QAndA = dynamic(() => import('../../../components/K_camp/Q&A'), {
   loading: () => <div></div>,
 }),
-Footer = dynamic(() => import('../../../Components/footer'), {
+Footer = dynamic(() => import('../../../Components/Footer'), {
   loading: () => <div></div>,
 }),
 Reviews = dynamic(() => import('../../../Components/Home/Reviews/reviews'), {
@@ -77,7 +77,7 @@ if (isFallback) {
 
             <Infos silverBoxes={Bootcamp?.silverBoxSection} goldenBox={Bootcamp?.goldenBox} isRTL={isRTL} lang={locale} />
 
-            <Projects projectSection={Bootcamp?.projectSection} translation={translation?.k_camps?.Projects} tButtons={translation?.buttons} />
+            <Projects projectSection={Bootcamp?.projectSection} translation={translation?.k_camps?.Projects} tButtons={translation?.buttons} isRTL={isRTL} />
 
             {/* Reviews */}
             <Reviews bootcamp={Bootcamp?.title} reviews={reviews} translation={translation} />

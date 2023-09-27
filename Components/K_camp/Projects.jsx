@@ -1,4 +1,4 @@
-import React, { useState, memo } from 'react';
+import React, { useState, memo, useEffect } from 'react';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
@@ -15,29 +15,33 @@ import projectPicture3 from '../../public/images/Assets/IMG SVG/Section Projects
 
 const MoreBigBtn = dynamic(() => import('../MoreBigBtn'))
 
-const Projects = ({ translation, tButtons }) => {
+const Projects = ({ translation, tButtons, isRTL }) => {
    const [countProducts, setCountProducts] = useState(2);
+   const [ projects, setProjects ] = useState();
 
-   const projects = [
-      {
-         'img': projectPicture1,
-         'description': 'نظام للجامعات لإدارة وحجز الغرف للفنادق الطلابية، بحيث يسهل على الطلاب حجز الغرفة المناسبة عبر نظام فلترة ذكي و على المدراء عرض جميع الغرف المتوفرة ومتابعة الحجوزات وعمليات الدفع',
-         'team': ['محمد', 'ياسير', 'براهيم']
-      },
-      {
-         'img': projectPicture2,
-         'description': 'نظام مخصص للجامعات يهدف إلى إدارة وحجز الغرف في الفنادق الطلابية، حيث يُسهِّل على الطلاب تحديد الغرف المناسبة باستخدام نظام فلترة ذكي. ومن ناحية أخرى، يمكن للمدراء عرض الغرف المتاحة بسهولة، وتتبع عمليات الحجز والمتابعة، فضلًا عن إجراءات الدفع.         ',
-         'team': ['يوسف', 'محمد']
-      },
-      {
-         'img': projectPicture3,
-         'description': 'نظام للجامعات لإدارة وحجز الغرف للفنادق الطلابية، بحيث يسهل على الطلاب حجز الغرفة المناسبة عبر نظام فلترة ذكي و على المدراء عرض جميع الغرف المتوفرة ومتابعة الحجوزات وعمليات الدفع',
-         'team': ['محمد', 'براهيم', 'ياسير']
-      },
-   ]
+
+   useEffect(() => {
+      setProjects([
+         {
+            'img': projectPicture1,
+            'description': 'نظام للجامعات لإدارة وحجز الغرف للفنادق الطلابية، بحيث يسهل على الطلاب حجز الغرفة المناسبة عبر نظام فلترة ذكي و على المدراء عرض جميع الغرف المتوفرة ومتابعة الحجوزات وعمليات الدفع',
+            'team': ['محمد', 'ياسير', 'براهيم']
+         },
+         {
+            'img': projectPicture2,
+            'description': 'نظام مخصص للجامعات يهدف إلى إدارة وحجز الغرف في الفنادق الطلابية، حيث يُسهِّل على الطلاب تحديد الغرف المناسبة باستخدام نظام فلترة ذكي. ومن ناحية أخرى، يمكن للمدراء عرض الغرف المتاحة بسهولة، وتتبع عمليات الحجز والمتابعة، فضلًا عن إجراءات الدفع.         ',
+            'team': ['يوسف', 'محمد']
+         },
+         {
+            'img': projectPicture3,
+            'description': 'نظام للجامعات لإدارة وحجز الغرف للفنادق الطلابية، بحيث يسهل على الطلاب حجز الغرفة المناسبة عبر نظام فلترة ذكي و على المدراء عرض جميع الغرف المتوفرة ومتابعة الحجوزات وعمليات الدفع',
+            'team': ['محمد', 'براهيم', 'ياسير']
+         },
+      ]);
+   }, []);
 
    const handleExpandData = () => {
-      if (countProducts === 2) {
+      if (typeof window !== 'undefined' && countProducts === 2) {
          setCountProducts(projects.length);
       } else {
          setCountProducts(2);
@@ -48,27 +52,27 @@ const Projects = ({ translation, tButtons }) => {
       <div className='w-full h-auto flex flex-col items-center gap-10 py-16'>
          <div className='max-w-[1200px] flex flex-col gap-5 text-[#5358A6] text-center px-5'>
             {/* Title */}
-            <div>
+            <>
                <span className='lg:text-4xl min-[570px]:text-3xl min-[450px]:text-2xl text-xl font-bold'>{translation?.title1}</span>
-            </div>
+            </>
 
             {/* Description */}
-            <div>
+            <>
                <p className='lg:text-xl min-[570px]:text-lg min-[450px]:text-base text-sm'>{translation?.title2}</p>
-            </div>
+            </>
          </div>
 
          {/* Projects */}
-         <div className='lg:w-[80%] min-[450px]:w-[90%] w-[95%] max-w-[1200px] h-auto grid md:grid-cols-2 grid-cols-1 items-center md:gap-y-16 gap-y-5 gap-x-5'>
+         <div style={isRTL? { direction: 'rtl'} : {direction: 'ltr'}} className='lg:w-[80%] min-[450px]:w-[90%] w-[95%] max-w-[1200px] h-auto grid md:grid-cols-2 grid-cols-1 items-center md:gap-y-16 gap-y-5 gap-x-5'>
             {
-               projects.slice(0, countProducts).map((item, key) => (
+               projects?.slice(0, countProducts).map((item, key) => (
                   <m.div
                   key={key}
                   whileInView={{ y: 0, opacity: 1 }}
                   initial={{ y: 100, opacity: 0 }}
                   transition={{
                      duration: .5,
-                  }} className='flex justify-center items-center'>
+                  }} style={{ direction: 'ltr'}} className='flex justify-center items-center'>
                      <div className='
                      xl:w-[450px] min-[1350px]:h-[600px] 
                      min-[1190px]:w-[450px] min-[1190px]:h-[600px] 

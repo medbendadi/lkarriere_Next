@@ -3,7 +3,7 @@ import '../styles/globals.css'
 import '../styles/NavBar.css'
 import '../styles/JoinFom.css'
 import { Source_Sans_3_Font, Almarai_Font } from '@/utils/fonts'
-import { Suspense, useEffect, useState } from "react";
+import { useEffect } from "react";
 // import "../styles/globals.css";
 import { useRouter } from "next/router";
 import { LazyMotion, domAnimation } from 'framer-motion';

@@ -12,7 +12,7 @@ import { ChevronDown } from 'react-feather'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { Carousel } from "react-responsive-carousel";
-const Partners = ({translation}) => {
+const Partners = ({translation, translationButtons}) => {
    const router = useRouter()
    const lang = router.query.lang;
    
@@ -114,7 +114,7 @@ const Partners = ({translation}) => {
          </ul>
 
          <button className='sm:hidden flex items-center justify-center w-full py-[15px] rounded-2xl text-white' style={{ background: 'var(--purple-linear-gradient-dark)' }}>
-            Show More
+            {translationButtons?.more}
             <ChevronDown />
          </button>
 

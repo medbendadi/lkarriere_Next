@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import dynamic from "next/dynamic";
@@ -47,6 +47,10 @@ Reviews = dynamic(() => import('../../../components/Home/Reviews/Reviews'), {
   loading: () => <div></div>,
 });
 
+const JoinForm = dynamic(() => import('../../../components/JoinFom'), {
+  loading: () => <div></div>,
+})
+
 function k_camp({ Bootcamp, translation, reviews }) {
   const {
     isFallback,
@@ -61,6 +65,7 @@ if (isFallback) {
     const isRTL = locale === 'ar' || locale === 'dr';
 
     const Kcamp = router.query.Kcamp;
+    const [handleModal, setHandleModal] = useState(false)
 
     return (
       <>
@@ -94,8 +99,13 @@ if (isFallback) {
 
             <Footer translation={translation?.footer} isRTL={isRTL} />
 
+
+            {
+              handleModal ? (<JoinForm translation={translation.form} onClose={() => setHandleModal(false)}/>) : null
+            }
+
             {/* Whatssap Icon */}
-            <Link aria-label='Whatsapp' href="https://wa.me/212677438317" target='_blanc'>
+            <Link aria-label='Whatsapp' href="https://wa.me/+212 689-558573" target='_blanc'>
               <div className={`fixed flex items-center justify-center w-[40px] z-[99] h-[40px] bottom-[30px] bg-[#40c351] rounded-full p-6 hover:bg-[#36a444] transition duration-300 cursor-pointer ${lang === 'ar' || lang === 'ma' ? 'left-[40px]' : 'right-[40px]'}`}>
                 <svg className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-uqopch" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PhoneIcon"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
               </div>

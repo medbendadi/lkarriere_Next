@@ -22,7 +22,7 @@ const CreateReviewCard = ({translation}) => {
          <div className={`${styles.reviews_card_image_container} h-fit flex items-center relative`}>
             <div className={`${styles.reviews_card_image_plus} relative`}>
                {/* <div className='w-[90px] h-[90px] object-contain'> */}
-               <Image fill src={plusIcon} alt="" />
+               <Image width={150} height={150} src={plusIcon} alt="" />
                {/* </div> */}
             </div>
             <div className={`${styles.reviews_card_star} absolute`}>

@@ -24,7 +24,7 @@ import contactIcon from '../../public/images/Assets/Icones/Icones Bar/icon bar 5
 
 import { ChevronDown, ChevronUp, Globe, Menu, X } from 'react-feather';
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 
 function NavBarMobile({ openModal, langs, chevronUp, setChevronUp, translation, setDomLoaded  }) {
@@ -65,60 +65,80 @@ function NavBarMobile({ openModal, langs, chevronUp, setChevronUp, translation, 
         lang.classList.toggle('active');
     } 
 
-
-       // Scrolling Effects
-   useEffect(() => {
-    const header = document.getElementById('headBarMobile');
-
-
-    let lastScrollTop = 0;
-    let ticking = false;
-
-    function updateNavbarVisibility(scrollTop) {
-       if (scrollTop > lastScrollTop) {
-          header.classList.add('navbar-hidden');
-       } else if (scrollTop === 0) {
-          header.style.backgroundColor = 'transparent';
-          header.style.boxShadow = 'none';
-       } else {
-          header.classList.remove('navbar-hidden');
-          header.style.backgroundColor = '#fff';     
-          header.style.boxShadow = '0 5px 16px rgb(0, 0, 0, 0.5)';
-       }
-       lastScrollTop = scrollTop;
-    }
-
-    function onScroll() {
-       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-       if (!ticking) {
-          requestAnimationFrame(() => {
-             updateNavbarVisibility(scrollTop);
-             ticking = false;
-          });
-          ticking = true;
-       }
-    }
-    // Debounce scroll events
-    window.addEventListener("scroll", onScroll);
-
-    // Cleanup the scroll event listener when the component unmounts
-    return () => {
-       window.removeEventListener("scroll", onScroll);
+    // Debounce function
+    const debounce = (func, delay) => {
+        let timeoutId;
+        return (...args) => {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                func(...args);
+            }, delay);
+        };
     };
- }, []);
 
- // Checking where the navbar is & Fixing the bug of the transparent background of navbar
- useEffect(() => {
-    const handleScroll = () => {
-       const header = document.getElementById('headBarMobile');
-      if (window.scrollY > 0) {
-          header.classList.remove('navbar-hidden');
-          header.style.backgroundColor = '#fff';
-          header.style.boxShadow = '0 5px 16px rgba(0, 0, 0, 0.5)';
-      }
-    };
-    handleScroll();
-  }, []); 
+
+    // Scrolling Effects
+    useEffect(() => {
+        const header = document.getElementById('headBarMobile');
+
+
+        let lastScrollTop = 0;
+        let ticking = false;
+
+        function updateNavbarVisibility(scrollTop) {
+        if (scrollTop > lastScrollTop) {
+            header.classList.add('navbar-hidden');
+        } else if (scrollTop === 0) {
+            header.style.backgroundColor = 'transparent';
+            header.style.boxShadow = 'none';
+        } else {
+            header.classList.remove('navbar-hidden');
+            header.style.backgroundColor = '#fff';     
+            header.style.boxShadow = '0 5px 16px rgb(0, 0, 0, 0.5)';
+        }
+        lastScrollTop = scrollTop;
+        }
+
+        function onScroll() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    updateNavbarVisibility(scrollTop);
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+        // Debounce scroll events
+        window.addEventListener("scroll", onScroll);
+
+        // Cleanup the scroll event listener when the component unmounts
+        return () => {
+        window.removeEventListener("scroll", onScroll);
+        };
+    }, []);
+
+    // Checking where the navbar is & Fixing the bug of the transparent background of navbar
+    useEffect(() => {
+        const handleScroll = () => {
+            const header = document.getElementById('headBarMobile');
+            if (window.scrollY > 0) {
+                header.classList.remove('navbar-hidden');
+                header.style.backgroundColor = '#fff';
+                header.style.boxShadow = '0 5px 16px rgba(0, 0, 0, 0.5)';
+            }
+        };
+
+        const debouncedHandleScroll = debounce(handleScroll, 250); // Adjust the debounce delay as needed
+
+        // Add the debounced scroll event listener
+        window.addEventListener('scroll', debouncedHandleScroll);
+
+        // Cleanup the scroll event listener when the component unmounts
+        return () => {
+        window.removeEventListener('scroll', debouncedHandleScroll);
+        };
+    }, []); 
     
 
 

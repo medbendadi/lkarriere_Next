@@ -11,6 +11,12 @@
    overflow: hidden;
 }
 
+
+.lkarrireTextHero {
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
 .hero_content {
    font-size: 30px;
    color: var(--main-purple);

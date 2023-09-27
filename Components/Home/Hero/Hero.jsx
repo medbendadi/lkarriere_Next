@@ -75,9 +75,8 @@ const Hero = ({ translation }) => {
             }}
             className={`${styles.hero_content} flex flex-col items-center ${isRTL ? 'md:items-end md:text-right text-center w-fit md:mr-[300px]' : 'md:items-start md:text-start text-center w-full'} font-extralight`}>
             <h1>{translation?.title1} </h1>
-            <div className={`${styles.hero_img_container}`}>
-               <Image fill src={textSvg} alt="" oading="eager" priority={true} placeholder="blur"
-                blurDataURL="data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]" quality="100" />
+            <div className="py-1">
+               <h1 style={{lineHeight: 1.2}} className={`${styles.lkarrireTextHero} font-extrabold md:text-7xl sm:text-6xl text-5xl purple-gradient-to-light`}>{translation?.logo}</h1>
             </div>
             <h1>{translation?.title2} <br /> {translation?.title3}</h1>
          </m.div>

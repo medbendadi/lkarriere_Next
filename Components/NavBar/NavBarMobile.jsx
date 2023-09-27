@@ -1,4 +1,5 @@
 import React, { Fragment, useRef } from 'react'
+import { Almarai_Font } from '../../utils/fonts'
 
 import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';
@@ -123,7 +124,7 @@ function NavBarMobile({ openModal, langs, chevronUp, setChevronUp, translation, 
 
     return (
         <>
-                    <nav className={`w-full fixed top-0 right-0 left-0 z-[999] ${isRTL ? "ar" : ''}`}>
+                    <div className={`w-full fixed top-0 right-0 left-0 z-[999] ${isRTL ? "ar" : ''}`}>
                         <div id='headBarMobile' className={`w-full absolute flex justify-center items-center top-0 left-[50%] -translate-x-[50%] pt-2 row`}>
                             <div className='w-[90%] flex justify-between items-center border-b-[1px] border-[#FAA32C] border-solid'>
                                 {/* Logo */}
@@ -132,7 +133,7 @@ function NavBarMobile({ openModal, langs, chevronUp, setChevronUp, translation, 
                                         <div className='relative w-[120px] h-[40px]'>
                                             <Image fill className="min-[315px]:block hidden" src={isRTL ? Logo_ar : Logo } alt="Logo" />
                                         </div>
-                                        </div>
+                                    </div>
                                 </Link>
             
                                 {/* Buttons */}
@@ -155,12 +156,12 @@ function NavBarMobile({ openModal, langs, chevronUp, setChevronUp, translation, 
                                                 {
                                                     langs.map((item, key) => (
                                                     <Fragment key={key}>
-                                                            <Link aria-label={`${item.code}`} href={`/${item.code}${location}`} className='w-[70%] flex justify-between items-center gap-2 hover:text-[#5358A6] py-2'>
+                                                            <Link aria-label={`${item.code}`} href={`/${item.code}${location}`} onClick={() => toggleLanguages()} className='w-[70%] flex justify-between items-center gap-2 hover:text-[#5358A6] py-2'>
                                                             <div className='relative w-[20px] h-[20px]'>
             
                                                                     <Image fill src={item.flag} alt="" />
                                                                     </div>
-                                                            <span className='text-sm font-ar'>{item.title}</span>
+                                                            <span className='text-sm font-ar' style={{fontFamily: Almarai_Font.style.fontFamily}}>{item.title}</span>
                                                         </Link>
                                                         {key !== langs.length - 1 ? (
                                                             <div key={key + '-line'} className='w-full border-b-[1px] border-solid border-black/10' />
@@ -182,7 +183,7 @@ function NavBarMobile({ openModal, langs, chevronUp, setChevronUp, translation, 
                                         <span>
                                             <ChevronDown size="15" />
                                         </span>
-                                        <p>{translation?.play}</p>
+                                        <span>{translation?.play}</span>
                                     </button>
             
                                     {/* Open Menu Button */}
@@ -202,13 +203,13 @@ function NavBarMobile({ openModal, langs, chevronUp, setChevronUp, translation, 
                             <div className='w-full'>
                                 {/* Close Menu Button */}
                                 <div className='w-full flex justify-end py-5 min-[500px]:px-8 px-5'>
-                            <button
-                                aria-label='Close Menu'
+                                    <button
+                                    aria-label='Close Menu'
                                     onClick={closeMenu}
                                     className="yellow-gradient-to-dark flex items-center text-center rounded-xl h-[36px] px-2 text-white gap-1">
-                                    <span>
-                                        <X size="20" />
-                                    </span>
+                                        <span>
+                                            <X size="20" />
+                                        </span>
                                     </button>
                                 </div>
             
@@ -228,10 +229,8 @@ function NavBarMobile({ openModal, langs, chevronUp, setChevronUp, translation, 
                                                     duration={500}
                                                     className={`flex ${isRTL ? 'flex-row-reverse' : 'flex-row'} items-center gap-2 py-3`}
                                                     >
-                                                    <div className='relative w-[20px] h-[20px]'>
-                                                            <Image fill src={item.icon} alt="" />
-                                                </div>
-                                                            {item.title}
+                                                        <Image width={20} height={20} className='w-[20px]' src={item.icon} alt="" />
+                                                        {item.title}
                                                     </ScrollLink>
                                                 {key !== menuMobile.length - 1 ? (
                                                     <div className='w-full border-b-2 border-solid border-white/40' />
@@ -246,9 +245,7 @@ function NavBarMobile({ openModal, langs, chevronUp, setChevronUp, translation, 
                                                 <li className='w-full flex flex-col items-center' key={key}>
                                                     <Link className={`flex 
                                                     ${isRTL ? 'flex-row-reverse' : 'flex-row'} items-center gap-2 py-3`} aria-label='home' href="/">
-                                                        <div className='w-[20px] h-[20px] relative'>
-                                                        <Image fill src={item.icon} alt="" /> {item.title}
-                                                        </div>
+                                                        <Image width={20} height={20} className='w-[20px]' src={item.icon} alt="" /> {item.title}
                                                     </Link>
                                                     {key !== menuMobile.length - 1 ? (
                                                         <div className='w-full border-b-2 border-solid border-white/40' />
@@ -289,7 +286,7 @@ function NavBarMobile({ openModal, langs, chevronUp, setChevronUp, translation, 
                                 </li>
                             </ul>
                         </div>
-                    </nav>
+                    </div>
       </>
   )
 }

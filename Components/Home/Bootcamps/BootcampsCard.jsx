@@ -47,7 +47,7 @@ function BootcampsCard({ item, translation }) {
             className='w-full flex justify-center items-center'>
             <div className={`${styles.BootcampsCard} w-[380px] min-w-[300px] h-[500px] bg-white rounded-[50px] flex flex-col justify-between items-center gap-1 shadow-xl shadow-black/20 py-4 relative overflow-y-auto`}>
                 {/* icon */}
-                <div className='w-[120px] h-[90px] object-cover relative'>
+                <div className='w-[120px] h-[120px] object-cover relative'>
                     <Image fill src={BootcampsCardIcon} alt="icon" loading='lazy' />
                 </div>
 

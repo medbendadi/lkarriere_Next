@@ -1,4 +1,5 @@
 import React, { Fragment, useRef, useState } from 'react'
+import { Almarai_Font } from '../../utils/fonts'
 
 import { Link as ScrollLink } from 'react-scroll';
 import { m } from 'framer-motion'
@@ -130,7 +131,7 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
                     <m.div
 
                         className="md:flex hidden z-[999]">
-                        <nav id='headBarDesktop' className={`navbar flex justify-center items-center w-5/6 m-auto fixed top-0 ${isRTL ? "ar" : ''}`}>
+                        <div id='headBarDesktop' className={`navbar flex justify-center items-center w-5/6 m-auto fixed top-0 ${isRTL ? "ar" : ''}`}>
                             <div id='headBarDesktopNav' className={`max-w-[1400px] w-[90%] h-full flex justify-between items-center py-[15px] row`}>
                                 <Link href='/'  aria-label='home' className={`navbar_logo flex`}>
                                     <div className={`navbar_logo_container relative`}>
@@ -198,7 +199,7 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
                                         <span>
                                             <Globe size="18" />
                                         </span>
-                                        <p>{lang?.toUpperCase()}</p>
+                                        <span>{lang?.toUpperCase()}</span>
 
                                         <span>
                                             {
@@ -213,13 +214,13 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
                                         <div className={`languagesContent w-full h-auto flex flex-col items-center `}>
 
                                             {
-                                                langs.map((item, key) => (
+                                                langs?.map((item, key) => (
                                                     <Fragment key={key}>
-                                                        <Link aria-label={`${item.code}`} href={`/${item.code}${location}`} className='w-[70%] flex justify-between items-center gap-2 hover:text-[#5358A6] py-2  '>
+                                                        <Link aria-label={`${item.code}`} href={`/${item.code}${location}`} onClick={() => toggleLanguages()} className='w-[70%] flex justify-between items-center gap-2 hover:text-[#5358A6] py-2  '>
                                                             <div className='w-[20px] h-[20px] relative'>
                                                                 <Image fill src={item.flag} alt="" />
                                                             </div>
-                                                            <span className='text-sm font-ar'>{item.title}</span>
+                                                            <span className='text-sm font-ar' style={{fontFamily: Almarai_Font.style.fontFamily}}>{item.title}</span>
                                                         </Link>
                                                         {key !== langs.length - 1 ? (
                                                             <div key={key + '-line'} className='w-full border-b-[1px] border-solid border-black/10' />
@@ -233,7 +234,7 @@ function NavBarDesktop({ circleBg, openModal, langs, chevronUp, setChevronUp, tr
                                     </div>
                                 </div>
                             </div>
-                        </nav>
+                        </div>
                     </m.div >
         </>
     )

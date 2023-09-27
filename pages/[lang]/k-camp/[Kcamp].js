@@ -40,10 +40,10 @@ Extras = dynamic(() => import('../../../components/K_camp/Extras'), {
 QAndA = dynamic(() => import('../../../components/K_camp/Q&A'), {
   loading: () => <div></div>,
 }),
-Footer = dynamic(() => import('../../../Components/Footer'), {
+Footer = dynamic(() => import('../../../components/Footer'), {
   loading: () => <div></div>,
 }),
-Reviews = dynamic(() => import('../../../Components/Home/Reviews/reviews'), {
+Reviews = dynamic(() => import('../../../components/Home/Reviews/Reviews'), {
   loading: () => <div></div>,
 });
 

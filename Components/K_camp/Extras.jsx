@@ -73,7 +73,7 @@ function Extras({ extraSection, guarantee, subscriptionSection, paymentOptionSec
                     </div>
 
                     <div className='w-full h-auto flex justify-center items-center'>
-                        <div className='w-fit h-auto flex justify-center items-center bg-[#ececec] rounded-[45px] py-10 px-16 gap-2'>
+                        <div className='w-fit h-auto flex justify-center items-start bg-[#ececec] rounded-[45px] py-10 px-16 gap-2'>
                             <div className='h-full'>
                                 <div>
                                     <span className='sm:text-7xl text-5xl font-extrabold text-[#FBBC67]'>00</span> 

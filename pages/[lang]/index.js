@@ -2,27 +2,27 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react'
 import dynamic from "next/dynamic";
-const Meta = dynamic(() => import('../../Components/Meta'))
-const NavBar = dynamic(() => import('../../Components/NavBar/NavBar'), {
+const Meta = dynamic(() => import('../../components/Meta'))
+const NavBar = dynamic(() => import('../../components/NavBar/NavBar'), {
   loading: () => <div></div>,
 })
-const Hero = dynamic(() => import('../../Components/Home/Hero/Hero'), {
+const Hero = dynamic(() => import('../../components/Home/Hero/Hero'), {
   loading: () => <div></div>,
 })
-const Features = dynamic(() => import('../../Components/Home/Features/HomeFeatures'), {
+const Features = dynamic(() => import('../../components/Home/Features/HomeFeatures'), {
   loading: () => <div></div>,
 })
-const WhyForWho = dynamic(() => import('../../Components/Home/whyForWho/WhyForWho'), {
+const WhyForWho = dynamic(() => import('../../components/Home/whyForWho/WhyForWho'), {
   loading: () => <div></div>,
 })
-const Bootcamps = dynamic(() => import('../../Components/Home/Bootcamps/Bootcamps'), {
+const Bootcamps = dynamic(() => import('../../components/Home/Bootcamps/Bootcamps'), {
   loading: () => <div></div>,
 })
 
 const HowItWorks = dynamic(() => import('../../components/Home/HowItWorks/HowItWorks'), {
   loading: () => <div></div>,
 })
-const Partners = dynamic(() => import('../../Components/Home/Partners/Partners'), {
+const Partners = dynamic(() => import('../../components/Home/Partners/Partners'), {
   loading: () => <div></div>,
 })
 const Coaches = dynamic(() => import('../../components/Home/Coaches/Coaches'), {
@@ -31,7 +31,7 @@ const Coaches = dynamic(() => import('../../components/Home/Coaches/Coaches'), {
 const Reviews = dynamic(() => import('../../components/Home/Reviews/Reviews'), {
   loading: () => <div></div>,
 })
-const Contact = dynamic(() => import('../../Components/Home/Contact/Contact'), {
+const Contact = dynamic(() => import('../../components/Home/Contact/Contact'), {
   loading: () => <div></div>,
 })
 const JoinForm = dynamic(() => import('../../components/JoinFom'), {
@@ -72,9 +72,9 @@ if (isFallback) {
             <Hero translation={translation.home?.hero_section} lang/>
             <Features translation={translation.home?.features}/>
         <WhyForWho translation={translation.home} />
-            <Bootcamps camps={camps} translation={translation.home?.bootcamps}/>
+            <Bootcamps camps={camps} translation={translation.home?.bootcamps} translationButtons={translation.buttons}/>
             <HowItWorks translation={translation.home?.howItWorks}/>
-            <Partners translation={translation.home?.ourPartners}/>
+            <Partners translation={translation.home?.ourPartners} translationButtons={translation.buttons}/>
             <Coaches translation={translation.home?.coaches}/>
         <Reviews icon={true} translation={translation} reviews={reviews} />
             <Contact translation={translation.home?.contact}/>

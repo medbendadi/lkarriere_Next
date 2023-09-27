@@ -15,7 +15,7 @@ import HeaderIcon from '../../../public/images/Assets/Icones/Icones Setion Bootc
 
 // const BootcampsCard = (await import('../../../../Components/BootcampsCard/BootcampsCard')).default;
 
-function Bootcamps({ camps, translation }) {
+function Bootcamps({ camps, translation, translationButtons }) {
         const router = useRouter()
       const lang = router.query.lang || 'en';
     const isRTL = lang === 'ar' || lang === 'ma';
@@ -65,8 +65,8 @@ function Bootcamps({ camps, translation }) {
 
             {
                !showBootcampCards && (
-                  <button aria-label='Show More' onClick={() => {setCountBootcampCards(data.length);  setShowBootcampCards(true)}} className='sm:hidden w-[80%] py-3 yellow-gradient-to-dark rounded-2xl text-white flex justify-center items-center gap-2' type='button'>
-                    <span className='capitalize text-base'>Show more</span>
+                  <button aria-label='Show More' onClick={() => {setCountBootcampCards(camps.length);  setShowBootcampCards(true)}} className='sm:hidden w-[80%] py-3 yellow-gradient-to-dark rounded-2xl text-white flex justify-center items-center gap-2' type='button'>
+                    <span className='capitalize text-base'>{translationButtons?.more}</span>
                     <ChevronDown size={20} />
                   </button>
                )
@@ -74,7 +74,7 @@ function Bootcamps({ camps, translation }) {
             {
                showBootcampCards && (
                   <button aria-label='Show Less' onClick={() => {setCountBootcampCards(6); setShowBootcampCards(false)}} className='sm:hidden w-[80%] py-3 yellow-gradient-to-dark rounded-2xl text-white flex justify-center items-center gap-2' type='button'>
-                    <span className='capitalize text-base'>Show less</span>
+                    <span className='capitalize text-base'>{translationButtons?.less}</span>
                     <ChevronUp size={20} />
                   </button>
                )  

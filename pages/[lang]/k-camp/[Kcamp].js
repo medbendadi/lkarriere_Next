@@ -6,48 +6,48 @@ import {Phone} from '@mui/icons-material';
 import { getDictionary } from '@/getTranslation';
 import { fetchData } from '../../../FetchData';
 
-const Meta = dynamic(() => import('../../../components/Meta')),
-NavBar = dynamic(() => import('../../../components/NavBar/NavBar'), {
+const Meta = dynamic(() => import('../../../Components/Meta')),
+NavBar = dynamic(() => import('../../../Components/NavBar/NavBar'), {
   loading: () => <div></div>,
 }),
-Hero = dynamic(() => import('../../../components/K_camp/Hero'), {
+Hero = dynamic(() => import('../../../Components/K_camp/Hero'), {
   loading: () => <div></div>,
 }),
-CounterSection = dynamic(() => import('../../../components/K_camp/CounterSection'), {
+CounterSection = dynamic(() => import('../../../Components/K_camp/CounterSection'), {
   loading: () => <div></div>,
 }),
-Features = dynamic(() => import('../../../components/K_camp/Features'), {
+Features = dynamic(() => import('../../../Components/K_camp/Features'), {
   loading: () => <div></div>,
 }),
-Infos = dynamic(() => import('../../../components/K_camp/Infos'), {
+Infos = dynamic(() => import('../../../Components/K_camp/Infos'), {
   loading: () => <div></div>,
 }),
-Projects = dynamic(() => import('../../../components/K_camp/Projects'), {
+Projects = dynamic(() => import('../../../Components/K_camp/Projects'), {
   loading: () => <div></div>,
 }),
-Certificate = dynamic(() => import('../../../components/K_camp/Certificate'), {
+Certificate = dynamic(() => import('../../../Components/K_camp/Certificate'), {
   loading: () => <div></div>,
 }),
-WhyChooseUs = dynamic(() => import('../../../components/K_camp/WhyChooseUs'), {
+WhyChooseUs = dynamic(() => import('../../../Components/K_camp/WhyChooseUs'), {
   loading: () => <div></div>,
 }),
-Price = dynamic(() => import('../../../components/K_camp/Price'), {
+Price = dynamic(() => import('../../../Components/K_camp/Price'), {
   loading: () => <div></div>,
 }),
-Extras = dynamic(() => import('../../../components/K_camp/Extras'), {
+Extras = dynamic(() => import('../../../Components/K_camp/Extras'), {
   loading: () => <div></div>,
 }),
-QAndA = dynamic(() => import('../../../components/K_camp/Q&A'), {
+QAndA = dynamic(() => import('../../../Components/K_camp/Q&A'), {
   loading: () => <div></div>,
 }),
-Footer = dynamic(() => import('../../../components/Footer'), {
+Footer = dynamic(() => import('../../../Components/Footer'), {
   loading: () => <div></div>,
 }),
-Reviews = dynamic(() => import('../../../components/Home/Reviews/Reviews'), {
+Reviews = dynamic(() => import('../../../Components/Home/Reviews/Reviews'), {
   loading: () => <div></div>,
 });
 
-const JoinForm = dynamic(() => import('../../../components/JoinFom'), {
+const JoinForm = dynamic(() => import('../../../Components/JoinFom'), {
   loading: () => <div></div>,
 })
 

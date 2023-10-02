@@ -2,43 +2,43 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react'
 import dynamic from "next/dynamic";
-const Meta = dynamic(() => import('../../components/Meta'))
-const NavBar = dynamic(() => import('../../components/NavBar/NavBar'), {
+const Meta = dynamic(() => import('../../Components/Meta'))
+const NavBar = dynamic(() => import('../../Components/NavBar/NavBar'), {
   loading: () => <div></div>,
 })
-const Hero = dynamic(() => import('../../components/Home/Hero/Hero'), {
+const Hero = dynamic(() => import('../../Components/Home/Hero/Hero'), {
   loading: () => <div></div>,
 })
-const Features = dynamic(() => import('../../components/Home/Features/HomeFeatures'), {
+const Features = dynamic(() => import('../../Components/Home/Features/HomeFeatures'), {
   loading: () => <div></div>,
 })
-const WhyForWho = dynamic(() => import('../../components/Home/whyForWho/WhyForWho'), {
+const WhyForWho = dynamic(() => import('../../Components/Home/whyForWho/WhyForWho'), {
   loading: () => <div></div>,
 })
-const Bootcamps = dynamic(() => import('../../components/Home/Bootcamps/Bootcamps'), {
-  loading: () => <div></div>,
-})
-
-const HowItWorks = dynamic(() => import('../../components/Home/HowItWorks/HowItWorks'), {
-  loading: () => <div></div>,
-})
-const Partners = dynamic(() => import('../../components/Home/Partners/Partners'), {
-  loading: () => <div></div>,
-})
-const Coaches = dynamic(() => import('../../components/Home/Coaches/Coaches'), {
-  loading: () => <div></div>,
-})
-const Reviews = dynamic(() => import('../../components/Home/Reviews/Reviews'), {
-  loading: () => <div></div>,
-})
-const Contact = dynamic(() => import('../../components/Home/Contact/Contact'), {
-  loading: () => <div></div>,
-})
-const JoinForm = dynamic(() => import('../../components/JoinFom'), {
+const Bootcamps = dynamic(() => import('../../Components/Home/Bootcamps/Bootcamps'), {
   loading: () => <div></div>,
 })
 
-const Footer = dynamic(() => import('../../components/Footer'), {
+const HowItWorks = dynamic(() => import('../../Components/Home/HowItWorks/HowItWorks'), {
+  loading: () => <div></div>,
+})
+const Partners = dynamic(() => import('../../Components/Home/Partners/Partners'), {
+  loading: () => <div></div>,
+})
+const Coaches = dynamic(() => import('../../Components/Home/Coaches/Coaches'), {
+  loading: () => <div></div>,
+})
+const Reviews = dynamic(() => import('../../Components/Home/Reviews/Reviews'), {
+  loading: () => <div></div>,
+})
+const Contact = dynamic(() => import('../../Components/Home/Contact/Contact'), {
+  loading: () => <div></div>,
+})
+const JoinForm = dynamic(() => import('../../Components/JoinFom'), {
+  loading: () => <div></div>,
+})
+
+const Footer = dynamic(() => import('../../Components/Footer'), {
   loading: () => <div></div>,
 })
 

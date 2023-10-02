@@ -13,7 +13,7 @@ const BootcampsCard = dynamic(() => import('./BootcampsCard'))
 import HeaderIcon from '../../../public/images/Assets/Icones/Icones Setion Bootcamps/icon 1.svg';
 
 
-// const BootcampsCard = (await import('../../../../Components/BootcampsCard/BootcampsCard')).default;
+// const BootcampsCard = (await import('../../../../components/BootcampsCard/BootcampsCard')).default;
 
 function Bootcamps({ camps, translation, translationButtons }) {
         const router = useRouter()
